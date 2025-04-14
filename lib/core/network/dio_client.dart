@@ -1,5 +1,8 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:logger/logger.dart';
+import 'package:test_case_mobile_developer/features/auth/data/source/auth_local.dart';
+import 'package:test_case_mobile_developer/injections.dart';
 
 class DioClient {
   final Dio _dio;
@@ -16,6 +19,15 @@ class DioClient {
     bool withToken = true,
   }) async {
     try {
+      final accessToken = dotenv.env['ACCESS_TOKEN'] ?? '';
+      final token = await getIt<AuthLocal>().getToken();
+
+      headers ??= {};
+      headers["AccessToken"] = accessToken;
+      if (withToken) {
+        headers["Authorization"] = 'Token $token';
+      }
+
       logger.i("path: $path");
       logger.i("method: $method");
       logger.i("data: $data");
@@ -32,6 +44,7 @@ class DioClient {
         ),
       );
       logger.f("response: $response");
+      logger.f("status code: ${response.statusCode}");
       return response;
     } on DioException catch (e) {
       logger.e('error url: ${e.requestOptions.uri}');

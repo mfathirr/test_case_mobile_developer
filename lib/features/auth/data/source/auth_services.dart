@@ -26,7 +26,7 @@ class AuthServices {
       '${dotenv.env['BASE_URL']}/customer/register/verify-code',
       data: {
         'user_id': userId,
-        code: code,
+        'code': code,
       },
     );
   }

@@ -26,7 +26,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     on<_CustomerRegisterMini>((event, emit) async {
       emit(const AuthState.loading());
       final res = await _customerRegisterMiniUseCase(
-          CustomerRegisterMiniParam(userId: event.userId));
+        CustomerRegisterMiniParam(userId: event.userId),
+      );
 
       res.fold(
         (l) => emit(AuthState.failed(message: l)),

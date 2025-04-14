@@ -1,12 +1,14 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
+import 'package:test_case_mobile_developer/features/auth/data/source/auth_local.dart';
 import 'package:test_case_mobile_developer/features/auth/data/source/auth_services.dart';
 import 'package:test_case_mobile_developer/features/auth/domain/repository/auth_repository.dart';
 
 class AuthRepositoryImpl implements AuthRepository {
   final AuthServices _authServices;
+  final AuthLocal _authLocal;
 
-  AuthRepositoryImpl(this._authServices);
+  AuthRepositoryImpl(this._authServices, this._authLocal);
 
   @override
   Future<Either<String, void>> customerLogin({
@@ -20,6 +22,7 @@ class AuthRepositoryImpl implements AuthRepository {
       );
 
       if (response.statusCode == 200) {
+        await _authLocal.storeToken(response.data['token']);
         return const Right(null);
       } else {
         return Left(
@@ -86,7 +89,8 @@ class AuthRepositoryImpl implements AuthRepository {
         password: password,
       );
 
-      if (response.statusCode == 201) {
+      if (response.statusCode == 200) {
+        await _authLocal.storeToken(response.data['token']);
         return const Right(null);
       } else {
         return Left(
@@ -109,7 +113,7 @@ class AuthRepositoryImpl implements AuthRepository {
         userId: userId,
       );
 
-      if (response.statusCode == 201) {
+      if (response.statusCode == 200) {
         return const Right(null);
       } else {
         return Left(
@@ -132,7 +136,7 @@ class AuthRepositoryImpl implements AuthRepository {
         userId: userId,
       );
 
-      if (response.statusCode == 201) {
+      if (response.statusCode == 200) {
         return const Right(null);
       } else {
         return Left(
@@ -157,7 +161,7 @@ class AuthRepositoryImpl implements AuthRepository {
         code: code,
       );
 
-      if (response.statusCode == 201) {
+      if (response.statusCode == 200) {
         return const Right(null);
       } else {
         return Left(
