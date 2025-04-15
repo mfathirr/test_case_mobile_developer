@@ -1,4 +1,10 @@
 import 'package:go_router/go_router.dart';
+import 'package:test_case_mobile_developer/features/address/domain/entities/customer_list_address_blueray_entity.dart';
+import 'package:test_case_mobile_developer/features/address/presentation/pages/addres_create_page.dart';
+import 'package:test_case_mobile_developer/features/address/presentation/pages/addres_update_page.dart';
+import 'package:test_case_mobile_developer/features/address/presentation/pages/address_map_page.dart';
+import 'package:test_case_mobile_developer/features/address/presentation/pages/address_page.dart';
+import 'package:test_case_mobile_developer/features/address/presentation/pages/address_search_data_page.dart';
 import 'package:test_case_mobile_developer/features/auth/presentation/pages/login_page.dart';
 import 'package:test_case_mobile_developer/features/auth/presentation/pages/register_mandatory_page.dart';
 import 'package:test_case_mobile_developer/features/auth/presentation/pages/register_page.dart';
@@ -6,7 +12,7 @@ import 'package:test_case_mobile_developer/features/auth/presentation/pages/regi
 
 class AppRouter {
   static GoRouter goRouter = GoRouter(
-    initialLocation: '/${LoginPage.routeName}',
+    initialLocation: '/${AddressPage.routeName}',
     routes: [
       GoRoute(
         path: '/${LoginPage.routeName}',
@@ -30,6 +36,33 @@ class AppRouter {
         name: RegisterMandatoryPage.routeName,
         builder: (context, state) => RegisterMandatoryPage(
           email: state.extra as String,
+        ),
+      ),
+      GoRoute(
+        path: '/${AddressPage.routeName}',
+        name: AddressPage.routeName,
+        builder: (context, state) => const AddressPage(),
+      ),
+      GoRoute(
+        path: '/${AddresCreatePage.routeName}',
+        name: AddresCreatePage.routeName,
+        builder: (context, state) => const AddresCreatePage(),
+      ),
+      GoRoute(
+        path: '/${AddressMapPage.routeName}',
+        name: AddressMapPage.routeName,
+        builder: (context, state) => const AddressMapPage(),
+      ),
+      GoRoute(
+        path: '/${AddressSearchDataPage.routeName}',
+        name: AddressSearchDataPage.routeName,
+        builder: (context, state) => const AddressSearchDataPage(),
+      ),
+      GoRoute(
+        path: '/${AddresUpdatePage.routeName}',
+        name: AddresUpdatePage.routeName,
+        builder: (context, state) => AddresUpdatePage(
+          data: state.extra as CustomerAddressEntity,
         ),
       ),
     ],
