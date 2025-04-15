@@ -15,6 +15,7 @@ class AuthServices {
       data: {
         'user_id': userId,
       },
+      withToken: false,
     );
   }
 
@@ -28,6 +29,7 @@ class AuthServices {
         'user_id': userId,
         'code': code,
       },
+      withToken: false,
     );
   }
 
@@ -45,6 +47,7 @@ class AuthServices {
         "last_name": lastName,
         "password": password,
       },
+      withToken: false,
     );
   }
 
@@ -56,6 +59,7 @@ class AuthServices {
       data: {
         "user_id": userId,
       },
+      withToken: false,
     );
   }
 
@@ -69,6 +73,7 @@ class AuthServices {
         "user_id": userId,
         "password": password,
       },
+      withToken: false,
     );
   }
 

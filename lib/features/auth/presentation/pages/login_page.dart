@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:test_case_mobile_developer/core/widget/text_field_widget.dart';
+import 'package:test_case_mobile_developer/features/address/presentation/pages/address_page.dart';
 import 'package:test_case_mobile_developer/features/auth/presentation/bloc/auth/auth_bloc.dart';
 import 'package:test_case_mobile_developer/features/auth/presentation/pages/register_page.dart';
 
@@ -21,13 +22,10 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return BlocListener<AuthBloc, AuthState>(
       listener: (context, state) {
-        // state.maybeWhen(
-        //   success: () => context.pushNamed(
-        //     RegisterMandatoryPage.routeName,
-        //     extra: widget.email,
-        //   ),
-        //   orElse: () {},
-        // );
+        state.maybeWhen(
+          success: () => context.pushNamed(AddressPage.routeName),
+          orElse: () {},
+        );
       },
       child: Scaffold(
         body: Column(
