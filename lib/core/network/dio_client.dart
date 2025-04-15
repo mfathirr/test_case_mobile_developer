@@ -16,7 +16,7 @@ class DioClient {
     dynamic data,
     Map<String, dynamic>? queryParameters,
     Map<String, String>? headers,
-    bool withToken = true,
+    bool? withToken = true,
   }) async {
     try {
       final accessToken = dotenv.env['ACCESS_TOKEN'] ?? '';
@@ -24,7 +24,7 @@ class DioClient {
 
       headers ??= {};
       headers["AccessToken"] = accessToken;
-      if (withToken) {
+      if (withToken ?? true) {
         headers["Authorization"] = 'Token $token';
       }
 
@@ -62,64 +62,52 @@ class DioClient {
     String path, {
     Map<String, dynamic>? queryParameters,
     Map<String, String>? headers,
+    bool? withToken,
   }) {
-    return _request<T>(
-      path,
-      method: 'GET',
-      queryParameters: queryParameters,
-      headers: headers,
-    );
+    return _request<T>(path,
+        method: 'GET',
+        queryParameters: queryParameters,
+        headers: headers,
+        withToken: withToken);
   }
 
   Future<Response<T>> post<T>(
     String path, {
     dynamic data,
     Map<String, String>? headers,
+    bool? withToken,
   }) {
-    return _request<T>(
-      path,
-      method: 'POST',
-      data: data,
-      headers: headers,
-    );
+    return _request<T>(path,
+        method: 'POST', data: data, headers: headers, withToken: withToken);
   }
 
   Future<Response<T>> put<T>(
     String path, {
     dynamic data,
     Map<String, String>? headers,
+    bool? withToken,
   }) {
-    return _request<T>(
-      path,
-      method: 'PUT',
-      data: data,
-      headers: headers,
-    );
+    return _request<T>(path,
+        method: 'PUT', data: data, headers: headers, withToken: withToken);
   }
 
   Future<Response<T>> patch<T>(
     String path, {
     dynamic data,
     Map<String, String>? headers,
+    bool? withToken,
   }) {
-    return _request<T>(
-      path,
-      method: 'PATCH',
-      data: data,
-      headers: headers,
-    );
+    return _request<T>(path,
+        method: 'PATCH', data: data, headers: headers, withToken: withToken);
   }
 
   Future<Response<T>> delete<T>(
     String path, {
     dynamic data,
     Map<String, String>? headers,
+    bool? withToken,
   }) {
-    return _request<T>(
-      path,
-      method: 'DELETE',
-      data: data,
-      headers: headers,
-    );
+    return _request<T>(path,
+        method: 'DELETE', data: data, headers: headers, withToken: withToken);
   }
 }
