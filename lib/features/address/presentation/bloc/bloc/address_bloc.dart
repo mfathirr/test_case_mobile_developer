@@ -62,6 +62,8 @@ class AddressBloc extends Bloc<AddressEvent, AddressState> {
         isPostAddressLoading: true,
         postAddressError: null,
         postAddressSuccess: false,
+        hasReachedMax: false,
+        currentPage: 1,
       ));
 
       final result = await _customerListBluerayUseCase(null);
@@ -72,12 +74,32 @@ class AddressBloc extends Bloc<AddressEvent, AddressState> {
           getAddressListError: e,
         )),
         (data) {
+          const pageSize = 10;
+          final firstPage = data.take(pageSize).toList();
+
           emit(state.copyWith(
             isGetAddressListLoading: false,
             getAddressList: data,
+            paginatedCustomers: firstPage,
+            currentPage: 1,
+            hasReachedMax: firstPage.length >= data.length,
           ));
         },
       );
+    });
+
+    on<_CustomerLoadMoreListBlueray>((event, emit) {
+      if (state.hasReachedMax || state.isGetAddressListLoading) return;
+
+      const pageSize = 10;
+      final nextPage = state.currentPage + 1;
+      final nextData = state.getAddressList.take(nextPage * pageSize).toList();
+
+      emit(state.copyWith(
+        paginatedCustomers: nextData,
+        currentPage: nextPage,
+        hasReachedMax: nextData.length >= state.getAddressList.length,
+      ));
     });
 
     on<_CustomerCreateBlueray>((event, emit) async {

@@ -19,6 +19,7 @@ mixin _$AddressEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() customerListBlueray,
+    required TResult Function() customerLoadMoreListBlueray,
     required TResult Function(CustomerCreateBluerayParam param)
         customerCreateBlueray,
     required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
@@ -57,6 +58,7 @@ mixin _$AddressEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? customerListBlueray,
+    TResult? Function()? customerLoadMoreListBlueray,
     TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult? Function(PostcodeValidationParam param)? postcodeValidation,
@@ -90,6 +92,7 @@ mixin _$AddressEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? customerListBlueray,
+    TResult Function()? customerLoadMoreListBlueray,
     TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult Function(PostcodeValidationParam param)? postcodeValidation,
@@ -124,6 +127,8 @@ mixin _$AddressEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CustomerListBlueray value) customerListBlueray,
+    required TResult Function(_CustomerLoadMoreListBlueray value)
+        customerLoadMoreListBlueray,
     required TResult Function(_CustomerCreateBlueray value)
         customerCreateBlueray,
     required TResult Function(_SubDistrictSearch value) subDistrictSearch,
@@ -147,6 +152,8 @@ mixin _$AddressEvent {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult? Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult? Function(_PostcodeValidation value)? postcodeValidation,
@@ -167,6 +174,8 @@ mixin _$AddressEvent {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult Function(_PostcodeValidation value)? postcodeValidation,
@@ -245,6 +254,7 @@ class _$CustomerListBluerayImpl implements _CustomerListBlueray {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() customerListBlueray,
+    required TResult Function() customerLoadMoreListBlueray,
     required TResult Function(CustomerCreateBluerayParam param)
         customerCreateBlueray,
     required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
@@ -286,6 +296,7 @@ class _$CustomerListBluerayImpl implements _CustomerListBlueray {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? customerListBlueray,
+    TResult? Function()? customerLoadMoreListBlueray,
     TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult? Function(PostcodeValidationParam param)? postcodeValidation,
@@ -322,6 +333,7 @@ class _$CustomerListBluerayImpl implements _CustomerListBlueray {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? customerListBlueray,
+    TResult Function()? customerLoadMoreListBlueray,
     TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult Function(PostcodeValidationParam param)? postcodeValidation,
@@ -362,6 +374,8 @@ class _$CustomerListBluerayImpl implements _CustomerListBlueray {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CustomerListBlueray value) customerListBlueray,
+    required TResult Function(_CustomerLoadMoreListBlueray value)
+        customerLoadMoreListBlueray,
     required TResult Function(_CustomerCreateBlueray value)
         customerCreateBlueray,
     required TResult Function(_SubDistrictSearch value) subDistrictSearch,
@@ -388,6 +402,8 @@ class _$CustomerListBluerayImpl implements _CustomerListBlueray {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult? Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult? Function(_PostcodeValidation value)? postcodeValidation,
@@ -411,6 +427,8 @@ class _$CustomerListBluerayImpl implements _CustomerListBlueray {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult Function(_PostcodeValidation value)? postcodeValidation,
@@ -437,6 +455,253 @@ class _$CustomerListBluerayImpl implements _CustomerListBlueray {
 
 abstract class _CustomerListBlueray implements AddressEvent {
   const factory _CustomerListBlueray() = _$CustomerListBluerayImpl;
+}
+
+/// @nodoc
+abstract class _$$CustomerLoadMoreListBluerayImplCopyWith<$Res> {
+  factory _$$CustomerLoadMoreListBluerayImplCopyWith(
+          _$CustomerLoadMoreListBluerayImpl value,
+          $Res Function(_$CustomerLoadMoreListBluerayImpl) then) =
+      __$$CustomerLoadMoreListBluerayImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$CustomerLoadMoreListBluerayImplCopyWithImpl<$Res>
+    extends _$AddressEventCopyWithImpl<$Res, _$CustomerLoadMoreListBluerayImpl>
+    implements _$$CustomerLoadMoreListBluerayImplCopyWith<$Res> {
+  __$$CustomerLoadMoreListBluerayImplCopyWithImpl(
+      _$CustomerLoadMoreListBluerayImpl _value,
+      $Res Function(_$CustomerLoadMoreListBluerayImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$CustomerLoadMoreListBluerayImpl
+    implements _CustomerLoadMoreListBlueray {
+  const _$CustomerLoadMoreListBluerayImpl();
+
+  @override
+  String toString() {
+    return 'AddressEvent.customerLoadMoreListBlueray()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CustomerLoadMoreListBluerayImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() customerListBlueray,
+    required TResult Function() customerLoadMoreListBlueray,
+    required TResult Function(CustomerCreateBluerayParam param)
+        customerCreateBlueray,
+    required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
+    required TResult Function(PostcodeValidationParam param) postcodeValidation,
+    required TResult Function(List<CustomerCreateMultipleParam> param)
+        customerCreateMultipleBlueray,
+    required TResult Function(CustomerDeleteBluerayParam param)
+        customerDeleteBlueray,
+    required TResult Function(CustomerUpdateBluerayParam param)
+        customerUpdateBlueray,
+    required TResult Function() getPrimaryAddress,
+    required TResult Function(PostPrimaryAddressParam param) postPrimaryAddress,
+    required TResult Function(String fileImage) uploadFileImage,
+    required TResult Function(int param) indexSearchAddress,
+    required TResult Function(GeoPoint point, MapController mapController)
+        mapAddress,
+    required TResult Function(Map<String, dynamic> data) mapData,
+    required TResult Function(CustomerCreateBluerayParam data)
+        addAddressMultiple,
+    required TResult Function(
+            bool customerDeleteBlueray,
+            bool postcodeValidation,
+            bool subDistrictSearch,
+            bool customerCreateBlueray,
+            bool customerUpdateBlueray,
+            bool getPrimaryAddress,
+            bool postPrimaryAddress,
+            bool uploadFileImage,
+            bool mapAddress,
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)
+        clearData,
+  }) {
+    return customerLoadMoreListBlueray();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? customerListBlueray,
+    TResult? Function()? customerLoadMoreListBlueray,
+    TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
+    TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
+    TResult? Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult? Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
+    TResult? Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
+    TResult? Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
+    TResult? Function()? getPrimaryAddress,
+    TResult? Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult? Function(String fileImage)? uploadFileImage,
+    TResult? Function(int param)? indexSearchAddress,
+    TResult? Function(GeoPoint point, MapController mapController)? mapAddress,
+    TResult? Function(Map<String, dynamic> data)? mapData,
+    TResult? Function(CustomerCreateBluerayParam data)? addAddressMultiple,
+    TResult? Function(
+            bool customerDeleteBlueray,
+            bool postcodeValidation,
+            bool subDistrictSearch,
+            bool customerCreateBlueray,
+            bool customerUpdateBlueray,
+            bool getPrimaryAddress,
+            bool postPrimaryAddress,
+            bool uploadFileImage,
+            bool mapAddress,
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
+        clearData,
+  }) {
+    return customerLoadMoreListBlueray?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? customerListBlueray,
+    TResult Function()? customerLoadMoreListBlueray,
+    TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
+    TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
+    TResult Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
+    TResult Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
+    TResult Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
+    TResult Function()? getPrimaryAddress,
+    TResult Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult Function(String fileImage)? uploadFileImage,
+    TResult Function(int param)? indexSearchAddress,
+    TResult Function(GeoPoint point, MapController mapController)? mapAddress,
+    TResult Function(Map<String, dynamic> data)? mapData,
+    TResult Function(CustomerCreateBluerayParam data)? addAddressMultiple,
+    TResult Function(
+            bool customerDeleteBlueray,
+            bool postcodeValidation,
+            bool subDistrictSearch,
+            bool customerCreateBlueray,
+            bool customerUpdateBlueray,
+            bool getPrimaryAddress,
+            bool postPrimaryAddress,
+            bool uploadFileImage,
+            bool mapAddress,
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
+        clearData,
+    required TResult orElse(),
+  }) {
+    if (customerLoadMoreListBlueray != null) {
+      return customerLoadMoreListBlueray();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_CustomerListBlueray value) customerListBlueray,
+    required TResult Function(_CustomerLoadMoreListBlueray value)
+        customerLoadMoreListBlueray,
+    required TResult Function(_CustomerCreateBlueray value)
+        customerCreateBlueray,
+    required TResult Function(_SubDistrictSearch value) subDistrictSearch,
+    required TResult Function(_PostcodeValidation value) postcodeValidation,
+    required TResult Function(_CustomerCreateMultipleBlueray value)
+        customerCreateMultipleBlueray,
+    required TResult Function(_CustomerDeleteBlueray value)
+        customerDeleteBlueray,
+    required TResult Function(_CustomerUpdateBlueray value)
+        customerUpdateBlueray,
+    required TResult Function(_GetPrimaryAddress value) getPrimaryAddress,
+    required TResult Function(_PostPrimaryAddress value) postPrimaryAddress,
+    required TResult Function(_UploadFileImage value) uploadFileImage,
+    required TResult Function(_IndexSearchAddress value) indexSearchAddress,
+    required TResult Function(_MapAddress value) mapAddress,
+    required TResult Function(_MapData value) mapData,
+    required TResult Function(_AddAddressMultiple value) addAddressMultiple,
+    required TResult Function(_ClearData value) clearData,
+  }) {
+    return customerLoadMoreListBlueray(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult? Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
+    TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
+    TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
+    TResult? Function(_PostcodeValidation value)? postcodeValidation,
+    TResult? Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
+    TResult? Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
+    TResult? Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
+    TResult? Function(_GetPrimaryAddress value)? getPrimaryAddress,
+    TResult? Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult? Function(_UploadFileImage value)? uploadFileImage,
+    TResult? Function(_IndexSearchAddress value)? indexSearchAddress,
+    TResult? Function(_MapAddress value)? mapAddress,
+    TResult? Function(_MapData value)? mapData,
+    TResult? Function(_AddAddressMultiple value)? addAddressMultiple,
+    TResult? Function(_ClearData value)? clearData,
+  }) {
+    return customerLoadMoreListBlueray?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
+    TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
+    TResult Function(_SubDistrictSearch value)? subDistrictSearch,
+    TResult Function(_PostcodeValidation value)? postcodeValidation,
+    TResult Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
+    TResult Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
+    TResult Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
+    TResult Function(_GetPrimaryAddress value)? getPrimaryAddress,
+    TResult Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult Function(_UploadFileImage value)? uploadFileImage,
+    TResult Function(_IndexSearchAddress value)? indexSearchAddress,
+    TResult Function(_MapAddress value)? mapAddress,
+    TResult Function(_MapData value)? mapData,
+    TResult Function(_AddAddressMultiple value)? addAddressMultiple,
+    TResult Function(_ClearData value)? clearData,
+    required TResult orElse(),
+  }) {
+    if (customerLoadMoreListBlueray != null) {
+      return customerLoadMoreListBlueray(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CustomerLoadMoreListBlueray implements AddressEvent {
+  const factory _CustomerLoadMoreListBlueray() =
+      _$CustomerLoadMoreListBluerayImpl;
 }
 
 /// @nodoc
@@ -506,6 +771,7 @@ class _$CustomerCreateBluerayImpl implements _CustomerCreateBlueray {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() customerListBlueray,
+    required TResult Function() customerLoadMoreListBlueray,
     required TResult Function(CustomerCreateBluerayParam param)
         customerCreateBlueray,
     required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
@@ -547,6 +813,7 @@ class _$CustomerCreateBluerayImpl implements _CustomerCreateBlueray {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? customerListBlueray,
+    TResult? Function()? customerLoadMoreListBlueray,
     TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult? Function(PostcodeValidationParam param)? postcodeValidation,
@@ -583,6 +850,7 @@ class _$CustomerCreateBluerayImpl implements _CustomerCreateBlueray {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? customerListBlueray,
+    TResult Function()? customerLoadMoreListBlueray,
     TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult Function(PostcodeValidationParam param)? postcodeValidation,
@@ -623,6 +891,8 @@ class _$CustomerCreateBluerayImpl implements _CustomerCreateBlueray {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CustomerListBlueray value) customerListBlueray,
+    required TResult Function(_CustomerLoadMoreListBlueray value)
+        customerLoadMoreListBlueray,
     required TResult Function(_CustomerCreateBlueray value)
         customerCreateBlueray,
     required TResult Function(_SubDistrictSearch value) subDistrictSearch,
@@ -649,6 +919,8 @@ class _$CustomerCreateBluerayImpl implements _CustomerCreateBlueray {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult? Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult? Function(_PostcodeValidation value)? postcodeValidation,
@@ -672,6 +944,8 @@ class _$CustomerCreateBluerayImpl implements _CustomerCreateBlueray {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult Function(_PostcodeValidation value)? postcodeValidation,
@@ -773,6 +1047,7 @@ class _$SubDistrictSearchImpl implements _SubDistrictSearch {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() customerListBlueray,
+    required TResult Function() customerLoadMoreListBlueray,
     required TResult Function(CustomerCreateBluerayParam param)
         customerCreateBlueray,
     required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
@@ -814,6 +1089,7 @@ class _$SubDistrictSearchImpl implements _SubDistrictSearch {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? customerListBlueray,
+    TResult? Function()? customerLoadMoreListBlueray,
     TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult? Function(PostcodeValidationParam param)? postcodeValidation,
@@ -850,6 +1126,7 @@ class _$SubDistrictSearchImpl implements _SubDistrictSearch {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? customerListBlueray,
+    TResult Function()? customerLoadMoreListBlueray,
     TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult Function(PostcodeValidationParam param)? postcodeValidation,
@@ -890,6 +1167,8 @@ class _$SubDistrictSearchImpl implements _SubDistrictSearch {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CustomerListBlueray value) customerListBlueray,
+    required TResult Function(_CustomerLoadMoreListBlueray value)
+        customerLoadMoreListBlueray,
     required TResult Function(_CustomerCreateBlueray value)
         customerCreateBlueray,
     required TResult Function(_SubDistrictSearch value) subDistrictSearch,
@@ -916,6 +1195,8 @@ class _$SubDistrictSearchImpl implements _SubDistrictSearch {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult? Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult? Function(_PostcodeValidation value)? postcodeValidation,
@@ -939,6 +1220,8 @@ class _$SubDistrictSearchImpl implements _SubDistrictSearch {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult Function(_PostcodeValidation value)? postcodeValidation,
@@ -1039,6 +1322,7 @@ class _$PostcodeValidationImpl implements _PostcodeValidation {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() customerListBlueray,
+    required TResult Function() customerLoadMoreListBlueray,
     required TResult Function(CustomerCreateBluerayParam param)
         customerCreateBlueray,
     required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
@@ -1080,6 +1364,7 @@ class _$PostcodeValidationImpl implements _PostcodeValidation {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? customerListBlueray,
+    TResult? Function()? customerLoadMoreListBlueray,
     TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult? Function(PostcodeValidationParam param)? postcodeValidation,
@@ -1116,6 +1401,7 @@ class _$PostcodeValidationImpl implements _PostcodeValidation {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? customerListBlueray,
+    TResult Function()? customerLoadMoreListBlueray,
     TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult Function(PostcodeValidationParam param)? postcodeValidation,
@@ -1156,6 +1442,8 @@ class _$PostcodeValidationImpl implements _PostcodeValidation {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CustomerListBlueray value) customerListBlueray,
+    required TResult Function(_CustomerLoadMoreListBlueray value)
+        customerLoadMoreListBlueray,
     required TResult Function(_CustomerCreateBlueray value)
         customerCreateBlueray,
     required TResult Function(_SubDistrictSearch value) subDistrictSearch,
@@ -1182,6 +1470,8 @@ class _$PostcodeValidationImpl implements _PostcodeValidation {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult? Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult? Function(_PostcodeValidation value)? postcodeValidation,
@@ -1205,6 +1495,8 @@ class _$PostcodeValidationImpl implements _PostcodeValidation {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult Function(_PostcodeValidation value)? postcodeValidation,
@@ -1319,6 +1611,7 @@ class _$CustomerCreateMultipleBluerayImpl
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() customerListBlueray,
+    required TResult Function() customerLoadMoreListBlueray,
     required TResult Function(CustomerCreateBluerayParam param)
         customerCreateBlueray,
     required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
@@ -1360,6 +1653,7 @@ class _$CustomerCreateMultipleBluerayImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? customerListBlueray,
+    TResult? Function()? customerLoadMoreListBlueray,
     TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult? Function(PostcodeValidationParam param)? postcodeValidation,
@@ -1396,6 +1690,7 @@ class _$CustomerCreateMultipleBluerayImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? customerListBlueray,
+    TResult Function()? customerLoadMoreListBlueray,
     TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult Function(PostcodeValidationParam param)? postcodeValidation,
@@ -1436,6 +1731,8 @@ class _$CustomerCreateMultipleBluerayImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CustomerListBlueray value) customerListBlueray,
+    required TResult Function(_CustomerLoadMoreListBlueray value)
+        customerLoadMoreListBlueray,
     required TResult Function(_CustomerCreateBlueray value)
         customerCreateBlueray,
     required TResult Function(_SubDistrictSearch value) subDistrictSearch,
@@ -1462,6 +1759,8 @@ class _$CustomerCreateMultipleBluerayImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult? Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult? Function(_PostcodeValidation value)? postcodeValidation,
@@ -1485,6 +1784,8 @@ class _$CustomerCreateMultipleBluerayImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult Function(_PostcodeValidation value)? postcodeValidation,
@@ -1588,6 +1889,7 @@ class _$CustomerDeleteBluerayImpl implements _CustomerDeleteBlueray {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() customerListBlueray,
+    required TResult Function() customerLoadMoreListBlueray,
     required TResult Function(CustomerCreateBluerayParam param)
         customerCreateBlueray,
     required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
@@ -1629,6 +1931,7 @@ class _$CustomerDeleteBluerayImpl implements _CustomerDeleteBlueray {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? customerListBlueray,
+    TResult? Function()? customerLoadMoreListBlueray,
     TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult? Function(PostcodeValidationParam param)? postcodeValidation,
@@ -1665,6 +1968,7 @@ class _$CustomerDeleteBluerayImpl implements _CustomerDeleteBlueray {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? customerListBlueray,
+    TResult Function()? customerLoadMoreListBlueray,
     TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult Function(PostcodeValidationParam param)? postcodeValidation,
@@ -1705,6 +2009,8 @@ class _$CustomerDeleteBluerayImpl implements _CustomerDeleteBlueray {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CustomerListBlueray value) customerListBlueray,
+    required TResult Function(_CustomerLoadMoreListBlueray value)
+        customerLoadMoreListBlueray,
     required TResult Function(_CustomerCreateBlueray value)
         customerCreateBlueray,
     required TResult Function(_SubDistrictSearch value) subDistrictSearch,
@@ -1731,6 +2037,8 @@ class _$CustomerDeleteBluerayImpl implements _CustomerDeleteBlueray {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult? Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult? Function(_PostcodeValidation value)? postcodeValidation,
@@ -1754,6 +2062,8 @@ class _$CustomerDeleteBluerayImpl implements _CustomerDeleteBlueray {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult Function(_PostcodeValidation value)? postcodeValidation,
@@ -1856,6 +2166,7 @@ class _$CustomerUpdateBluerayImpl implements _CustomerUpdateBlueray {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() customerListBlueray,
+    required TResult Function() customerLoadMoreListBlueray,
     required TResult Function(CustomerCreateBluerayParam param)
         customerCreateBlueray,
     required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
@@ -1897,6 +2208,7 @@ class _$CustomerUpdateBluerayImpl implements _CustomerUpdateBlueray {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? customerListBlueray,
+    TResult? Function()? customerLoadMoreListBlueray,
     TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult? Function(PostcodeValidationParam param)? postcodeValidation,
@@ -1933,6 +2245,7 @@ class _$CustomerUpdateBluerayImpl implements _CustomerUpdateBlueray {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? customerListBlueray,
+    TResult Function()? customerLoadMoreListBlueray,
     TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult Function(PostcodeValidationParam param)? postcodeValidation,
@@ -1973,6 +2286,8 @@ class _$CustomerUpdateBluerayImpl implements _CustomerUpdateBlueray {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CustomerListBlueray value) customerListBlueray,
+    required TResult Function(_CustomerLoadMoreListBlueray value)
+        customerLoadMoreListBlueray,
     required TResult Function(_CustomerCreateBlueray value)
         customerCreateBlueray,
     required TResult Function(_SubDistrictSearch value) subDistrictSearch,
@@ -1999,6 +2314,8 @@ class _$CustomerUpdateBluerayImpl implements _CustomerUpdateBlueray {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult? Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult? Function(_PostcodeValidation value)? postcodeValidation,
@@ -2022,6 +2339,8 @@ class _$CustomerUpdateBluerayImpl implements _CustomerUpdateBlueray {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult Function(_PostcodeValidation value)? postcodeValidation,
@@ -2096,6 +2415,7 @@ class _$GetPrimaryAddressImpl implements _GetPrimaryAddress {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() customerListBlueray,
+    required TResult Function() customerLoadMoreListBlueray,
     required TResult Function(CustomerCreateBluerayParam param)
         customerCreateBlueray,
     required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
@@ -2137,6 +2457,7 @@ class _$GetPrimaryAddressImpl implements _GetPrimaryAddress {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? customerListBlueray,
+    TResult? Function()? customerLoadMoreListBlueray,
     TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult? Function(PostcodeValidationParam param)? postcodeValidation,
@@ -2173,6 +2494,7 @@ class _$GetPrimaryAddressImpl implements _GetPrimaryAddress {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? customerListBlueray,
+    TResult Function()? customerLoadMoreListBlueray,
     TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult Function(PostcodeValidationParam param)? postcodeValidation,
@@ -2213,6 +2535,8 @@ class _$GetPrimaryAddressImpl implements _GetPrimaryAddress {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CustomerListBlueray value) customerListBlueray,
+    required TResult Function(_CustomerLoadMoreListBlueray value)
+        customerLoadMoreListBlueray,
     required TResult Function(_CustomerCreateBlueray value)
         customerCreateBlueray,
     required TResult Function(_SubDistrictSearch value) subDistrictSearch,
@@ -2239,6 +2563,8 @@ class _$GetPrimaryAddressImpl implements _GetPrimaryAddress {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult? Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult? Function(_PostcodeValidation value)? postcodeValidation,
@@ -2262,6 +2588,8 @@ class _$GetPrimaryAddressImpl implements _GetPrimaryAddress {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult Function(_PostcodeValidation value)? postcodeValidation,
@@ -2356,6 +2684,7 @@ class _$PostPrimaryAddressImpl implements _PostPrimaryAddress {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() customerListBlueray,
+    required TResult Function() customerLoadMoreListBlueray,
     required TResult Function(CustomerCreateBluerayParam param)
         customerCreateBlueray,
     required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
@@ -2397,6 +2726,7 @@ class _$PostPrimaryAddressImpl implements _PostPrimaryAddress {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? customerListBlueray,
+    TResult? Function()? customerLoadMoreListBlueray,
     TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult? Function(PostcodeValidationParam param)? postcodeValidation,
@@ -2433,6 +2763,7 @@ class _$PostPrimaryAddressImpl implements _PostPrimaryAddress {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? customerListBlueray,
+    TResult Function()? customerLoadMoreListBlueray,
     TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult Function(PostcodeValidationParam param)? postcodeValidation,
@@ -2473,6 +2804,8 @@ class _$PostPrimaryAddressImpl implements _PostPrimaryAddress {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CustomerListBlueray value) customerListBlueray,
+    required TResult Function(_CustomerLoadMoreListBlueray value)
+        customerLoadMoreListBlueray,
     required TResult Function(_CustomerCreateBlueray value)
         customerCreateBlueray,
     required TResult Function(_SubDistrictSearch value) subDistrictSearch,
@@ -2499,6 +2832,8 @@ class _$PostPrimaryAddressImpl implements _PostPrimaryAddress {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult? Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult? Function(_PostcodeValidation value)? postcodeValidation,
@@ -2522,6 +2857,8 @@ class _$PostPrimaryAddressImpl implements _PostPrimaryAddress {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult Function(_PostcodeValidation value)? postcodeValidation,
@@ -2624,6 +2961,7 @@ class _$UploadFileImageImpl implements _UploadFileImage {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() customerListBlueray,
+    required TResult Function() customerLoadMoreListBlueray,
     required TResult Function(CustomerCreateBluerayParam param)
         customerCreateBlueray,
     required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
@@ -2665,6 +3003,7 @@ class _$UploadFileImageImpl implements _UploadFileImage {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? customerListBlueray,
+    TResult? Function()? customerLoadMoreListBlueray,
     TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult? Function(PostcodeValidationParam param)? postcodeValidation,
@@ -2701,6 +3040,7 @@ class _$UploadFileImageImpl implements _UploadFileImage {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? customerListBlueray,
+    TResult Function()? customerLoadMoreListBlueray,
     TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult Function(PostcodeValidationParam param)? postcodeValidation,
@@ -2741,6 +3081,8 @@ class _$UploadFileImageImpl implements _UploadFileImage {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CustomerListBlueray value) customerListBlueray,
+    required TResult Function(_CustomerLoadMoreListBlueray value)
+        customerLoadMoreListBlueray,
     required TResult Function(_CustomerCreateBlueray value)
         customerCreateBlueray,
     required TResult Function(_SubDistrictSearch value) subDistrictSearch,
@@ -2767,6 +3109,8 @@ class _$UploadFileImageImpl implements _UploadFileImage {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult? Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult? Function(_PostcodeValidation value)? postcodeValidation,
@@ -2790,6 +3134,8 @@ class _$UploadFileImageImpl implements _UploadFileImage {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult Function(_PostcodeValidation value)? postcodeValidation,
@@ -2890,6 +3236,7 @@ class _$IndexSearchAddressImpl implements _IndexSearchAddress {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() customerListBlueray,
+    required TResult Function() customerLoadMoreListBlueray,
     required TResult Function(CustomerCreateBluerayParam param)
         customerCreateBlueray,
     required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
@@ -2931,6 +3278,7 @@ class _$IndexSearchAddressImpl implements _IndexSearchAddress {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? customerListBlueray,
+    TResult? Function()? customerLoadMoreListBlueray,
     TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult? Function(PostcodeValidationParam param)? postcodeValidation,
@@ -2967,6 +3315,7 @@ class _$IndexSearchAddressImpl implements _IndexSearchAddress {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? customerListBlueray,
+    TResult Function()? customerLoadMoreListBlueray,
     TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult Function(PostcodeValidationParam param)? postcodeValidation,
@@ -3007,6 +3356,8 @@ class _$IndexSearchAddressImpl implements _IndexSearchAddress {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CustomerListBlueray value) customerListBlueray,
+    required TResult Function(_CustomerLoadMoreListBlueray value)
+        customerLoadMoreListBlueray,
     required TResult Function(_CustomerCreateBlueray value)
         customerCreateBlueray,
     required TResult Function(_SubDistrictSearch value) subDistrictSearch,
@@ -3033,6 +3384,8 @@ class _$IndexSearchAddressImpl implements _IndexSearchAddress {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult? Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult? Function(_PostcodeValidation value)? postcodeValidation,
@@ -3056,6 +3409,8 @@ class _$IndexSearchAddressImpl implements _IndexSearchAddress {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult Function(_PostcodeValidation value)? postcodeValidation,
@@ -3164,6 +3519,7 @@ class _$MapAddressImpl implements _MapAddress {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() customerListBlueray,
+    required TResult Function() customerLoadMoreListBlueray,
     required TResult Function(CustomerCreateBluerayParam param)
         customerCreateBlueray,
     required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
@@ -3205,6 +3561,7 @@ class _$MapAddressImpl implements _MapAddress {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? customerListBlueray,
+    TResult? Function()? customerLoadMoreListBlueray,
     TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult? Function(PostcodeValidationParam param)? postcodeValidation,
@@ -3241,6 +3598,7 @@ class _$MapAddressImpl implements _MapAddress {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? customerListBlueray,
+    TResult Function()? customerLoadMoreListBlueray,
     TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult Function(PostcodeValidationParam param)? postcodeValidation,
@@ -3281,6 +3639,8 @@ class _$MapAddressImpl implements _MapAddress {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CustomerListBlueray value) customerListBlueray,
+    required TResult Function(_CustomerLoadMoreListBlueray value)
+        customerLoadMoreListBlueray,
     required TResult Function(_CustomerCreateBlueray value)
         customerCreateBlueray,
     required TResult Function(_SubDistrictSearch value) subDistrictSearch,
@@ -3307,6 +3667,8 @@ class _$MapAddressImpl implements _MapAddress {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult? Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult? Function(_PostcodeValidation value)? postcodeValidation,
@@ -3330,6 +3692,8 @@ class _$MapAddressImpl implements _MapAddress {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult Function(_PostcodeValidation value)? postcodeValidation,
@@ -3438,6 +3802,7 @@ class _$MapDataImpl implements _MapData {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() customerListBlueray,
+    required TResult Function() customerLoadMoreListBlueray,
     required TResult Function(CustomerCreateBluerayParam param)
         customerCreateBlueray,
     required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
@@ -3479,6 +3844,7 @@ class _$MapDataImpl implements _MapData {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? customerListBlueray,
+    TResult? Function()? customerLoadMoreListBlueray,
     TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult? Function(PostcodeValidationParam param)? postcodeValidation,
@@ -3515,6 +3881,7 @@ class _$MapDataImpl implements _MapData {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? customerListBlueray,
+    TResult Function()? customerLoadMoreListBlueray,
     TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult Function(PostcodeValidationParam param)? postcodeValidation,
@@ -3555,6 +3922,8 @@ class _$MapDataImpl implements _MapData {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CustomerListBlueray value) customerListBlueray,
+    required TResult Function(_CustomerLoadMoreListBlueray value)
+        customerLoadMoreListBlueray,
     required TResult Function(_CustomerCreateBlueray value)
         customerCreateBlueray,
     required TResult Function(_SubDistrictSearch value) subDistrictSearch,
@@ -3581,6 +3950,8 @@ class _$MapDataImpl implements _MapData {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult? Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult? Function(_PostcodeValidation value)? postcodeValidation,
@@ -3604,6 +3975,8 @@ class _$MapDataImpl implements _MapData {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult Function(_PostcodeValidation value)? postcodeValidation,
@@ -3704,6 +4077,7 @@ class _$AddAddressMultipleImpl implements _AddAddressMultiple {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() customerListBlueray,
+    required TResult Function() customerLoadMoreListBlueray,
     required TResult Function(CustomerCreateBluerayParam param)
         customerCreateBlueray,
     required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
@@ -3745,6 +4119,7 @@ class _$AddAddressMultipleImpl implements _AddAddressMultiple {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? customerListBlueray,
+    TResult? Function()? customerLoadMoreListBlueray,
     TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult? Function(PostcodeValidationParam param)? postcodeValidation,
@@ -3781,6 +4156,7 @@ class _$AddAddressMultipleImpl implements _AddAddressMultiple {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? customerListBlueray,
+    TResult Function()? customerLoadMoreListBlueray,
     TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult Function(PostcodeValidationParam param)? postcodeValidation,
@@ -3821,6 +4197,8 @@ class _$AddAddressMultipleImpl implements _AddAddressMultiple {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CustomerListBlueray value) customerListBlueray,
+    required TResult Function(_CustomerLoadMoreListBlueray value)
+        customerLoadMoreListBlueray,
     required TResult Function(_CustomerCreateBlueray value)
         customerCreateBlueray,
     required TResult Function(_SubDistrictSearch value) subDistrictSearch,
@@ -3847,6 +4225,8 @@ class _$AddAddressMultipleImpl implements _AddAddressMultiple {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult? Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult? Function(_PostcodeValidation value)? postcodeValidation,
@@ -3870,6 +4250,8 @@ class _$AddAddressMultipleImpl implements _AddAddressMultiple {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult Function(_PostcodeValidation value)? postcodeValidation,
@@ -4120,6 +4502,7 @@ class _$ClearDataImpl implements _ClearData {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() customerListBlueray,
+    required TResult Function() customerLoadMoreListBlueray,
     required TResult Function(CustomerCreateBluerayParam param)
         customerCreateBlueray,
     required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
@@ -4173,6 +4556,7 @@ class _$ClearDataImpl implements _ClearData {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? customerListBlueray,
+    TResult? Function()? customerLoadMoreListBlueray,
     TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult? Function(PostcodeValidationParam param)? postcodeValidation,
@@ -4221,6 +4605,7 @@ class _$ClearDataImpl implements _ClearData {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? customerListBlueray,
+    TResult Function()? customerLoadMoreListBlueray,
     TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult Function(PostcodeValidationParam param)? postcodeValidation,
@@ -4273,6 +4658,8 @@ class _$ClearDataImpl implements _ClearData {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CustomerListBlueray value) customerListBlueray,
+    required TResult Function(_CustomerLoadMoreListBlueray value)
+        customerLoadMoreListBlueray,
     required TResult Function(_CustomerCreateBlueray value)
         customerCreateBlueray,
     required TResult Function(_SubDistrictSearch value) subDistrictSearch,
@@ -4299,6 +4686,8 @@ class _$ClearDataImpl implements _ClearData {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult? Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult? Function(_PostcodeValidation value)? postcodeValidation,
@@ -4322,6 +4711,8 @@ class _$ClearDataImpl implements _ClearData {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult Function(_CustomerLoadMoreListBlueray value)?
+        customerLoadMoreListBlueray,
     TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult Function(_PostcodeValidation value)? postcodeValidation,
@@ -4384,6 +4775,11 @@ mixin _$AddressState {
   bool get isGetAddressListLoading => throw _privateConstructorUsedError;
   String? get getAddressListError => throw _privateConstructorUsedError;
   List<CustomerAddressEntity> get getAddressList =>
+      throw _privateConstructorUsedError;
+  List<CustomerAddressEntity> get paginatedCustomers =>
+      throw _privateConstructorUsedError;
+  int get currentPage => throw _privateConstructorUsedError;
+  bool get hasReachedMax =>
       throw _privateConstructorUsedError; // Post Customer Address
   bool get isPostAddressLoading => throw _privateConstructorUsedError;
   String? get postAddressError => throw _privateConstructorUsedError;
@@ -4445,6 +4841,9 @@ abstract class $AddressStateCopyWith<$Res> {
       {bool isGetAddressListLoading,
       String? getAddressListError,
       List<CustomerAddressEntity> getAddressList,
+      List<CustomerAddressEntity> paginatedCustomers,
+      int currentPage,
+      bool hasReachedMax,
       bool isPostAddressLoading,
       String? postAddressError,
       bool postAddressSuccess,
@@ -4496,6 +4895,9 @@ class _$AddressStateCopyWithImpl<$Res, $Val extends AddressState>
     Object? isGetAddressListLoading = null,
     Object? getAddressListError = freezed,
     Object? getAddressList = null,
+    Object? paginatedCustomers = null,
+    Object? currentPage = null,
+    Object? hasReachedMax = null,
     Object? isPostAddressLoading = null,
     Object? postAddressError = freezed,
     Object? postAddressSuccess = null,
@@ -4543,6 +4945,18 @@ class _$AddressStateCopyWithImpl<$Res, $Val extends AddressState>
           ? _value.getAddressList
           : getAddressList // ignore: cast_nullable_to_non_nullable
               as List<CustomerAddressEntity>,
+      paginatedCustomers: null == paginatedCustomers
+          ? _value.paginatedCustomers
+          : paginatedCustomers // ignore: cast_nullable_to_non_nullable
+              as List<CustomerAddressEntity>,
+      currentPage: null == currentPage
+          ? _value.currentPage
+          : currentPage // ignore: cast_nullable_to_non_nullable
+              as int,
+      hasReachedMax: null == hasReachedMax
+          ? _value.hasReachedMax
+          : hasReachedMax // ignore: cast_nullable_to_non_nullable
+              as bool,
       isPostAddressLoading: null == isPostAddressLoading
           ? _value.isPostAddressLoading
           : isPostAddressLoading // ignore: cast_nullable_to_non_nullable
@@ -4691,6 +5105,9 @@ abstract class _$$AddressStateImplCopyWith<$Res>
       {bool isGetAddressListLoading,
       String? getAddressListError,
       List<CustomerAddressEntity> getAddressList,
+      List<CustomerAddressEntity> paginatedCustomers,
+      int currentPage,
+      bool hasReachedMax,
       bool isPostAddressLoading,
       String? postAddressError,
       bool postAddressSuccess,
@@ -4740,6 +5157,9 @@ class __$$AddressStateImplCopyWithImpl<$Res>
     Object? isGetAddressListLoading = null,
     Object? getAddressListError = freezed,
     Object? getAddressList = null,
+    Object? paginatedCustomers = null,
+    Object? currentPage = null,
+    Object? hasReachedMax = null,
     Object? isPostAddressLoading = null,
     Object? postAddressError = freezed,
     Object? postAddressSuccess = null,
@@ -4787,6 +5207,18 @@ class __$$AddressStateImplCopyWithImpl<$Res>
           ? _value._getAddressList
           : getAddressList // ignore: cast_nullable_to_non_nullable
               as List<CustomerAddressEntity>,
+      paginatedCustomers: null == paginatedCustomers
+          ? _value._paginatedCustomers
+          : paginatedCustomers // ignore: cast_nullable_to_non_nullable
+              as List<CustomerAddressEntity>,
+      currentPage: null == currentPage
+          ? _value.currentPage
+          : currentPage // ignore: cast_nullable_to_non_nullable
+              as int,
+      hasReachedMax: null == hasReachedMax
+          ? _value.hasReachedMax
+          : hasReachedMax // ignore: cast_nullable_to_non_nullable
+              as bool,
       isPostAddressLoading: null == isPostAddressLoading
           ? _value.isPostAddressLoading
           : isPostAddressLoading // ignore: cast_nullable_to_non_nullable
@@ -4930,6 +5362,9 @@ class _$AddressStateImpl implements _AddressState {
       {this.isGetAddressListLoading = false,
       this.getAddressListError,
       final List<CustomerAddressEntity> getAddressList = const [],
+      final List<CustomerAddressEntity> paginatedCustomers = const [],
+      this.currentPage = 1,
+      this.hasReachedMax = false,
       this.isPostAddressLoading = false,
       this.postAddressError,
       this.postAddressSuccess = false,
@@ -4964,6 +5399,7 @@ class _$AddressStateImpl implements _AddressState {
       final Map<String, dynamic>? mapData,
       final List<CustomerCreateBluerayParam> address = const []})
       : _getAddressList = getAddressList,
+        _paginatedCustomers = paginatedCustomers,
         _subDistrictSearchList = subDistrictSearchList,
         _mapData = mapData,
         _address = address;
@@ -4983,6 +5419,22 @@ class _$AddressStateImpl implements _AddressState {
     return EqualUnmodifiableListView(_getAddressList);
   }
 
+  final List<CustomerAddressEntity> _paginatedCustomers;
+  @override
+  @JsonKey()
+  List<CustomerAddressEntity> get paginatedCustomers {
+    if (_paginatedCustomers is EqualUnmodifiableListView)
+      return _paginatedCustomers;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_paginatedCustomers);
+  }
+
+  @override
+  @JsonKey()
+  final int currentPage;
+  @override
+  @JsonKey()
+  final bool hasReachedMax;
 // Post Customer Address
   @override
   @JsonKey()
@@ -5102,7 +5554,7 @@ class _$AddressStateImpl implements _AddressState {
 
   @override
   String toString() {
-    return 'AddressState(isGetAddressListLoading: $isGetAddressListLoading, getAddressListError: $getAddressListError, getAddressList: $getAddressList, isPostAddressLoading: $isPostAddressLoading, postAddressError: $postAddressError, postAddressSuccess: $postAddressSuccess, isPostAddressMultipleLoading: $isPostAddressMultipleLoading, postAddressMultipleError: $postAddressMultipleError, postAddressMultipleSuccess: $postAddressMultipleSuccess, isSubDistrictSearchLoading: $isSubDistrictSearchLoading, subDistrictSearchError: $subDistrictSearchError, subDistrictSearchList: $subDistrictSearchList, isPostcodeValidationLoading: $isPostcodeValidationLoading, postcodeValidationError: $postcodeValidationError, isPostcodeValidationSuccess: $isPostcodeValidationSuccess, isDeleteAddressLoading: $isDeleteAddressLoading, deleteAddressError: $deleteAddressError, deleteAddressSuccess: $deleteAddressSuccess, isUpdateAddressLoading: $isUpdateAddressLoading, updateAddressError: $updateAddressError, updateAddressSuccess: $updateAddressSuccess, isGetPrimaryAddressLoading: $isGetPrimaryAddressLoading, getPrimaryAddressError: $getPrimaryAddressError, getPrimaryAddressSuccess: $getPrimaryAddressSuccess, isPostPrimaryAddressLoading: $isPostPrimaryAddressLoading, postPrimaryAddressError: $postPrimaryAddressError, postPrimaryAddressSuccess: $postPrimaryAddressSuccess, isUploadFileImageLoading: $isUploadFileImageLoading, uploadFileImageError: $uploadFileImageError, uploadFileImageSuccess: $uploadFileImageSuccess, indexSearchAddress: $indexSearchAddress, mapAddress: $mapAddress, mapAddressError: $mapAddressError, mapPoint: $mapPoint, mapData: $mapData, address: $address)';
+    return 'AddressState(isGetAddressListLoading: $isGetAddressListLoading, getAddressListError: $getAddressListError, getAddressList: $getAddressList, paginatedCustomers: $paginatedCustomers, currentPage: $currentPage, hasReachedMax: $hasReachedMax, isPostAddressLoading: $isPostAddressLoading, postAddressError: $postAddressError, postAddressSuccess: $postAddressSuccess, isPostAddressMultipleLoading: $isPostAddressMultipleLoading, postAddressMultipleError: $postAddressMultipleError, postAddressMultipleSuccess: $postAddressMultipleSuccess, isSubDistrictSearchLoading: $isSubDistrictSearchLoading, subDistrictSearchError: $subDistrictSearchError, subDistrictSearchList: $subDistrictSearchList, isPostcodeValidationLoading: $isPostcodeValidationLoading, postcodeValidationError: $postcodeValidationError, isPostcodeValidationSuccess: $isPostcodeValidationSuccess, isDeleteAddressLoading: $isDeleteAddressLoading, deleteAddressError: $deleteAddressError, deleteAddressSuccess: $deleteAddressSuccess, isUpdateAddressLoading: $isUpdateAddressLoading, updateAddressError: $updateAddressError, updateAddressSuccess: $updateAddressSuccess, isGetPrimaryAddressLoading: $isGetPrimaryAddressLoading, getPrimaryAddressError: $getPrimaryAddressError, getPrimaryAddressSuccess: $getPrimaryAddressSuccess, isPostPrimaryAddressLoading: $isPostPrimaryAddressLoading, postPrimaryAddressError: $postPrimaryAddressError, postPrimaryAddressSuccess: $postPrimaryAddressSuccess, isUploadFileImageLoading: $isUploadFileImageLoading, uploadFileImageError: $uploadFileImageError, uploadFileImageSuccess: $uploadFileImageSuccess, indexSearchAddress: $indexSearchAddress, mapAddress: $mapAddress, mapAddressError: $mapAddressError, mapPoint: $mapPoint, mapData: $mapData, address: $address)';
   }
 
   @override
@@ -5116,6 +5568,12 @@ class _$AddressStateImpl implements _AddressState {
                 other.getAddressListError == getAddressListError) &&
             const DeepCollectionEquality()
                 .equals(other._getAddressList, _getAddressList) &&
+            const DeepCollectionEquality()
+                .equals(other._paginatedCustomers, _paginatedCustomers) &&
+            (identical(other.currentPage, currentPage) ||
+                other.currentPage == currentPage) &&
+            (identical(other.hasReachedMax, hasReachedMax) ||
+                other.hasReachedMax == hasReachedMax) &&
             (identical(other.isPostAddressLoading, isPostAddressLoading) ||
                 other.isPostAddressLoading == isPostAddressLoading) &&
             (identical(other.postAddressError, postAddressError) ||
@@ -5149,8 +5607,7 @@ class _$AddressStateImpl implements _AddressState {
                 other.isDeleteAddressLoading == isDeleteAddressLoading) &&
             (identical(other.deleteAddressError, deleteAddressError) ||
                 other.deleteAddressError == deleteAddressError) &&
-            (identical(other.deleteAddressSuccess, deleteAddressSuccess) ||
-                other.deleteAddressSuccess == deleteAddressSuccess) &&
+            (identical(other.deleteAddressSuccess, deleteAddressSuccess) || other.deleteAddressSuccess == deleteAddressSuccess) &&
             (identical(other.isUpdateAddressLoading, isUpdateAddressLoading) || other.isUpdateAddressLoading == isUpdateAddressLoading) &&
             (identical(other.updateAddressError, updateAddressError) || other.updateAddressError == updateAddressError) &&
             (identical(other.updateAddressSuccess, updateAddressSuccess) || other.updateAddressSuccess == updateAddressSuccess) &&
@@ -5177,6 +5634,9 @@ class _$AddressStateImpl implements _AddressState {
         isGetAddressListLoading,
         getAddressListError,
         const DeepCollectionEquality().hash(_getAddressList),
+        const DeepCollectionEquality().hash(_paginatedCustomers),
+        currentPage,
+        hasReachedMax,
         isPostAddressLoading,
         postAddressError,
         postAddressSuccess,
@@ -5224,6 +5684,9 @@ abstract class _AddressState implements AddressState {
       {final bool isGetAddressListLoading,
       final String? getAddressListError,
       final List<CustomerAddressEntity> getAddressList,
+      final List<CustomerAddressEntity> paginatedCustomers,
+      final int currentPage,
+      final bool hasReachedMax,
       final bool isPostAddressLoading,
       final String? postAddressError,
       final bool postAddressSuccess,
@@ -5264,6 +5727,12 @@ abstract class _AddressState implements AddressState {
   String? get getAddressListError;
   @override
   List<CustomerAddressEntity> get getAddressList;
+  @override
+  List<CustomerAddressEntity> get paginatedCustomers;
+  @override
+  int get currentPage;
+  @override
+  bool get hasReachedMax;
   @override // Post Customer Address
   bool get isPostAddressLoading;
   @override

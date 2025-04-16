@@ -18,11 +18,23 @@ class AddressPage extends StatefulWidget {
 }
 
 class _AddressPageState extends State<AddressPage> {
+  final ScrollController _scrollController = ScrollController();
+
   @override
   void initState() {
     super.initState();
     context.read<AddressBloc>().add(const AddressEvent.customerListBlueray());
     context.read<AddressBloc>().add(const AddressEvent.getPrimaryAddress());
+
+    _scrollController.addListener(() {
+      if (_scrollController.position.pixels >=
+          _scrollController.position.maxScrollExtent - 200) {
+        print(_scrollController.position.pixels);
+        context
+            .read<AddressBloc>()
+            .add(const AddressEvent.customerLoadMoreListBlueray());
+      }
+    });
   }
 
   @override
@@ -101,6 +113,7 @@ class _AddressPageState extends State<AddressPage> {
           ],
         ),
         body: ListView(
+          controller: _scrollController,
           children: [
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: 12),
@@ -132,33 +145,54 @@ class _AddressPageState extends State<AddressPage> {
             const SizedBox(height: 12),
             BlocBuilder<AddressBloc, AddressState>(
               builder: (context, state) {
-                return ListView.separated(
-                  physics: const NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  itemCount: state.isGetAddressListLoading
-                      ? 3
-                      : state.getAddressList.isEmpty
-                          ? 1
-                          : state.getAddressList.length,
-                  itemBuilder: (context, index) {
-                    return state.isGetAddressListLoading
-                        ? const ShimmerAddressItem()
-                        : state.getAddressList.isEmpty
-                            ? Center(
-                                child: Text(
-                                'Tidak ada alamat',
-                                style: AppTheme.jakartaSansTextTheme.bodyMedium,
-                              ))
-                            : AddressItem(
-                                data: state.getAddressList[index],
-                              );
-                  },
-                  separatorBuilder: (BuildContext context, int index) =>
-                      const SizedBox(height: 12),
+                final isLoading = state.isGetAddressListLoading;
+                final addresses = state.paginatedCustomers;
+
+                return Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    ListView.separated(
+                      physics: const NeverScrollableScrollPhysics(),
+                      shrinkWrap: true,
+                      itemCount: isLoading
+                          ? 3
+                          : addresses.isEmpty
+                              ? 1
+                              : addresses.length,
+                      itemBuilder: (context, index) {
+                        if (isLoading) return const ShimmerAddressItem();
+
+                        if (addresses.isEmpty) {
+                          return Center(
+                            child: Text(
+                              'Tidak ada alamat',
+                              style: AppTheme.jakartaSansTextTheme.bodyMedium,
+                            ),
+                          );
+                        }
+
+                        return AddressItem(data: addresses[index]);
+                      },
+                      separatorBuilder: (_, __) => const SizedBox(height: 12),
+                    ),
+                    const SizedBox(height: 16),
+                    if (!isLoading && !state.hasReachedMax)
+                      Center(
+                        child: state.hasReachedMax
+                            ? const SizedBox(
+                                height: 16,
+                                width: 16,
+                                child: CircularProgressIndicator(
+                                  color: Colors.blue,
+                                ),
+                              )
+                            : const SizedBox(),
+                      ),
+                  ],
                 );
               },
             ),
-            const SizedBox(height: 12),
+            const SizedBox(height: 500),
           ],
         ),
         floatingActionButton: FloatingActionButton(
@@ -235,5 +269,11 @@ class _AddressPageState extends State<AddressPage> {
         ),
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
   }
 }

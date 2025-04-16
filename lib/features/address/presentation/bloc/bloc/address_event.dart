@@ -3,6 +3,8 @@ part of 'address_bloc.dart';
 @freezed
 class AddressEvent with _$AddressEvent {
   const factory AddressEvent.customerListBlueray() = _CustomerListBlueray;
+  const factory AddressEvent.customerLoadMoreListBlueray() =
+      _CustomerLoadMoreListBlueray;
   const factory AddressEvent.customerCreateBlueray({
     required CustomerCreateBluerayParam param,
   }) = _CustomerCreateBlueray;

@@ -7,6 +7,9 @@ class AddressState with _$AddressState {
     @Default(false) bool isGetAddressListLoading,
     String? getAddressListError,
     @Default([]) List<CustomerAddressEntity> getAddressList,
+    @Default([]) List<CustomerAddressEntity> paginatedCustomers,
+    @Default(1) int currentPage,
+    @Default(false) bool hasReachedMax,
 
     // Post Customer Address
     @Default(false) bool isPostAddressLoading,
