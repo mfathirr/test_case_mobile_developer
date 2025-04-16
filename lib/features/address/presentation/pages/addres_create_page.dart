@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_osm_plugin/flutter_osm_plugin.dart';
 import 'package:go_router/go_router.dart';
 import 'package:test_case_mobile_developer/core/theme/app_theme.dart';
 import 'package:test_case_mobile_developer/core/widget/text_field_widget.dart';
@@ -19,6 +20,9 @@ class AddresCreatePage extends StatefulWidget {
 }
 
 class _AddresCreatePageState extends State<AddresCreatePage> {
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final ValueNotifier<bool> isPostalCodeValid = ValueNotifier(false);
+
   final TextEditingController _labelController = TextEditingController();
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _phoneController = TextEditingController();
@@ -67,6 +71,7 @@ class _AddresCreatePageState extends State<AddresCreatePage> {
           context
               .read<AddressBloc>()
               .add(const AddressEvent.clearData(postcodeValidation: true));
+          _postalCodeController.clear();
         }
 
         if (state.isPostcodeValidationSuccess) {
@@ -83,182 +88,277 @@ class _AddresCreatePageState extends State<AddresCreatePage> {
       },
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Tambah Alamat'),
+          automaticallyImplyLeading: false,
+          title: Row(
+            children: [
+              const SizedBox(width: 8),
+              GestureDetector(
+                onTap: () => context.pop(),
+                child: const Icon(Icons.arrow_back_ios_new_rounded, size: 19),
+              ),
+              const SizedBox(width: 10),
+              const Text('Tambah Alamat'),
+            ],
+          ),
         ),
         body: Padding(
           padding: const EdgeInsets.all(24.0),
-          child: ListView(
-            children: [
-              TextFieldWidget(
-                hintText: 'Label Alamat',
-                controller: _labelController,
-              ),
-              const SizedBox(height: 12),
-              TextFieldWidget(
-                hintText: 'Nama Penerima',
-                controller: _nameController,
-                keyboardType: TextInputType.name,
-              ),
-              const SizedBox(height: 12),
-              TextFieldWidget(
-                hintText: 'Nomor Telepon',
-                controller: _phoneController,
-                keyboardType: TextInputType.phone,
-              ),
-              const SizedBox(height: 12),
-              TextFieldWidget(
-                hintText: 'Email',
-                controller: _emailController,
-                keyboardType: TextInputType.emailAddress,
-              ),
-              const SizedBox(height: 12),
-              TextFieldWidget(
-                readOnly: true,
-                hintText: 'Provinsi',
-                controller: _provinceController,
-                onTap: () async {
-                  final data =
-                      await context.pushNamed(AddressSearchDataPage.routeName)
-                          as SubDistrictsSearchEntity?;
+          child: Form(
+            key: _formKey,
+            child: ListView(
+              children: [
+                TextFieldWidget(
+                  hintText: 'Label Alamat',
+                  controller: _labelController,
+                ),
+                const SizedBox(height: 12),
+                TextFieldWidget(
+                  isRequired: true,
+                  hintText: 'Nama Penerima',
+                  controller: _nameController,
+                  keyboardType: TextInputType.name,
+                ),
+                const SizedBox(height: 12),
+                TextFieldWidget(
+                  isRequired: true,
+                  hintText: 'Nomor Telepon',
+                  controller: _phoneController,
+                  keyboardType: TextInputType.phone,
+                ),
+                const SizedBox(height: 12),
+                TextFieldWidget(
+                  hintText: 'Email',
+                  controller: _emailController,
+                  keyboardType: TextInputType.emailAddress,
+                ),
+                const SizedBox(height: 12),
+                TextFieldWidget(
+                  isRequired: true,
+                  readOnly: true,
+                  hintText: 'Provinsi',
+                  controller: _provinceController,
+                  onTap: () async {
+                    final data =
+                        await context.pushNamed(AddressSearchDataPage.routeName)
+                            as SubDistrictsSearchEntity?;
 
-                  if (data != null) {
-                    _provinceController.text = data.province;
-                    _districtController.text = data.district;
-                    _subDistrictController.text = data.subDistrict;
-                    _provinceIdController.text = data.provinceId.toString();
-                    _districtIdController.text = data.districtId.toString();
-                    _subDistrictIdController.text =
-                        data.subDistrictId.toString();
-                  }
-                },
-              ),
-              if (_provinceController.text.isNotEmpty) ...[
-                const SizedBox(height: 12),
-                TextFieldWidget(
-                  hintText: 'Kota',
-                  controller: _districtController,
+                    if (data != null) {
+                      _provinceController.text = data.province;
+                      _districtController.text = data.district;
+                      _subDistrictController.text = data.subDistrict;
+                      _provinceIdController.text = data.provinceId.toString();
+                      _districtIdController.text = data.districtId.toString();
+                      _subDistrictIdController.text =
+                          data.subDistrictId.toString();
+                    }
+                  },
+                ),
+                BlocBuilder<AddressBloc, AddressState>(
+                  builder: (context, state) {
+                    return Column(
+                      children: _provinceController.text.isNotEmpty
+                          ? [
+                              const SizedBox(height: 12),
+                              TextFieldWidget(
+                                isRequired: true,
+                                readOnly: true,
+                                hintText: 'Kota',
+                                controller: _districtController,
+                              ),
+                              const SizedBox(height: 12),
+                              TextFieldWidget(
+                                isRequired: true,
+                                readOnly: true,
+                                hintText: 'Kecamatan',
+                                controller: _subDistrictController,
+                              ),
+                            ]
+                          : [],
+                    );
+                  },
                 ),
                 const SizedBox(height: 12),
-                TextFieldWidget(
-                  hintText: 'Kecamatan',
-                  controller: _subDistrictController,
-                ),
-              ],
-              const SizedBox(height: 12),
-              Row(
-                children: [
-                  Expanded(
-                    child: TextFieldWidget(
-                      hintText: 'Kode Pos',
-                      controller: _postalCodeController,
-                      keyboardType: TextInputType.number,
-                    ),
-                  ),
-                  const SizedBox(width: 6),
-                  SizedBox(
-                    height: 53,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.blue,
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 12, vertical: 7),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                      ),
-                      onPressed: _postalCodeController.text.isNotEmpty
-                          ? () {
-                              context.read<AddressBloc>().add(
-                                    AddressEvent.postcodeValidation(
-                                      param: PostcodeValidationParam(
-                                        postalCode: int.parse(
-                                          _postalCodeController.text,
-                                        ),
-                                      ),
-                                    ),
-                                  );
-                            }
-                          : null,
-                      child: Text(
-                        'Cek',
-                        style:
-                            AppTheme.jakartaSansTextTheme.bodyMedium?.copyWith(
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 12),
-              TextFieldWidget(
-                hintText: 'Alamat Lengkap',
-                controller: _fullAddressController,
-              ),
-              const SizedBox(height: 12),
-              TextFieldWidget(
-                hintText: 'NPWP',
-                controller: _npwpController,
-              ),
-              const SizedBox(height: 12),
-              Container(
-                padding: const EdgeInsets.all(8),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(8),
-                  border: Border.all(color: Colors.grey[300]!),
-                ),
-                child: Row(
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Icon(
-                      Icons.pin_drop_rounded,
-                      size: 20,
-                    ),
-                    const SizedBox(
-                      width: 6,
-                    ),
                     Expanded(
-                      child: Text(
-                        _pinAddressController.text,
-                        style: AppTheme.jakartaSansTextTheme.bodyMedium,
-                        overflow: TextOverflow.ellipsis,
+                      child: TextFieldWidget(
+                        isRequired: true,
+                        hintText: 'Kode Pos',
+                        controller: _postalCodeController,
+                        keyboardType: TextInputType.number,
+                        onChanged: (text) {
+                          isPostalCodeValid.value = text.isNotEmpty;
+                        },
                       ),
                     ),
-                    if (_pinAddressController.text.contains('Pin Alamat'))
-                      const Spacer()
-                    else
-                      const SizedBox(width: 6),
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.blue,
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 12, vertical: 7),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                      ),
-                      onPressed: () async {
-                        final data = await context
-                            .pushNamed(AddressMapPage.routeName) as Map?;
-
-                        if (data != null) {
-                          _latController.text = data['lat'].toString();
-                          _longController.text = data['long'].toString();
-                          _pinAddressController.text = data['address'];
-                        }
-                      },
-                      child: Text(
-                        'Pin',
-                        style:
-                            AppTheme.jakartaSansTextTheme.bodyMedium?.copyWith(
-                          color: Colors.white,
-                        ),
-                      ),
-                    )
+                    const SizedBox(width: 6),
+                    ValueListenableBuilder<bool>(
+                        valueListenable: isPostalCodeValid,
+                        builder: (context, isValid, _) {
+                          return SizedBox(
+                            height: 53,
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.blue,
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 12,
+                                  vertical: 7,
+                                ),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                              ),
+                              onPressed: isValid
+                                  ? () {
+                                      context.read<AddressBloc>().add(
+                                            AddressEvent.postcodeValidation(
+                                              param: PostcodeValidationParam(
+                                                postalCode: int.parse(
+                                                  _postalCodeController.text,
+                                                ),
+                                              ),
+                                            ),
+                                          );
+                                    }
+                                  : null,
+                              child: Text(
+                                'Cek',
+                                style: AppTheme.jakartaSansTextTheme.bodyMedium
+                                    ?.copyWith(
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          );
+                        }),
                   ],
                 ),
-              )
-            ],
+                const SizedBox(height: 12),
+                TextFieldWidget(
+                  hintText: 'Alamat Lengkap',
+                  controller: _fullAddressController,
+                ),
+                const SizedBox(height: 12),
+                TextFieldWidget(
+                  hintText: 'NPWP',
+                  controller: _npwpController,
+                ),
+                const SizedBox(height: 12),
+                BlocBuilder<AddressBloc, AddressState>(
+                  builder: (context, state) {
+                    return FormField<String>(
+                      initialValue: _pinAddressController.text,
+                      validator: (value) {
+                        if (value == null ||
+                            value.isEmpty ||
+                            value == 'Pin Alamat') {
+                          return 'Pin Alamat tidak boleh kosong';
+                        }
+
+                        return null;
+                      },
+                      builder: (state) {
+                        return Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              padding: const EdgeInsets.all(8),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(8),
+                                border: Border.all(
+                                  color: state.hasError
+                                      ? Colors.red[500]!
+                                      : Colors.grey[300]!,
+                                ),
+                              ),
+                              child: Row(
+                                children: [
+                                  const Icon(Icons.pin_drop_rounded, size: 20),
+                                  const SizedBox(width: 6),
+                                  Expanded(
+                                    child: Text(
+                                      _pinAddressController.text,
+                                      style: AppTheme
+                                          .jakartaSansTextTheme.bodyMedium,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                  ),
+                                  if (_pinAddressController.text
+                                      .contains('Pin Alamat'))
+                                    const Spacer()
+                                  else
+                                    const SizedBox(width: 6),
+                                  ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: Colors.blue,
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 12,
+                                        vertical: 7,
+                                      ),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(8),
+                                      ),
+                                    ),
+                                    onPressed: () async {
+                                      final bool isLatLong =
+                                          _latController.text.isNotEmpty
+                                              ? true
+                                              : false;
+
+                                      final data = await context.pushNamed(
+                                          AddressMapPage.routeName,
+                                          extra: isLatLong
+                                              ? GeoPoint(
+                                                  latitude: double.parse(
+                                                      _latController.text),
+                                                  longitude: double.parse(
+                                                      _longController.text))
+                                              : null) as Map<String, dynamic>?;
+
+                                      if (data != null) {
+                                        _latController.text =
+                                            data['lat'].toString();
+                                        _longController.text =
+                                            data['long'].toString();
+                                        _pinAddressController.text =
+                                            data['address'];
+                                      }
+                                    },
+                                    child: Text(
+                                      'Pin',
+                                      style: AppTheme
+                                          .jakartaSansTextTheme.bodyMedium
+                                          ?.copyWith(
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            if (state.hasError)
+                              Padding(
+                                padding:
+                                    const EdgeInsets.only(top: 8, left: 12),
+                                child: Text(
+                                  state.errorText ?? '',
+                                  style: AppTheme
+                                      .jakartaSansTextTheme.labelMedium
+                                      ?.copyWith(
+                                    color: Colors.red[600],
+                                  ),
+                                ),
+                              ),
+                          ],
+                        );
+                      },
+                    );
+                  },
+                )
+              ],
+            ),
           ),
         ),
         bottomNavigationBar: Container(
@@ -286,28 +386,31 @@ class _AddresCreatePageState extends State<AddresCreatePage> {
                 ),
               ),
               onPressed: () {
-                context.read<AddressBloc>().add(
-                      AddressEvent.customerCreateBlueray(
-                        param: CustomerCreateBluerayParam(
-                          address: _fullAddressController.text,
-                          addressLabel: _labelController.text,
-                          name: _nameController.text,
-                          phoneNumber: _phoneController.text,
-                          email: _emailController.text,
-                          provinceId: int.parse(_provinceIdController.text),
-                          districtId: int.parse(_districtIdController.text),
-                          subDistrictId:
-                              int.parse(_subDistrictIdController.text),
-                          postalCode: _postalCodeController.text,
-                          lat: _latController.text,
-                          long: _longController.text,
-                          addressMap: _pinAddressController.text,
+                _formKey.currentState?.save();
+                if (_formKey.currentState?.validate() ?? false) {
+                  context.read<AddressBloc>().add(
+                        AddressEvent.customerCreateBlueray(
+                          param: CustomerCreateBluerayParam(
+                            address: _fullAddressController.text,
+                            addressLabel: _labelController.text,
+                            name: _nameController.text,
+                            phoneNumber: _phoneController.text,
+                            email: _emailController.text,
+                            provinceId: int.parse(_provinceIdController.text),
+                            districtId: int.parse(_districtIdController.text),
+                            subDistrictId:
+                                int.parse(_subDistrictIdController.text),
+                            postalCode: _postalCodeController.text,
+                            lat: _latController.text,
+                            long: _longController.text,
+                            addressMap: _pinAddressController.text,
+                          ),
                         ),
-                      ),
-                    );
+                      );
+                }
               },
               child: Text(
-                'Simpan',
+                'Tambah',
                 style: AppTheme.jakartaSansTextTheme.bodyMedium?.copyWith(
                   color: Colors.white,
                 ),

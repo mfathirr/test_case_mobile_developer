@@ -53,11 +53,15 @@ class AddressItem extends StatelessWidget {
                 children: [
                   InkWell(
                     onTap: () {
+                      if (data.isPrimary) {
+                        return;
+                      }
                       context.read<AddressBloc>().add(
                             AddressEvent.postPrimaryAddress(
                                 param: PostPrimaryAddressParam(
                                     addressId: data.addressId)),
                           );
+                      context.pop();
                     },
                     child: Icon(
                       Icons.star_rounded,
@@ -101,24 +105,26 @@ class AddressItem extends StatelessWidget {
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 Text(
-                                  'Delete Address',
+                                  'Hapus Alamat',
                                   style: AppTheme
-                                      .jakartaSansTextTheme.headlineSmall,
+                                      .jakartaSansTextTheme.headlineSmall
+                                      ?.copyWith(color: Colors.red),
                                 ),
                                 const SizedBox(height: 12),
                                 Text(
-                                  'Are you sure you want to delete ${data.name} - ${data.addressLabel}?',
+                                  'Apakah kamu yakin untuk menghapus ${data.name} - ${data.addressLabel}?',
                                   style:
                                       AppTheme.jakartaSansTextTheme.titleMedium,
                                   textAlign: TextAlign.center,
                                 ),
-                                const SizedBox(height: 20),
+                                const SizedBox(height: 24),
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.end,
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
                                     GestureDetector(
                                       onTap: () {
+                                        context.pop();
                                         context.read<AddressBloc>().add(
                                             AddressEvent.customerDeleteBlueray(
                                                 param:
@@ -127,9 +133,9 @@ class AddressItem extends StatelessWidget {
                                                             data.addressId)));
                                       },
                                       child: Text(
-                                        'Delete',
+                                        'hapus',
                                         style: AppTheme
-                                            .jakartaSansTextTheme.titleMedium
+                                            .jakartaSansTextTheme.bodyLarge
                                             ?.copyWith(
                                           color: Colors.red,
                                         ),
@@ -141,9 +147,9 @@ class AddressItem extends StatelessWidget {
                                         context.pop();
                                       },
                                       child: Text(
-                                        'Cancel',
+                                        'kembali',
                                         style: AppTheme
-                                            .jakartaSansTextTheme.titleMedium,
+                                            .jakartaSansTextTheme.bodyLarge,
                                       ),
                                     ),
                                   ],

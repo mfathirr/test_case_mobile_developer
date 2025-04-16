@@ -1,6 +1,5 @@
 import 'package:dartz/dartz.dart';
 import 'package:test_case_mobile_developer/features/address/domain/entities/customer_list_address_blueray_entity.dart';
-import 'package:test_case_mobile_developer/features/address/domain/entities/get_primary_address_entity.dart';
 import 'package:test_case_mobile_developer/features/address/domain/entities/sub_district_search_entity.dart';
 
 abstract interface class AddressRepository {

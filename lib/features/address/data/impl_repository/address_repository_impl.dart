@@ -1,11 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:test_case_mobile_developer/features/address/data/model/get_list_blueray_model.dart';
-import 'package:test_case_mobile_developer/features/address/data/model/get_primary_address_model.dart';
 import 'package:test_case_mobile_developer/features/address/data/model/subdistrict_search_model.dart';
 import 'package:test_case_mobile_developer/features/address/data/source/address_services.dart';
 import 'package:test_case_mobile_developer/features/address/domain/entities/customer_list_address_blueray_entity.dart';
-import 'package:test_case_mobile_developer/features/address/domain/entities/get_primary_address_entity.dart';
 import 'package:test_case_mobile_developer/features/address/domain/entities/sub_district_search_entity.dart';
 import 'package:test_case_mobile_developer/features/address/domain/repository/address_repository.dart';
 
@@ -256,7 +254,7 @@ class AddressRepositoryImpl implements AddressRepository {
         postalCode: postalCode,
       );
 
-      if (response.statusCode == 200) {
+      if (response.data['status'] == true) {
         return const Right(null);
       } else {
         return Left(

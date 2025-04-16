@@ -1,5 +1,3 @@
-import 'dart:isolate';
-
 import 'package:equatable/equatable.dart';
 
 class CustomerAddressEntity extends Equatable {

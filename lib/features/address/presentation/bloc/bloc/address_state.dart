@@ -42,5 +42,14 @@ class AddressState with _$AddressState {
     @Default(false) bool isPostPrimaryAddressLoading,
     String? postPrimaryAddressError,
     @Default(false) bool postPrimaryAddressSuccess,
+
+    // Indexing
+    int? indexSearchAddress,
+
+    // Map
+    String? mapAddress,
+    String? mapAddressError,
+    GeoPoint? mapPoint,
+    Map<String, dynamic>? mapData,
   }) = _AddressState;
 }

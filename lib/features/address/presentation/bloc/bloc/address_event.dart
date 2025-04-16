@@ -22,6 +22,16 @@ class AddressEvent with _$AddressEvent {
   const factory AddressEvent.postPrimaryAddress({
     required PostPrimaryAddressParam param,
   }) = _PostPrimaryAddress;
+  const factory AddressEvent.indexSearchAddress({
+    required int param,
+  }) = _IndexSearchAddress;
+  const factory AddressEvent.mapAddress({
+    required GeoPoint point,
+    required MapController mapController,
+  }) = _MapAddress;
+  const factory AddressEvent.mapData({
+    required Map<String, dynamic> data,
+  }) = _MapData;
   const factory AddressEvent.clearData({
     @Default(false) bool customerDeleteBlueray,
     @Default(false) bool postcodeValidation,
@@ -30,5 +40,7 @@ class AddressEvent with _$AddressEvent {
     @Default(false) bool customerUpdateBlueray,
     @Default(false) bool getPrimaryAddress,
     @Default(false) bool postPrimaryAddress,
+    @Default(false) bool mapAddress,
+    @Default(false) bool mapData,
   }) = _ClearData;
 }

@@ -1,3 +1,4 @@
+import 'package:flutter_osm_plugin/flutter_osm_plugin.dart';
 import 'package:go_router/go_router.dart';
 import 'package:test_case_mobile_developer/features/address/domain/entities/customer_list_address_blueray_entity.dart';
 import 'package:test_case_mobile_developer/features/address/presentation/pages/addres_create_page.dart';
@@ -51,7 +52,7 @@ class AppRouter {
       GoRoute(
         path: '/${AddressMapPage.routeName}',
         name: AddressMapPage.routeName,
-        builder: (context, state) => const AddressMapPage(),
+        builder: (context, state) => AddressMapPage(point: state.extra as GeoPoint?,),
       ),
       GoRoute(
         path: '/${AddressSearchDataPage.routeName}',
