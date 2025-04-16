@@ -23,7 +23,7 @@ class _LoginPageState extends State<LoginPage> {
     return BlocListener<AuthBloc, AuthState>(
       listener: (context, state) {
         state.maybeWhen(
-          success: () => context.pushNamed(AddressPage.routeName),
+          success: () => context.pushReplacementNamed(AddressPage.routeName),
           orElse: () {},
         );
       },
