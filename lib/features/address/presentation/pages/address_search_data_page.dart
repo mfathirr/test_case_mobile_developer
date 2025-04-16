@@ -119,11 +119,17 @@ class _AddressSearchDataPageState extends State<AddressSearchDataPage> {
                                           style: AppTheme
                                               .jakartaSansTextTheme.titleSmall,
                                         ),
-                                        Text(
-                                          state.subDistrictSearchList[index]
-                                              .address,
-                                          style: AppTheme
-                                              .jakartaSansTextTheme.bodyMedium,
+                                        const SizedBox(width: 10),
+                                        SizedBox(
+                                          width: 200,
+                                          child: Text(
+                                            state.subDistrictSearchList[index]
+                                                .address,
+                                            style: AppTheme.jakartaSansTextTheme
+                                                .bodyMedium,
+                                            overflow: TextOverflow.ellipsis,
+                                            textAlign: TextAlign.right,
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -137,11 +143,16 @@ class _AddressSearchDataPageState extends State<AddressSearchDataPage> {
                                           style: AppTheme
                                               .jakartaSansTextTheme.titleSmall,
                                         ),
-                                        Text(
-                                          state.subDistrictSearchList[index]
-                                              .province,
-                                          style: AppTheme
-                                              .jakartaSansTextTheme.bodyMedium,
+                                        SizedBox(
+                                          width: 200,
+                                          child: Text(
+                                            state.subDistrictSearchList[index]
+                                                .province,
+                                            style: AppTheme.jakartaSansTextTheme
+                                                .bodyMedium,
+                                            overflow: TextOverflow.ellipsis,
+                                            textAlign: TextAlign.right,
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -155,11 +166,16 @@ class _AddressSearchDataPageState extends State<AddressSearchDataPage> {
                                           style: AppTheme
                                               .jakartaSansTextTheme.titleSmall,
                                         ),
-                                        Text(
-                                          state.subDistrictSearchList[index]
-                                              .district,
-                                          style: AppTheme
-                                              .jakartaSansTextTheme.bodyMedium,
+                                        SizedBox(
+                                          width: 200,
+                                          child: Text(
+                                            state.subDistrictSearchList[index]
+                                                .district,
+                                            style: AppTheme.jakartaSansTextTheme
+                                                .bodyMedium,
+                                            overflow: TextOverflow.ellipsis,
+                                            textAlign: TextAlign.right,
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -173,11 +189,16 @@ class _AddressSearchDataPageState extends State<AddressSearchDataPage> {
                                           style: AppTheme
                                               .jakartaSansTextTheme.titleSmall,
                                         ),
-                                        Text(
-                                          state.subDistrictSearchList[index]
-                                              .subDistrict,
-                                          style: AppTheme
-                                              .jakartaSansTextTheme.bodyMedium,
+                                        SizedBox(
+                                          width: 200,
+                                          child: Text(
+                                            state.subDistrictSearchList[index]
+                                                .subDistrict,
+                                            style: AppTheme.jakartaSansTextTheme
+                                                .bodyMedium,
+                                            overflow: TextOverflow.ellipsis,
+                                            textAlign: TextAlign.right,
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -191,11 +212,16 @@ class _AddressSearchDataPageState extends State<AddressSearchDataPage> {
                                           style: AppTheme
                                               .jakartaSansTextTheme.titleSmall,
                                         ),
-                                        Text(
-                                          state.subDistrictSearchList[index]
-                                              .subDistrictCode,
-                                          style: AppTheme
-                                              .jakartaSansTextTheme.bodyMedium,
+                                        SizedBox(
+                                          width: 100,
+                                          child: Text(
+                                            state.subDistrictSearchList[index]
+                                                .subDistrictCode,
+                                            style: AppTheme.jakartaSansTextTheme
+                                                .bodyMedium,
+                                            overflow: TextOverflow.ellipsis,
+                                            textAlign: TextAlign.right,
+                                          ),
                                         ),
                                       ],
                                     ),

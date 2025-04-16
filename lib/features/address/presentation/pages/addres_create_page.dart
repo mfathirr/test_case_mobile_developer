@@ -66,6 +66,11 @@ class _AddresCreatePageState extends State<AddresCreatePage> {
           context
               .read<AddressBloc>()
               .add(const AddressEvent.clearData(customerCreateBlueray: true));
+          if (state.getPrimaryAddressSuccess == null) {
+            context
+                .read<AddressBloc>()
+                .add(const AddressEvent.getPrimaryAddress());
+          }
           context
               .read<AddressBloc>()
               .add(const AddressEvent.customerListBlueray());
@@ -497,6 +502,13 @@ class _AddresCreatePageState extends State<AddresCreatePage> {
                                           long: _longController.text,
                                           addressMap:
                                               _pinAddressController.text,
+                                          npwp: _npwpController.text.isEmpty
+                                              ? null
+                                              : _npwpController.text,
+                                          npwpFile: _npwpFileImageController
+                                                  .text.isEmpty
+                                              ? null
+                                              : _npwpFileImageController.text,
                                         ),
                                       );
 
@@ -608,6 +620,8 @@ class _AddresCreatePageState extends State<AddresCreatePage> {
                           return;
                         }
 
+                        print(_npwpController.text);
+
                         context.pushNamed(
                           AddressMultipleCreatePage.routeName,
                           extra: CustomerCreateBluerayParam(
@@ -624,6 +638,12 @@ class _AddresCreatePageState extends State<AddresCreatePage> {
                             lat: _latController.text,
                             long: _longController.text,
                             addressMap: _pinAddressController.text,
+                            npwp: _npwpController.text.isEmpty
+                                ? null
+                                : _npwpController.text,
+                            npwpFile: _npwpFileImageController.text.isEmpty
+                                ? null
+                                : _npwpFileImageController.text,
                           ),
                         );
 
@@ -672,6 +692,13 @@ class _AddresCreatePageState extends State<AddresCreatePage> {
                                     lat: _latController.text,
                                     long: _longController.text,
                                     addressMap: _pinAddressController.text,
+                                    npwp: _npwpController.text.isEmpty
+                                        ? null
+                                        : _npwpController.text,
+                                    npwpFile:
+                                        _npwpFileImageController.text.isEmpty
+                                            ? null
+                                            : _npwpFileImageController.text,
                                   ),
                                 ),
                               );

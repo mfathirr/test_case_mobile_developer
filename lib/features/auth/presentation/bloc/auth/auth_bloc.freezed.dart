@@ -1396,6 +1396,7 @@ mixin _$AuthState {
     required TResult Function() loading,
     required TResult Function(String message) failed,
     required TResult Function() success,
+    required TResult Function() successOTP,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1404,6 +1405,7 @@ mixin _$AuthState {
     TResult? Function()? loading,
     TResult? Function(String message)? failed,
     TResult? Function()? success,
+    TResult? Function()? successOTP,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1412,6 +1414,7 @@ mixin _$AuthState {
     TResult Function()? loading,
     TResult Function(String message)? failed,
     TResult Function()? success,
+    TResult Function()? successOTP,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1421,6 +1424,7 @@ mixin _$AuthState {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Failed value) failed,
     required TResult Function(_LoginSuccess value) success,
+    required TResult Function(_LoginSuccessOTP value) successOTP,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1429,6 +1433,7 @@ mixin _$AuthState {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Failed value)? failed,
     TResult? Function(_LoginSuccess value)? success,
+    TResult? Function(_LoginSuccessOTP value)? successOTP,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1437,6 +1442,7 @@ mixin _$AuthState {
     TResult Function(_Loading value)? loading,
     TResult Function(_Failed value)? failed,
     TResult Function(_LoginSuccess value)? success,
+    TResult Function(_LoginSuccessOTP value)? successOTP,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1501,6 +1507,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() loading,
     required TResult Function(String message) failed,
     required TResult Function() success,
+    required TResult Function() successOTP,
   }) {
     return initial();
   }
@@ -1512,6 +1519,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? loading,
     TResult? Function(String message)? failed,
     TResult? Function()? success,
+    TResult? Function()? successOTP,
   }) {
     return initial?.call();
   }
@@ -1523,6 +1531,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? loading,
     TResult Function(String message)? failed,
     TResult Function()? success,
+    TResult Function()? successOTP,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -1538,6 +1547,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Failed value) failed,
     required TResult Function(_LoginSuccess value) success,
+    required TResult Function(_LoginSuccessOTP value) successOTP,
   }) {
     return initial(this);
   }
@@ -1549,6 +1559,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Failed value)? failed,
     TResult? Function(_LoginSuccess value)? success,
+    TResult? Function(_LoginSuccessOTP value)? successOTP,
   }) {
     return initial?.call(this);
   }
@@ -1560,6 +1571,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(_Loading value)? loading,
     TResult Function(_Failed value)? failed,
     TResult Function(_LoginSuccess value)? success,
+    TResult Function(_LoginSuccessOTP value)? successOTP,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -1615,6 +1627,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function() loading,
     required TResult Function(String message) failed,
     required TResult Function() success,
+    required TResult Function() successOTP,
   }) {
     return loading();
   }
@@ -1626,6 +1639,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function()? loading,
     TResult? Function(String message)? failed,
     TResult? Function()? success,
+    TResult? Function()? successOTP,
   }) {
     return loading?.call();
   }
@@ -1637,6 +1651,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function()? loading,
     TResult Function(String message)? failed,
     TResult Function()? success,
+    TResult Function()? successOTP,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -1652,6 +1667,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Failed value) failed,
     required TResult Function(_LoginSuccess value) success,
+    required TResult Function(_LoginSuccessOTP value) successOTP,
   }) {
     return loading(this);
   }
@@ -1663,6 +1679,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Failed value)? failed,
     TResult? Function(_LoginSuccess value)? success,
+    TResult? Function(_LoginSuccessOTP value)? successOTP,
   }) {
     return loading?.call(this);
   }
@@ -1674,6 +1691,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function(_Loading value)? loading,
     TResult Function(_Failed value)? failed,
     TResult Function(_LoginSuccess value)? success,
+    TResult Function(_LoginSuccessOTP value)? successOTP,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -1755,6 +1773,7 @@ class _$FailedImpl implements _Failed {
     required TResult Function() loading,
     required TResult Function(String message) failed,
     required TResult Function() success,
+    required TResult Function() successOTP,
   }) {
     return failed(message);
   }
@@ -1766,6 +1785,7 @@ class _$FailedImpl implements _Failed {
     TResult? Function()? loading,
     TResult? Function(String message)? failed,
     TResult? Function()? success,
+    TResult? Function()? successOTP,
   }) {
     return failed?.call(message);
   }
@@ -1777,6 +1797,7 @@ class _$FailedImpl implements _Failed {
     TResult Function()? loading,
     TResult Function(String message)? failed,
     TResult Function()? success,
+    TResult Function()? successOTP,
     required TResult orElse(),
   }) {
     if (failed != null) {
@@ -1792,6 +1813,7 @@ class _$FailedImpl implements _Failed {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Failed value) failed,
     required TResult Function(_LoginSuccess value) success,
+    required TResult Function(_LoginSuccessOTP value) successOTP,
   }) {
     return failed(this);
   }
@@ -1803,6 +1825,7 @@ class _$FailedImpl implements _Failed {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Failed value)? failed,
     TResult? Function(_LoginSuccess value)? success,
+    TResult? Function(_LoginSuccessOTP value)? successOTP,
   }) {
     return failed?.call(this);
   }
@@ -1814,6 +1837,7 @@ class _$FailedImpl implements _Failed {
     TResult Function(_Loading value)? loading,
     TResult Function(_Failed value)? failed,
     TResult Function(_LoginSuccess value)? success,
+    TResult Function(_LoginSuccessOTP value)? successOTP,
     required TResult orElse(),
   }) {
     if (failed != null) {
@@ -1874,6 +1898,7 @@ class _$LoginSuccessImpl implements _LoginSuccess {
     required TResult Function() loading,
     required TResult Function(String message) failed,
     required TResult Function() success,
+    required TResult Function() successOTP,
   }) {
     return success();
   }
@@ -1885,6 +1910,7 @@ class _$LoginSuccessImpl implements _LoginSuccess {
     TResult? Function()? loading,
     TResult? Function(String message)? failed,
     TResult? Function()? success,
+    TResult? Function()? successOTP,
   }) {
     return success?.call();
   }
@@ -1896,6 +1922,7 @@ class _$LoginSuccessImpl implements _LoginSuccess {
     TResult Function()? loading,
     TResult Function(String message)? failed,
     TResult Function()? success,
+    TResult Function()? successOTP,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -1911,6 +1938,7 @@ class _$LoginSuccessImpl implements _LoginSuccess {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Failed value) failed,
     required TResult Function(_LoginSuccess value) success,
+    required TResult Function(_LoginSuccessOTP value) successOTP,
   }) {
     return success(this);
   }
@@ -1922,6 +1950,7 @@ class _$LoginSuccessImpl implements _LoginSuccess {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Failed value)? failed,
     TResult? Function(_LoginSuccess value)? success,
+    TResult? Function(_LoginSuccessOTP value)? successOTP,
   }) {
     return success?.call(this);
   }
@@ -1933,6 +1962,7 @@ class _$LoginSuccessImpl implements _LoginSuccess {
     TResult Function(_Loading value)? loading,
     TResult Function(_Failed value)? failed,
     TResult Function(_LoginSuccess value)? success,
+    TResult Function(_LoginSuccessOTP value)? successOTP,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -1944,4 +1974,124 @@ class _$LoginSuccessImpl implements _LoginSuccess {
 
 abstract class _LoginSuccess implements AuthState {
   const factory _LoginSuccess() = _$LoginSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$LoginSuccessOTPImplCopyWith<$Res> {
+  factory _$$LoginSuccessOTPImplCopyWith(_$LoginSuccessOTPImpl value,
+          $Res Function(_$LoginSuccessOTPImpl) then) =
+      __$$LoginSuccessOTPImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$LoginSuccessOTPImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$LoginSuccessOTPImpl>
+    implements _$$LoginSuccessOTPImplCopyWith<$Res> {
+  __$$LoginSuccessOTPImplCopyWithImpl(
+      _$LoginSuccessOTPImpl _value, $Res Function(_$LoginSuccessOTPImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$LoginSuccessOTPImpl implements _LoginSuccessOTP {
+  const _$LoginSuccessOTPImpl();
+
+  @override
+  String toString() {
+    return 'AuthState.successOTP()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$LoginSuccessOTPImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String message) failed,
+    required TResult Function() success,
+    required TResult Function() successOTP,
+  }) {
+    return successOTP();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(String message)? failed,
+    TResult? Function()? success,
+    TResult? Function()? successOTP,
+  }) {
+    return successOTP?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String message)? failed,
+    TResult Function()? success,
+    TResult Function()? successOTP,
+    required TResult orElse(),
+  }) {
+    if (successOTP != null) {
+      return successOTP();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Failed value) failed,
+    required TResult Function(_LoginSuccess value) success,
+    required TResult Function(_LoginSuccessOTP value) successOTP,
+  }) {
+    return successOTP(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Failed value)? failed,
+    TResult? Function(_LoginSuccess value)? success,
+    TResult? Function(_LoginSuccessOTP value)? successOTP,
+  }) {
+    return successOTP?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Failed value)? failed,
+    TResult Function(_LoginSuccess value)? success,
+    TResult Function(_LoginSuccessOTP value)? successOTP,
+    required TResult orElse(),
+  }) {
+    if (successOTP != null) {
+      return successOTP(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoginSuccessOTP implements AuthState {
+  const factory _LoginSuccessOTP() = _$LoginSuccessOTPImpl;
 }

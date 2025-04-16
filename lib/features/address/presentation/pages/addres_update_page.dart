@@ -480,6 +480,12 @@ class _AddresUpdatePageState extends State<AddresUpdatePage> {
                             long: double.parse(_longController.text),
                             addressMap: _pinAddressController.text,
                             addressId: widget.data.addressId.toString(),
+                            npwp: _npwpController.text.isEmpty
+                                ? null
+                                : _npwpController.text,
+                            npwpFile: _npwpFileImageController.text.isEmpty
+                                ? null
+                                : _npwpFileImageController.text,
                           ),
                         ),
                       );

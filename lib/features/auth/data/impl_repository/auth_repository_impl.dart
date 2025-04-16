@@ -91,7 +91,6 @@ class AuthRepositoryImpl implements AuthRepository {
       );
 
       if (response.statusCode == 200) {
-        await _authLocal.storeToken(response.data['token']);
         return const Right(null);
       } else {
         return Left(
@@ -162,7 +161,7 @@ class AuthRepositoryImpl implements AuthRepository {
         code: code,
       );
 
-      if (response.statusCode == 200) {
+      if (response.data['action']) {
         return const Right(null);
       } else {
         return Left(

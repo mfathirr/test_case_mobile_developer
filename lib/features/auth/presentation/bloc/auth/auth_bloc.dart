@@ -72,7 +72,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
       res.fold(
         (l) => emit(AuthState.failed(message: l)),
-        (r) => emit(const AuthState.success()),
+        (r) => emit(const AuthState.successOTP()),
       );
     });
 

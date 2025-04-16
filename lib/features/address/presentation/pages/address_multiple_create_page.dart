@@ -41,7 +41,6 @@ class _AddressMultipleCreatePageState extends State<AddressMultipleCreatePage> {
               .read<AddressBloc>()
               .add(const AddressEvent.customerListBlueray());
           context.pop();
-          context.pop();
         }
       },
       child: Scaffold(
@@ -65,6 +64,7 @@ class _AddressMultipleCreatePageState extends State<AddressMultipleCreatePage> {
                 padding: const EdgeInsets.only(top: 24),
                 itemCount: state.address.length,
                 itemBuilder: (context, index) {
+                  print(state.address[index].npwp);
                   return AddressMultipleItem(data: state.address[index]);
                 },
                 separatorBuilder: (BuildContext context, int index) =>
