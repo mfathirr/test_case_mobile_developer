@@ -29,7 +29,6 @@ class _AddressPageState extends State<AddressPage> {
     _scrollController.addListener(() {
       if (_scrollController.position.pixels >=
           _scrollController.position.maxScrollExtent - 200) {
-        print(_scrollController.position.pixels);
         context
             .read<AddressBloc>()
             .add(const AddressEvent.customerLoadMoreListBlueray());
@@ -192,7 +191,7 @@ class _AddressPageState extends State<AddressPage> {
                 );
               },
             ),
-            const SizedBox(height: 500),
+            const SizedBox(height: 12),
           ],
         ),
         floatingActionButton: FloatingActionButton(
