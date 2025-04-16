@@ -620,7 +620,6 @@ class _AddresCreatePageState extends State<AddresCreatePage> {
                           return;
                         }
 
-                        print(_npwpController.text);
 
                         context.pushNamed(
                           AddressMultipleCreatePage.routeName,
