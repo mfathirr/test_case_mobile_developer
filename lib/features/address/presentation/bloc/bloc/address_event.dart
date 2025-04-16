@@ -12,6 +12,10 @@ class AddressEvent with _$AddressEvent {
   const factory AddressEvent.postcodeValidation({
     required PostcodeValidationParam param,
   }) = _PostcodeValidation;
+  // Post Multiple Address
+  const factory AddressEvent.customerCreateMultipleBlueray({
+    required List<CustomerCreateMultipleParam> param,
+  }) = _CustomerCreateMultipleBlueray;
   const factory AddressEvent.customerDeleteBlueray({
     required CustomerDeleteBluerayParam param,
   }) = _CustomerDeleteBlueray;
@@ -22,6 +26,9 @@ class AddressEvent with _$AddressEvent {
   const factory AddressEvent.postPrimaryAddress({
     required PostPrimaryAddressParam param,
   }) = _PostPrimaryAddress;
+  const factory AddressEvent.uploadFileImage({
+    required String fileImage,
+  }) = _UploadFileImage;
   const factory AddressEvent.indexSearchAddress({
     required int param,
   }) = _IndexSearchAddress;
@@ -32,6 +39,9 @@ class AddressEvent with _$AddressEvent {
   const factory AddressEvent.mapData({
     required Map<String, dynamic> data,
   }) = _MapData;
+  const factory AddressEvent.addAddressMultiple({
+    required CustomerCreateBluerayParam data,
+  }) = _AddAddressMultiple;
   const factory AddressEvent.clearData({
     @Default(false) bool customerDeleteBlueray,
     @Default(false) bool postcodeValidation,
@@ -40,7 +50,10 @@ class AddressEvent with _$AddressEvent {
     @Default(false) bool customerUpdateBlueray,
     @Default(false) bool getPrimaryAddress,
     @Default(false) bool postPrimaryAddress,
+    @Default(false) bool uploadFileImage,
     @Default(false) bool mapAddress,
     @Default(false) bool mapData,
+    @Default(false) bool addAddressMultiple,
+    @Default(false) bool customerCreateMultipleBlueray,
   }) = _ClearData;
 }

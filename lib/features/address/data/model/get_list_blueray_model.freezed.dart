@@ -59,9 +59,9 @@ mixin _$ConsumerAddressModel {
   @JsonKey(name: "npwp")
   dynamic get npwp => throw _privateConstructorUsedError;
   @JsonKey(name: "long")
-  dynamic get long => throw _privateConstructorUsedError;
+  double? get long => throw _privateConstructorUsedError;
   @JsonKey(name: "lat")
-  dynamic get lat => throw _privateConstructorUsedError;
+  double? get lat => throw _privateConstructorUsedError;
   @JsonKey(name: "address_map")
   String? get addressMap => throw _privateConstructorUsedError;
   @JsonKey(name: "customer")
@@ -109,8 +109,8 @@ abstract class $ConsumerAddressModelCopyWith<$Res> {
       @JsonKey(name: "phone_number") String? phoneNumber,
       @JsonKey(name: "phone_number_2") dynamic phoneNumber2,
       @JsonKey(name: "npwp") dynamic npwp,
-      @JsonKey(name: "long") dynamic long,
-      @JsonKey(name: "lat") dynamic lat,
+      @JsonKey(name: "long") double? long,
+      @JsonKey(name: "lat") double? lat,
       @JsonKey(name: "address_map") String? addressMap,
       @JsonKey(name: "customer") int? customer,
       @JsonKey(name: "province") int? province,
@@ -243,11 +243,11 @@ class _$ConsumerAddressModelCopyWithImpl<$Res,
       long: freezed == long
           ? _value.long
           : long // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as double?,
       lat: freezed == lat
           ? _value.lat
           : lat // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as double?,
       addressMap: freezed == addressMap
           ? _value.addressMap
           : addressMap // ignore: cast_nullable_to_non_nullable
@@ -308,8 +308,8 @@ abstract class _$$ConsumerAddressModelImplCopyWith<$Res>
       @JsonKey(name: "phone_number") String? phoneNumber,
       @JsonKey(name: "phone_number_2") dynamic phoneNumber2,
       @JsonKey(name: "npwp") dynamic npwp,
-      @JsonKey(name: "long") dynamic long,
-      @JsonKey(name: "lat") dynamic lat,
+      @JsonKey(name: "long") double? long,
+      @JsonKey(name: "lat") double? lat,
       @JsonKey(name: "address_map") String? addressMap,
       @JsonKey(name: "customer") int? customer,
       @JsonKey(name: "province") int? province,
@@ -439,11 +439,11 @@ class __$$ConsumerAddressModelImplCopyWithImpl<$Res>
       long: freezed == long
           ? _value.long
           : long // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as double?,
       lat: freezed == lat
           ? _value.lat
           : lat // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as double?,
       addressMap: freezed == addressMap
           ? _value.addressMap
           : addressMap // ignore: cast_nullable_to_non_nullable
@@ -571,10 +571,10 @@ class _$ConsumerAddressModelImpl implements _ConsumerAddressModel {
   final dynamic npwp;
   @override
   @JsonKey(name: "long")
-  final dynamic long;
+  final double? long;
   @override
   @JsonKey(name: "lat")
-  final dynamic lat;
+  final double? lat;
   @override
   @JsonKey(name: "address_map")
   final String? addressMap;
@@ -640,8 +640,8 @@ class _$ConsumerAddressModelImpl implements _ConsumerAddressModel {
             const DeepCollectionEquality()
                 .equals(other.phoneNumber2, phoneNumber2) &&
             const DeepCollectionEquality().equals(other.npwp, npwp) &&
-            const DeepCollectionEquality().equals(other.long, long) &&
-            const DeepCollectionEquality().equals(other.lat, lat) &&
+            (identical(other.long, long) || other.long == long) &&
+            (identical(other.lat, lat) || other.lat == lat) &&
             (identical(other.addressMap, addressMap) ||
                 other.addressMap == addressMap) &&
             (identical(other.customer, customer) ||
@@ -681,8 +681,8 @@ class _$ConsumerAddressModelImpl implements _ConsumerAddressModel {
         phoneNumber,
         const DeepCollectionEquality().hash(phoneNumber2),
         const DeepCollectionEquality().hash(npwp),
-        const DeepCollectionEquality().hash(long),
-        const DeepCollectionEquality().hash(lat),
+        long,
+        lat,
         addressMap,
         customer,
         province,
@@ -729,8 +729,8 @@ abstract class _ConsumerAddressModel implements ConsumerAddressModel {
           @JsonKey(name: "phone_number") final String? phoneNumber,
           @JsonKey(name: "phone_number_2") final dynamic phoneNumber2,
           @JsonKey(name: "npwp") final dynamic npwp,
-          @JsonKey(name: "long") final dynamic long,
-          @JsonKey(name: "lat") final dynamic lat,
+          @JsonKey(name: "long") final double? long,
+          @JsonKey(name: "lat") final double? lat,
           @JsonKey(name: "address_map") final String? addressMap,
           @JsonKey(name: "customer") final int? customer,
           @JsonKey(name: "province") final int? province,
@@ -802,10 +802,10 @@ abstract class _ConsumerAddressModel implements ConsumerAddressModel {
   dynamic get npwp;
   @override
   @JsonKey(name: "long")
-  dynamic get long;
+  double? get long;
   @override
   @JsonKey(name: "lat")
-  dynamic get lat;
+  double? get lat;
   @override
   @JsonKey(name: "address_map")
   String? get addressMap;

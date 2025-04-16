@@ -17,6 +17,7 @@ class DioClient {
     Map<String, dynamic>? queryParameters,
     Map<String, String>? headers,
     bool? withToken = true,
+    bool? isMultipart = false,
   }) async {
     try {
       final accessToken = dotenv.env['ACCESS_TOKEN'] ?? '';
@@ -26,6 +27,10 @@ class DioClient {
       headers["AccessToken"] = accessToken;
       if (withToken ?? true) {
         headers["Authorization"] = 'Token $token';
+      }
+
+      if (isMultipart ?? false) {
+        headers["Content-Type"] = 'multipart/form-data';
       }
 
       logger.i("path: $path");
@@ -76,9 +81,14 @@ class DioClient {
     dynamic data,
     Map<String, String>? headers,
     bool? withToken,
+    bool? isMultipart,
   }) {
     return _request<T>(path,
-        method: 'POST', data: data, headers: headers, withToken: withToken);
+        method: 'POST',
+        data: data,
+        headers: headers,
+        withToken: withToken,
+        isMultipart: isMultipart);
   }
 
   Future<Response<T>> put<T>(

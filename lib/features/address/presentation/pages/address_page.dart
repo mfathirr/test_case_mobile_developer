@@ -6,6 +6,8 @@ import 'package:test_case_mobile_developer/features/address/presentation/bloc/bl
 import 'package:test_case_mobile_developer/features/address/presentation/pages/addres_create_page.dart';
 import 'package:test_case_mobile_developer/features/address/presentation/widgets/address_item.dart';
 import 'package:test_case_mobile_developer/features/address/presentation/widgets/shimmer_address_item.dart';
+import 'package:test_case_mobile_developer/features/auth/presentation/bloc/auth/auth_bloc.dart';
+import 'package:test_case_mobile_developer/features/auth/presentation/pages/login_page.dart';
 
 class AddressPage extends StatefulWidget {
   static const String routeName = 'address_page';
@@ -25,44 +27,55 @@ class _AddressPageState extends State<AddressPage> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocListener<AddressBloc, AddressState>(
-      listener: (context, state) {
-        if (state.deleteAddressSuccess) {
-          context
-              .read<AddressBloc>()
-              .add(const AddressEvent.clearData(customerDeleteBlueray: true));
-          context
-              .read<AddressBloc>()
-              .add(const AddressEvent.customerListBlueray());
-          context
-              .read<AddressBloc>()
-              .add(const AddressEvent.getPrimaryAddress());
-        } else if (state.deleteAddressError != null) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text(state.deleteAddressError!),
-            ),
-          );
-        }
+    return MultiBlocListener(
+      listeners: [
+        BlocListener<AddressBloc, AddressState>(
+          listener: (context, state) {
+            if (state.deleteAddressSuccess) {
+              context.read<AddressBloc>().add(
+                  const AddressEvent.clearData(customerDeleteBlueray: true));
+              context
+                  .read<AddressBloc>()
+                  .add(const AddressEvent.customerListBlueray());
+              context
+                  .read<AddressBloc>()
+                  .add(const AddressEvent.getPrimaryAddress());
+            } else if (state.deleteAddressError != null) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text(state.deleteAddressError!),
+                ),
+              );
+            }
 
-        if (state.postPrimaryAddressSuccess) {
-          context
-              .read<AddressBloc>()
-              .add(const AddressEvent.clearData(postPrimaryAddress: true));
-          context
-              .read<AddressBloc>()
-              .add(const AddressEvent.getPrimaryAddress());
-          context
-              .read<AddressBloc>()
-              .add(const AddressEvent.customerListBlueray());
-        } else if (state.postPrimaryAddressError != null) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text(state.postPrimaryAddressError!),
-            ),
-          );
-        }
-      },
+            if (state.postPrimaryAddressSuccess) {
+              context
+                  .read<AddressBloc>()
+                  .add(const AddressEvent.clearData(postPrimaryAddress: true));
+              context
+                  .read<AddressBloc>()
+                  .add(const AddressEvent.getPrimaryAddress());
+              context
+                  .read<AddressBloc>()
+                  .add(const AddressEvent.customerListBlueray());
+            } else if (state.postPrimaryAddressError != null) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text(state.postPrimaryAddressError!),
+                ),
+              );
+            }
+          },
+        ),
+        BlocListener<AuthBloc, AuthState>(
+          listener: (context, state) {
+            state.maybeWhen(
+              success: () => context.pushReplacementNamed(LoginPage.routeName),
+              orElse: () {},
+            );
+          },
+        ),
+      ],
       child: Scaffold(
         appBar: AppBar(
           title: Padding(
@@ -145,7 +158,80 @@ class _AddressPageState extends State<AddressPage> {
                 );
               },
             ),
+            const SizedBox(height: 12),
           ],
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            showAdaptiveDialog(
+              context: context,
+              builder: (context) {
+                return AlertDialog(
+                  backgroundColor: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  content: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        'Keluar Aplikasi',
+                        style: AppTheme.jakartaSansTextTheme.headlineSmall
+                            ?.copyWith(color: Colors.red),
+                      ),
+                      const SizedBox(height: 12),
+                      Text(
+                        'Apakah kamu yakin untuk keluar aplikasi?',
+                        style: AppTheme.jakartaSansTextTheme.titleMedium,
+                        textAlign: TextAlign.center,
+                      ),
+                      const SizedBox(height: 24),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          GestureDetector(
+                            onTap: () {
+                              context
+                                  .read<AuthBloc>()
+                                  .add(const AuthEvent.customerLogout());
+                              context.pop();
+                            },
+                            child: Text(
+                              'keluar',
+                              style: AppTheme.jakartaSansTextTheme.bodyLarge
+                                  ?.copyWith(
+                                color: Colors.red,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 8),
+                          GestureDetector(
+                            onTap: () {
+                              context.pop();
+                            },
+                            child: Text(
+                              'kembali',
+                              style: AppTheme.jakartaSansTextTheme.bodyLarge,
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                );
+              },
+            );
+          },
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(50),
+          ),
+          backgroundColor: Colors.blue,
+          child: const Icon(
+            Icons.logout_rounded,
+            color: Colors.white,
+            size: 20,
+          ),
         ),
       ),
     );

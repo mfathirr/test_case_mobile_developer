@@ -13,6 +13,11 @@ class AddressState with _$AddressState {
     String? postAddressError,
     @Default(false) bool postAddressSuccess,
 
+    // Post Customer Address Multiple
+    @Default(false) bool isPostAddressMultipleLoading,
+    String? postAddressMultipleError,
+    @Default(false) bool postAddressMultipleSuccess,
+
     // SubDistrict Search
     @Default(false) bool isSubDistrictSearchLoading,
     String? subDistrictSearchError,
@@ -43,6 +48,11 @@ class AddressState with _$AddressState {
     String? postPrimaryAddressError,
     @Default(false) bool postPrimaryAddressSuccess,
 
+    // Upload
+    @Default(false) bool isUploadFileImageLoading,
+    String? uploadFileImageError,
+    String? uploadFileImageSuccess,
+
     // Indexing
     int? indexSearchAddress,
 
@@ -51,5 +61,8 @@ class AddressState with _$AddressState {
     String? mapAddressError,
     GeoPoint? mapPoint,
     Map<String, dynamic>? mapData,
+
+    // Address
+    @Default([]) List<CustomerCreateBluerayParam> address,
   }) = _AddressState;
 }

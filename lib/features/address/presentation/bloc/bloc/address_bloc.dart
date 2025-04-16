@@ -6,6 +6,8 @@ import 'package:test_case_mobile_developer/features/address/domain/entities/cust
 import 'package:test_case_mobile_developer/features/address/domain/entities/sub_district_search_entity.dart';
 import 'package:test_case_mobile_developer/features/address/domain/usecase/customer_create_blueray/customer_create_blueray.dart';
 import 'package:test_case_mobile_developer/features/address/domain/usecase/customer_create_blueray/customer_create_blueray_param.dart';
+import 'package:test_case_mobile_developer/features/address/domain/usecase/customer_create_multiple%20copy/customer_create_multiple.dart';
+import 'package:test_case_mobile_developer/features/address/domain/usecase/customer_create_multiple%20copy/customer_create_multiple_param.dart';
 import 'package:test_case_mobile_developer/features/address/domain/usecase/customer_delete_blueray/customer_delete_blueray.dart';
 import 'package:test_case_mobile_developer/features/address/domain/usecase/customer_delete_blueray/customer_delete_blueray_param.dart';
 import 'package:test_case_mobile_developer/features/address/domain/usecase/customer_list_blueray/customer_list_blueray.dart';
@@ -18,6 +20,10 @@ import 'package:test_case_mobile_developer/features/address/domain/usecase/postc
 import 'package:test_case_mobile_developer/features/address/domain/usecase/postcode_validation/postcode_validation_param.dart';
 import 'package:test_case_mobile_developer/features/address/domain/usecase/subdistrict_search/subdistrict_search.dart';
 import 'package:test_case_mobile_developer/features/address/domain/usecase/subdistrict_search/subdistrict_search_param.dart';
+import 'package:test_case_mobile_developer/features/address/domain/usecase/upload_file/upload_file.dart';
+import 'package:test_case_mobile_developer/features/address/domain/usecase/upload_file/upload_file_param.dart';
+import 'package:test_case_mobile_developer/features/address/domain/usecase/upload_image/upload_image.dart';
+import 'package:test_case_mobile_developer/features/address/domain/usecase/upload_image/upload_image_param.dart';
 
 part 'address_event.dart';
 part 'address_state.dart';
@@ -26,12 +32,15 @@ part 'address_bloc.freezed.dart';
 class AddressBloc extends Bloc<AddressEvent, AddressState> {
   final CustomerListBluerayUseCase _customerListBluerayUseCase;
   final CustomerCreateBluerayUseCase _customerCreateBluerayUseCase;
+  final CustomerCreateMultipleUseCase _customerCreateMultipleUseCase;
   final CustomerDeleteBluerayUseCase _customerDeleteBluerayUseCase;
   final CustomerUpdateBluerayUseCase _customerUpdateBluerayUseCase;
   final SubdistrictSearchUseCase _subdistrictSearchUseCase;
   final GetPrimaryAddressUseCase _getPrimaryAddressUseCase;
   final PostcodeValidationUseCase _postcodeValidationUseCase;
   final PostPrimaryAddressUseCase _postPrimaryAddressUseCase;
+  final UploadFileUseCase _uploadFileUseCase;
+  final UploadImageUseCase _uploadImageUseCase;
 
   AddressBloc(
     this._customerListBluerayUseCase,
@@ -42,6 +51,9 @@ class AddressBloc extends Bloc<AddressEvent, AddressState> {
     this._getPrimaryAddressUseCase,
     this._postcodeValidationUseCase,
     this._postPrimaryAddressUseCase,
+    this._uploadFileUseCase,
+    this._uploadImageUseCase,
+    this._customerCreateMultipleUseCase,
   ) : super(const AddressState()) {
     on<_CustomerListBlueray>((event, emit) async {
       emit(state.copyWith(
@@ -59,10 +71,12 @@ class AddressBloc extends Bloc<AddressEvent, AddressState> {
           isGetAddressListLoading: false,
           getAddressListError: e,
         )),
-        (data) => emit(state.copyWith(
-          isGetAddressListLoading: false,
-          getAddressList: data,
-        )),
+        (data) {
+          emit(state.copyWith(
+            isGetAddressListLoading: false,
+            getAddressList: data,
+          ));
+        },
       );
     });
 
@@ -84,6 +98,26 @@ class AddressBloc extends Bloc<AddressEvent, AddressState> {
         (data) => emit(state.copyWith(
           isPostAddressLoading: false,
           postAddressSuccess: true,
+        )),
+      );
+    });
+
+    on<_CustomerCreateMultipleBlueray>((event, emit) async {
+      emit(state.copyWith(
+        isPostAddressMultipleLoading: true,
+        postAddressMultipleError: null,
+      ));
+
+      final result = await _customerCreateMultipleUseCase(event.param);
+
+      result.fold(
+        (e) => emit(state.copyWith(
+          isPostAddressMultipleLoading: false,
+          postAddressMultipleError: e,
+        )),
+        (data) => emit(state.copyWith(
+          isPostAddressMultipleLoading: false,
+          postAddressMultipleSuccess: true,
         )),
       );
     });
@@ -171,6 +205,7 @@ class AddressBloc extends Bloc<AddressEvent, AddressState> {
       emit(state.copyWith(
         isGetPrimaryAddressLoading: true,
         getPrimaryAddressError: null,
+        getPrimaryAddressSuccess: null,
       ));
 
       final result = await _getPrimaryAddressUseCase(null);
@@ -206,6 +241,47 @@ class AddressBloc extends Bloc<AddressEvent, AddressState> {
           postPrimaryAddressSuccess: true,
         )),
       );
+    });
+
+    on<_UploadFileImage>((event, emit) async {
+      emit(state.copyWith(
+        isUploadFileImageLoading: true,
+        uploadFileImageError: null,
+      ));
+
+      final extension =
+          event.fileImage.toLowerCase().split('.').last.toLowerCase();
+
+      final isImg =
+          ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp'].contains(extension);
+
+      if (!isImg) {
+        final result = await _uploadFileUseCase(
+            UploadFileParam(fileName: event.fileImage));
+        result.fold(
+          (e) => emit(state.copyWith(
+            isUploadFileImageLoading: false,
+            uploadFileImageError: e,
+          )),
+          (data) => emit(state.copyWith(
+            isUploadFileImageLoading: false,
+            uploadFileImageSuccess: data,
+          )),
+        );
+      } else {
+        final result = await _uploadImageUseCase(
+            UploadImageParam(imageName: event.fileImage));
+        result.fold(
+          (e) => emit(state.copyWith(
+            isUploadFileImageLoading: false,
+            uploadFileImageError: e,
+          )),
+          (data) => emit(state.copyWith(
+            isUploadFileImageLoading: false,
+            uploadFileImageSuccess: data,
+          )),
+        );
+      }
     });
 
     on<_IndexSearchAddress>((event, emit) {
@@ -252,6 +328,12 @@ class AddressBloc extends Bloc<AddressEvent, AddressState> {
     on<_MapData>((event, emit) {
       emit(state.copyWith(
         mapData: event.data,
+      ));
+    });
+
+    on<_AddAddressMultiple>((event, emit) {
+      emit(state.copyWith(
+        address: [...state.address, event.data],
       ));
     });
 
@@ -306,6 +388,13 @@ class AddressBloc extends Bloc<AddressEvent, AddressState> {
           isPostPrimaryAddressLoading: false,
         ));
       }
+      if (event.uploadFileImage) {
+        emit(state.copyWith(
+          uploadFileImageSuccess: null,
+          uploadFileImageError: null,
+          isUploadFileImageLoading: false,
+        ));
+      }
       if (event.mapAddress) {
         emit(state.copyWith(
           mapAddress: null,
@@ -316,6 +405,18 @@ class AddressBloc extends Bloc<AddressEvent, AddressState> {
       if (event.mapData) {
         emit(state.copyWith(
           mapData: null,
+        ));
+      }
+      if (event.addAddressMultiple) {
+        emit(state.copyWith(
+          address: const [],
+        ));
+      }
+      if (event.customerCreateMultipleBlueray) {
+        emit(state.copyWith(
+          isPostAddressMultipleLoading: false,
+          postAddressMultipleError: null,
+          postAddressMultipleSuccess: false,
         ));
       }
     });

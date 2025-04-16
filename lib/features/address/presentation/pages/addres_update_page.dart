@@ -1,3 +1,4 @@
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_osm_plugin/flutter_osm_plugin.dart';
@@ -36,6 +37,8 @@ class _AddresUpdatePageState extends State<AddresUpdatePage> {
   final TextEditingController _subDistrictController = TextEditingController();
   final TextEditingController _subDistrictIdController =
       TextEditingController();
+  final TextEditingController _npwpFileImageController =
+      TextEditingController();
   final TextEditingController _postalCodeController = TextEditingController();
   final TextEditingController _fullAddressController = TextEditingController();
   final TextEditingController _npwpController = TextEditingController();
@@ -62,6 +65,7 @@ class _AddresUpdatePageState extends State<AddresUpdatePage> {
     _pinAddressController.text = widget.data.addressMap;
     _latController.text = widget.data.lat.toString();
     _longController.text = widget.data.long.toString();
+    _npwpFileImageController.text = widget.data.npwpFile;
     isPostalCodeValid.value = _postalCodeController.text.isNotEmpty;
   }
 
@@ -69,6 +73,13 @@ class _AddresUpdatePageState extends State<AddresUpdatePage> {
   Widget build(BuildContext context) {
     return BlocListener<AddressBloc, AddressState>(
       listener: (context, state) {
+        if (state.uploadFileImageSuccess != null) {
+          context
+              .read<AddressBloc>()
+              .add(const AddressEvent.clearData(uploadFileImage: true));
+          _npwpFileImageController.text = state.uploadFileImageSuccess!;
+        }
+
         if (state.postcodeValidationError != null) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
@@ -374,7 +385,53 @@ class _AddresUpdatePageState extends State<AddresUpdatePage> {
                       },
                     );
                   },
-                )
+                ),
+                const SizedBox(height: 12),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: TextFieldWidget(
+                        readOnly: true,
+                        hintText: 'NPWP File',
+                        controller: _npwpFileImageController,
+                        keyboardType: TextInputType.number,
+                      ),
+                    ),
+                    const SizedBox(width: 6),
+                    SizedBox(
+                      height: 53,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.blue,
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 12,
+                            vertical: 7,
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                        ),
+                        onPressed: () async {
+                          await FilePicker.platform.pickFiles().then((value) {
+                            if (value != null) {
+                              context.read<AddressBloc>().add(
+                                  AddressEvent.uploadFileImage(
+                                      fileImage: value.files.single.path!));
+                            }
+                          });
+                        },
+                        child: Text(
+                          'Unggah',
+                          style: AppTheme.jakartaSansTextTheme.bodyMedium
+                              ?.copyWith(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               ],
             ),
           ),

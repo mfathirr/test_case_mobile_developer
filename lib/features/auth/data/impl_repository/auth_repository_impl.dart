@@ -41,7 +41,8 @@ class AuthRepositoryImpl implements AuthRepository {
     try {
       final response = await _authServices.customerLogout();
 
-      if (response.statusCode == 200) {
+      if (response.statusCode == 204) {
+        await _authLocal.removeData();
         return const Right(null);
       } else {
         return Left(

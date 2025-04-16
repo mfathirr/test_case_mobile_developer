@@ -23,16 +23,21 @@ mixin _$AddressEvent {
         customerCreateBlueray,
     required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
     required TResult Function(PostcodeValidationParam param) postcodeValidation,
+    required TResult Function(List<CustomerCreateMultipleParam> param)
+        customerCreateMultipleBlueray,
     required TResult Function(CustomerDeleteBluerayParam param)
         customerDeleteBlueray,
     required TResult Function(CustomerUpdateBluerayParam param)
         customerUpdateBlueray,
     required TResult Function() getPrimaryAddress,
     required TResult Function(PostPrimaryAddressParam param) postPrimaryAddress,
+    required TResult Function(String fileImage) uploadFileImage,
     required TResult Function(int param) indexSearchAddress,
     required TResult Function(GeoPoint point, MapController mapController)
         mapAddress,
     required TResult Function(Map<String, dynamic> data) mapData,
+    required TResult Function(CustomerCreateBluerayParam data)
+        addAddressMultiple,
     required TResult Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -41,8 +46,11 @@ mixin _$AddressEvent {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)
         clearData,
   }) =>
       throw _privateConstructorUsedError;
@@ -52,13 +60,17 @@ mixin _$AddressEvent {
     TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult? Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult? Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
     TResult? Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
     TResult? Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
     TResult? Function()? getPrimaryAddress,
     TResult? Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult? Function(String fileImage)? uploadFileImage,
     TResult? Function(int param)? indexSearchAddress,
     TResult? Function(GeoPoint point, MapController mapController)? mapAddress,
     TResult? Function(Map<String, dynamic> data)? mapData,
+    TResult? Function(CustomerCreateBluerayParam data)? addAddressMultiple,
     TResult? Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -67,8 +79,11 @@ mixin _$AddressEvent {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)?
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
         clearData,
   }) =>
       throw _privateConstructorUsedError;
@@ -78,13 +93,17 @@ mixin _$AddressEvent {
     TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
     TResult Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
     TResult Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
     TResult Function()? getPrimaryAddress,
     TResult Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult Function(String fileImage)? uploadFileImage,
     TResult Function(int param)? indexSearchAddress,
     TResult Function(GeoPoint point, MapController mapController)? mapAddress,
     TResult Function(Map<String, dynamic> data)? mapData,
+    TResult Function(CustomerCreateBluerayParam data)? addAddressMultiple,
     TResult Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -93,8 +112,11 @@ mixin _$AddressEvent {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)?
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
         clearData,
     required TResult orElse(),
   }) =>
@@ -106,15 +128,19 @@ mixin _$AddressEvent {
         customerCreateBlueray,
     required TResult Function(_SubDistrictSearch value) subDistrictSearch,
     required TResult Function(_PostcodeValidation value) postcodeValidation,
+    required TResult Function(_CustomerCreateMultipleBlueray value)
+        customerCreateMultipleBlueray,
     required TResult Function(_CustomerDeleteBlueray value)
         customerDeleteBlueray,
     required TResult Function(_CustomerUpdateBlueray value)
         customerUpdateBlueray,
     required TResult Function(_GetPrimaryAddress value) getPrimaryAddress,
     required TResult Function(_PostPrimaryAddress value) postPrimaryAddress,
+    required TResult Function(_UploadFileImage value) uploadFileImage,
     required TResult Function(_IndexSearchAddress value) indexSearchAddress,
     required TResult Function(_MapAddress value) mapAddress,
     required TResult Function(_MapData value) mapData,
+    required TResult Function(_AddAddressMultiple value) addAddressMultiple,
     required TResult Function(_ClearData value) clearData,
   }) =>
       throw _privateConstructorUsedError;
@@ -124,13 +150,17 @@ mixin _$AddressEvent {
     TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult? Function(_PostcodeValidation value)? postcodeValidation,
+    TResult? Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
     TResult? Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
     TResult? Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
     TResult? Function(_GetPrimaryAddress value)? getPrimaryAddress,
     TResult? Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult? Function(_UploadFileImage value)? uploadFileImage,
     TResult? Function(_IndexSearchAddress value)? indexSearchAddress,
     TResult? Function(_MapAddress value)? mapAddress,
     TResult? Function(_MapData value)? mapData,
+    TResult? Function(_AddAddressMultiple value)? addAddressMultiple,
     TResult? Function(_ClearData value)? clearData,
   }) =>
       throw _privateConstructorUsedError;
@@ -140,13 +170,17 @@ mixin _$AddressEvent {
     TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult Function(_PostcodeValidation value)? postcodeValidation,
+    TResult Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
     TResult Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
     TResult Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
     TResult Function(_GetPrimaryAddress value)? getPrimaryAddress,
     TResult Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult Function(_UploadFileImage value)? uploadFileImage,
     TResult Function(_IndexSearchAddress value)? indexSearchAddress,
     TResult Function(_MapAddress value)? mapAddress,
     TResult Function(_MapData value)? mapData,
+    TResult Function(_AddAddressMultiple value)? addAddressMultiple,
     TResult Function(_ClearData value)? clearData,
     required TResult orElse(),
   }) =>
@@ -215,16 +249,21 @@ class _$CustomerListBluerayImpl implements _CustomerListBlueray {
         customerCreateBlueray,
     required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
     required TResult Function(PostcodeValidationParam param) postcodeValidation,
+    required TResult Function(List<CustomerCreateMultipleParam> param)
+        customerCreateMultipleBlueray,
     required TResult Function(CustomerDeleteBluerayParam param)
         customerDeleteBlueray,
     required TResult Function(CustomerUpdateBluerayParam param)
         customerUpdateBlueray,
     required TResult Function() getPrimaryAddress,
     required TResult Function(PostPrimaryAddressParam param) postPrimaryAddress,
+    required TResult Function(String fileImage) uploadFileImage,
     required TResult Function(int param) indexSearchAddress,
     required TResult Function(GeoPoint point, MapController mapController)
         mapAddress,
     required TResult Function(Map<String, dynamic> data) mapData,
+    required TResult Function(CustomerCreateBluerayParam data)
+        addAddressMultiple,
     required TResult Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -233,8 +272,11 @@ class _$CustomerListBluerayImpl implements _CustomerListBlueray {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)
         clearData,
   }) {
     return customerListBlueray();
@@ -247,13 +289,17 @@ class _$CustomerListBluerayImpl implements _CustomerListBlueray {
     TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult? Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult? Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
     TResult? Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
     TResult? Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
     TResult? Function()? getPrimaryAddress,
     TResult? Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult? Function(String fileImage)? uploadFileImage,
     TResult? Function(int param)? indexSearchAddress,
     TResult? Function(GeoPoint point, MapController mapController)? mapAddress,
     TResult? Function(Map<String, dynamic> data)? mapData,
+    TResult? Function(CustomerCreateBluerayParam data)? addAddressMultiple,
     TResult? Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -262,8 +308,11 @@ class _$CustomerListBluerayImpl implements _CustomerListBlueray {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)?
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
         clearData,
   }) {
     return customerListBlueray?.call();
@@ -276,13 +325,17 @@ class _$CustomerListBluerayImpl implements _CustomerListBlueray {
     TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
     TResult Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
     TResult Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
     TResult Function()? getPrimaryAddress,
     TResult Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult Function(String fileImage)? uploadFileImage,
     TResult Function(int param)? indexSearchAddress,
     TResult Function(GeoPoint point, MapController mapController)? mapAddress,
     TResult Function(Map<String, dynamic> data)? mapData,
+    TResult Function(CustomerCreateBluerayParam data)? addAddressMultiple,
     TResult Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -291,8 +344,11 @@ class _$CustomerListBluerayImpl implements _CustomerListBlueray {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)?
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
         clearData,
     required TResult orElse(),
   }) {
@@ -310,15 +366,19 @@ class _$CustomerListBluerayImpl implements _CustomerListBlueray {
         customerCreateBlueray,
     required TResult Function(_SubDistrictSearch value) subDistrictSearch,
     required TResult Function(_PostcodeValidation value) postcodeValidation,
+    required TResult Function(_CustomerCreateMultipleBlueray value)
+        customerCreateMultipleBlueray,
     required TResult Function(_CustomerDeleteBlueray value)
         customerDeleteBlueray,
     required TResult Function(_CustomerUpdateBlueray value)
         customerUpdateBlueray,
     required TResult Function(_GetPrimaryAddress value) getPrimaryAddress,
     required TResult Function(_PostPrimaryAddress value) postPrimaryAddress,
+    required TResult Function(_UploadFileImage value) uploadFileImage,
     required TResult Function(_IndexSearchAddress value) indexSearchAddress,
     required TResult Function(_MapAddress value) mapAddress,
     required TResult Function(_MapData value) mapData,
+    required TResult Function(_AddAddressMultiple value) addAddressMultiple,
     required TResult Function(_ClearData value) clearData,
   }) {
     return customerListBlueray(this);
@@ -331,13 +391,17 @@ class _$CustomerListBluerayImpl implements _CustomerListBlueray {
     TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult? Function(_PostcodeValidation value)? postcodeValidation,
+    TResult? Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
     TResult? Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
     TResult? Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
     TResult? Function(_GetPrimaryAddress value)? getPrimaryAddress,
     TResult? Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult? Function(_UploadFileImage value)? uploadFileImage,
     TResult? Function(_IndexSearchAddress value)? indexSearchAddress,
     TResult? Function(_MapAddress value)? mapAddress,
     TResult? Function(_MapData value)? mapData,
+    TResult? Function(_AddAddressMultiple value)? addAddressMultiple,
     TResult? Function(_ClearData value)? clearData,
   }) {
     return customerListBlueray?.call(this);
@@ -350,13 +414,17 @@ class _$CustomerListBluerayImpl implements _CustomerListBlueray {
     TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult Function(_PostcodeValidation value)? postcodeValidation,
+    TResult Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
     TResult Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
     TResult Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
     TResult Function(_GetPrimaryAddress value)? getPrimaryAddress,
     TResult Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult Function(_UploadFileImage value)? uploadFileImage,
     TResult Function(_IndexSearchAddress value)? indexSearchAddress,
     TResult Function(_MapAddress value)? mapAddress,
     TResult Function(_MapData value)? mapData,
+    TResult Function(_AddAddressMultiple value)? addAddressMultiple,
     TResult Function(_ClearData value)? clearData,
     required TResult orElse(),
   }) {
@@ -442,16 +510,21 @@ class _$CustomerCreateBluerayImpl implements _CustomerCreateBlueray {
         customerCreateBlueray,
     required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
     required TResult Function(PostcodeValidationParam param) postcodeValidation,
+    required TResult Function(List<CustomerCreateMultipleParam> param)
+        customerCreateMultipleBlueray,
     required TResult Function(CustomerDeleteBluerayParam param)
         customerDeleteBlueray,
     required TResult Function(CustomerUpdateBluerayParam param)
         customerUpdateBlueray,
     required TResult Function() getPrimaryAddress,
     required TResult Function(PostPrimaryAddressParam param) postPrimaryAddress,
+    required TResult Function(String fileImage) uploadFileImage,
     required TResult Function(int param) indexSearchAddress,
     required TResult Function(GeoPoint point, MapController mapController)
         mapAddress,
     required TResult Function(Map<String, dynamic> data) mapData,
+    required TResult Function(CustomerCreateBluerayParam data)
+        addAddressMultiple,
     required TResult Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -460,8 +533,11 @@ class _$CustomerCreateBluerayImpl implements _CustomerCreateBlueray {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)
         clearData,
   }) {
     return customerCreateBlueray(param);
@@ -474,13 +550,17 @@ class _$CustomerCreateBluerayImpl implements _CustomerCreateBlueray {
     TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult? Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult? Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
     TResult? Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
     TResult? Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
     TResult? Function()? getPrimaryAddress,
     TResult? Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult? Function(String fileImage)? uploadFileImage,
     TResult? Function(int param)? indexSearchAddress,
     TResult? Function(GeoPoint point, MapController mapController)? mapAddress,
     TResult? Function(Map<String, dynamic> data)? mapData,
+    TResult? Function(CustomerCreateBluerayParam data)? addAddressMultiple,
     TResult? Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -489,8 +569,11 @@ class _$CustomerCreateBluerayImpl implements _CustomerCreateBlueray {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)?
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
         clearData,
   }) {
     return customerCreateBlueray?.call(param);
@@ -503,13 +586,17 @@ class _$CustomerCreateBluerayImpl implements _CustomerCreateBlueray {
     TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
     TResult Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
     TResult Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
     TResult Function()? getPrimaryAddress,
     TResult Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult Function(String fileImage)? uploadFileImage,
     TResult Function(int param)? indexSearchAddress,
     TResult Function(GeoPoint point, MapController mapController)? mapAddress,
     TResult Function(Map<String, dynamic> data)? mapData,
+    TResult Function(CustomerCreateBluerayParam data)? addAddressMultiple,
     TResult Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -518,8 +605,11 @@ class _$CustomerCreateBluerayImpl implements _CustomerCreateBlueray {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)?
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
         clearData,
     required TResult orElse(),
   }) {
@@ -537,15 +627,19 @@ class _$CustomerCreateBluerayImpl implements _CustomerCreateBlueray {
         customerCreateBlueray,
     required TResult Function(_SubDistrictSearch value) subDistrictSearch,
     required TResult Function(_PostcodeValidation value) postcodeValidation,
+    required TResult Function(_CustomerCreateMultipleBlueray value)
+        customerCreateMultipleBlueray,
     required TResult Function(_CustomerDeleteBlueray value)
         customerDeleteBlueray,
     required TResult Function(_CustomerUpdateBlueray value)
         customerUpdateBlueray,
     required TResult Function(_GetPrimaryAddress value) getPrimaryAddress,
     required TResult Function(_PostPrimaryAddress value) postPrimaryAddress,
+    required TResult Function(_UploadFileImage value) uploadFileImage,
     required TResult Function(_IndexSearchAddress value) indexSearchAddress,
     required TResult Function(_MapAddress value) mapAddress,
     required TResult Function(_MapData value) mapData,
+    required TResult Function(_AddAddressMultiple value) addAddressMultiple,
     required TResult Function(_ClearData value) clearData,
   }) {
     return customerCreateBlueray(this);
@@ -558,13 +652,17 @@ class _$CustomerCreateBluerayImpl implements _CustomerCreateBlueray {
     TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult? Function(_PostcodeValidation value)? postcodeValidation,
+    TResult? Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
     TResult? Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
     TResult? Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
     TResult? Function(_GetPrimaryAddress value)? getPrimaryAddress,
     TResult? Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult? Function(_UploadFileImage value)? uploadFileImage,
     TResult? Function(_IndexSearchAddress value)? indexSearchAddress,
     TResult? Function(_MapAddress value)? mapAddress,
     TResult? Function(_MapData value)? mapData,
+    TResult? Function(_AddAddressMultiple value)? addAddressMultiple,
     TResult? Function(_ClearData value)? clearData,
   }) {
     return customerCreateBlueray?.call(this);
@@ -577,13 +675,17 @@ class _$CustomerCreateBluerayImpl implements _CustomerCreateBlueray {
     TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult Function(_PostcodeValidation value)? postcodeValidation,
+    TResult Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
     TResult Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
     TResult Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
     TResult Function(_GetPrimaryAddress value)? getPrimaryAddress,
     TResult Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult Function(_UploadFileImage value)? uploadFileImage,
     TResult Function(_IndexSearchAddress value)? indexSearchAddress,
     TResult Function(_MapAddress value)? mapAddress,
     TResult Function(_MapData value)? mapData,
+    TResult Function(_AddAddressMultiple value)? addAddressMultiple,
     TResult Function(_ClearData value)? clearData,
     required TResult orElse(),
   }) {
@@ -675,16 +777,21 @@ class _$SubDistrictSearchImpl implements _SubDistrictSearch {
         customerCreateBlueray,
     required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
     required TResult Function(PostcodeValidationParam param) postcodeValidation,
+    required TResult Function(List<CustomerCreateMultipleParam> param)
+        customerCreateMultipleBlueray,
     required TResult Function(CustomerDeleteBluerayParam param)
         customerDeleteBlueray,
     required TResult Function(CustomerUpdateBluerayParam param)
         customerUpdateBlueray,
     required TResult Function() getPrimaryAddress,
     required TResult Function(PostPrimaryAddressParam param) postPrimaryAddress,
+    required TResult Function(String fileImage) uploadFileImage,
     required TResult Function(int param) indexSearchAddress,
     required TResult Function(GeoPoint point, MapController mapController)
         mapAddress,
     required TResult Function(Map<String, dynamic> data) mapData,
+    required TResult Function(CustomerCreateBluerayParam data)
+        addAddressMultiple,
     required TResult Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -693,8 +800,11 @@ class _$SubDistrictSearchImpl implements _SubDistrictSearch {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)
         clearData,
   }) {
     return subDistrictSearch(query);
@@ -707,13 +817,17 @@ class _$SubDistrictSearchImpl implements _SubDistrictSearch {
     TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult? Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult? Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
     TResult? Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
     TResult? Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
     TResult? Function()? getPrimaryAddress,
     TResult? Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult? Function(String fileImage)? uploadFileImage,
     TResult? Function(int param)? indexSearchAddress,
     TResult? Function(GeoPoint point, MapController mapController)? mapAddress,
     TResult? Function(Map<String, dynamic> data)? mapData,
+    TResult? Function(CustomerCreateBluerayParam data)? addAddressMultiple,
     TResult? Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -722,8 +836,11 @@ class _$SubDistrictSearchImpl implements _SubDistrictSearch {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)?
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
         clearData,
   }) {
     return subDistrictSearch?.call(query);
@@ -736,13 +853,17 @@ class _$SubDistrictSearchImpl implements _SubDistrictSearch {
     TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
     TResult Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
     TResult Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
     TResult Function()? getPrimaryAddress,
     TResult Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult Function(String fileImage)? uploadFileImage,
     TResult Function(int param)? indexSearchAddress,
     TResult Function(GeoPoint point, MapController mapController)? mapAddress,
     TResult Function(Map<String, dynamic> data)? mapData,
+    TResult Function(CustomerCreateBluerayParam data)? addAddressMultiple,
     TResult Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -751,8 +872,11 @@ class _$SubDistrictSearchImpl implements _SubDistrictSearch {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)?
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
         clearData,
     required TResult orElse(),
   }) {
@@ -770,15 +894,19 @@ class _$SubDistrictSearchImpl implements _SubDistrictSearch {
         customerCreateBlueray,
     required TResult Function(_SubDistrictSearch value) subDistrictSearch,
     required TResult Function(_PostcodeValidation value) postcodeValidation,
+    required TResult Function(_CustomerCreateMultipleBlueray value)
+        customerCreateMultipleBlueray,
     required TResult Function(_CustomerDeleteBlueray value)
         customerDeleteBlueray,
     required TResult Function(_CustomerUpdateBlueray value)
         customerUpdateBlueray,
     required TResult Function(_GetPrimaryAddress value) getPrimaryAddress,
     required TResult Function(_PostPrimaryAddress value) postPrimaryAddress,
+    required TResult Function(_UploadFileImage value) uploadFileImage,
     required TResult Function(_IndexSearchAddress value) indexSearchAddress,
     required TResult Function(_MapAddress value) mapAddress,
     required TResult Function(_MapData value) mapData,
+    required TResult Function(_AddAddressMultiple value) addAddressMultiple,
     required TResult Function(_ClearData value) clearData,
   }) {
     return subDistrictSearch(this);
@@ -791,13 +919,17 @@ class _$SubDistrictSearchImpl implements _SubDistrictSearch {
     TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult? Function(_PostcodeValidation value)? postcodeValidation,
+    TResult? Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
     TResult? Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
     TResult? Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
     TResult? Function(_GetPrimaryAddress value)? getPrimaryAddress,
     TResult? Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult? Function(_UploadFileImage value)? uploadFileImage,
     TResult? Function(_IndexSearchAddress value)? indexSearchAddress,
     TResult? Function(_MapAddress value)? mapAddress,
     TResult? Function(_MapData value)? mapData,
+    TResult? Function(_AddAddressMultiple value)? addAddressMultiple,
     TResult? Function(_ClearData value)? clearData,
   }) {
     return subDistrictSearch?.call(this);
@@ -810,13 +942,17 @@ class _$SubDistrictSearchImpl implements _SubDistrictSearch {
     TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult Function(_PostcodeValidation value)? postcodeValidation,
+    TResult Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
     TResult Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
     TResult Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
     TResult Function(_GetPrimaryAddress value)? getPrimaryAddress,
     TResult Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult Function(_UploadFileImage value)? uploadFileImage,
     TResult Function(_IndexSearchAddress value)? indexSearchAddress,
     TResult Function(_MapAddress value)? mapAddress,
     TResult Function(_MapData value)? mapData,
+    TResult Function(_AddAddressMultiple value)? addAddressMultiple,
     TResult Function(_ClearData value)? clearData,
     required TResult orElse(),
   }) {
@@ -907,16 +1043,21 @@ class _$PostcodeValidationImpl implements _PostcodeValidation {
         customerCreateBlueray,
     required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
     required TResult Function(PostcodeValidationParam param) postcodeValidation,
+    required TResult Function(List<CustomerCreateMultipleParam> param)
+        customerCreateMultipleBlueray,
     required TResult Function(CustomerDeleteBluerayParam param)
         customerDeleteBlueray,
     required TResult Function(CustomerUpdateBluerayParam param)
         customerUpdateBlueray,
     required TResult Function() getPrimaryAddress,
     required TResult Function(PostPrimaryAddressParam param) postPrimaryAddress,
+    required TResult Function(String fileImage) uploadFileImage,
     required TResult Function(int param) indexSearchAddress,
     required TResult Function(GeoPoint point, MapController mapController)
         mapAddress,
     required TResult Function(Map<String, dynamic> data) mapData,
+    required TResult Function(CustomerCreateBluerayParam data)
+        addAddressMultiple,
     required TResult Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -925,8 +1066,11 @@ class _$PostcodeValidationImpl implements _PostcodeValidation {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)
         clearData,
   }) {
     return postcodeValidation(param);
@@ -939,13 +1083,17 @@ class _$PostcodeValidationImpl implements _PostcodeValidation {
     TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult? Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult? Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
     TResult? Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
     TResult? Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
     TResult? Function()? getPrimaryAddress,
     TResult? Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult? Function(String fileImage)? uploadFileImage,
     TResult? Function(int param)? indexSearchAddress,
     TResult? Function(GeoPoint point, MapController mapController)? mapAddress,
     TResult? Function(Map<String, dynamic> data)? mapData,
+    TResult? Function(CustomerCreateBluerayParam data)? addAddressMultiple,
     TResult? Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -954,8 +1102,11 @@ class _$PostcodeValidationImpl implements _PostcodeValidation {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)?
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
         clearData,
   }) {
     return postcodeValidation?.call(param);
@@ -968,13 +1119,17 @@ class _$PostcodeValidationImpl implements _PostcodeValidation {
     TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
     TResult Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
     TResult Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
     TResult Function()? getPrimaryAddress,
     TResult Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult Function(String fileImage)? uploadFileImage,
     TResult Function(int param)? indexSearchAddress,
     TResult Function(GeoPoint point, MapController mapController)? mapAddress,
     TResult Function(Map<String, dynamic> data)? mapData,
+    TResult Function(CustomerCreateBluerayParam data)? addAddressMultiple,
     TResult Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -983,8 +1138,11 @@ class _$PostcodeValidationImpl implements _PostcodeValidation {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)?
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
         clearData,
     required TResult orElse(),
   }) {
@@ -1002,15 +1160,19 @@ class _$PostcodeValidationImpl implements _PostcodeValidation {
         customerCreateBlueray,
     required TResult Function(_SubDistrictSearch value) subDistrictSearch,
     required TResult Function(_PostcodeValidation value) postcodeValidation,
+    required TResult Function(_CustomerCreateMultipleBlueray value)
+        customerCreateMultipleBlueray,
     required TResult Function(_CustomerDeleteBlueray value)
         customerDeleteBlueray,
     required TResult Function(_CustomerUpdateBlueray value)
         customerUpdateBlueray,
     required TResult Function(_GetPrimaryAddress value) getPrimaryAddress,
     required TResult Function(_PostPrimaryAddress value) postPrimaryAddress,
+    required TResult Function(_UploadFileImage value) uploadFileImage,
     required TResult Function(_IndexSearchAddress value) indexSearchAddress,
     required TResult Function(_MapAddress value) mapAddress,
     required TResult Function(_MapData value) mapData,
+    required TResult Function(_AddAddressMultiple value) addAddressMultiple,
     required TResult Function(_ClearData value) clearData,
   }) {
     return postcodeValidation(this);
@@ -1023,13 +1185,17 @@ class _$PostcodeValidationImpl implements _PostcodeValidation {
     TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult? Function(_PostcodeValidation value)? postcodeValidation,
+    TResult? Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
     TResult? Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
     TResult? Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
     TResult? Function(_GetPrimaryAddress value)? getPrimaryAddress,
     TResult? Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult? Function(_UploadFileImage value)? uploadFileImage,
     TResult? Function(_IndexSearchAddress value)? indexSearchAddress,
     TResult? Function(_MapAddress value)? mapAddress,
     TResult? Function(_MapData value)? mapData,
+    TResult? Function(_AddAddressMultiple value)? addAddressMultiple,
     TResult? Function(_ClearData value)? clearData,
   }) {
     return postcodeValidation?.call(this);
@@ -1042,13 +1208,17 @@ class _$PostcodeValidationImpl implements _PostcodeValidation {
     TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult Function(_PostcodeValidation value)? postcodeValidation,
+    TResult Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
     TResult Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
     TResult Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
     TResult Function(_GetPrimaryAddress value)? getPrimaryAddress,
     TResult Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult Function(_UploadFileImage value)? uploadFileImage,
     TResult Function(_IndexSearchAddress value)? indexSearchAddress,
     TResult Function(_MapAddress value)? mapAddress,
     TResult Function(_MapData value)? mapData,
+    TResult Function(_AddAddressMultiple value)? addAddressMultiple,
     TResult Function(_ClearData value)? clearData,
     required TResult orElse(),
   }) {
@@ -1068,6 +1238,287 @@ abstract class _PostcodeValidation implements AddressEvent {
   @JsonKey(ignore: true)
   _$$PostcodeValidationImplCopyWith<_$PostcodeValidationImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$CustomerCreateMultipleBluerayImplCopyWith<$Res> {
+  factory _$$CustomerCreateMultipleBluerayImplCopyWith(
+          _$CustomerCreateMultipleBluerayImpl value,
+          $Res Function(_$CustomerCreateMultipleBluerayImpl) then) =
+      __$$CustomerCreateMultipleBluerayImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<CustomerCreateMultipleParam> param});
+}
+
+/// @nodoc
+class __$$CustomerCreateMultipleBluerayImplCopyWithImpl<$Res>
+    extends _$AddressEventCopyWithImpl<$Res,
+        _$CustomerCreateMultipleBluerayImpl>
+    implements _$$CustomerCreateMultipleBluerayImplCopyWith<$Res> {
+  __$$CustomerCreateMultipleBluerayImplCopyWithImpl(
+      _$CustomerCreateMultipleBluerayImpl _value,
+      $Res Function(_$CustomerCreateMultipleBluerayImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? param = null,
+  }) {
+    return _then(_$CustomerCreateMultipleBluerayImpl(
+      param: null == param
+          ? _value._param
+          : param // ignore: cast_nullable_to_non_nullable
+              as List<CustomerCreateMultipleParam>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CustomerCreateMultipleBluerayImpl
+    implements _CustomerCreateMultipleBlueray {
+  const _$CustomerCreateMultipleBluerayImpl(
+      {required final List<CustomerCreateMultipleParam> param})
+      : _param = param;
+
+  final List<CustomerCreateMultipleParam> _param;
+  @override
+  List<CustomerCreateMultipleParam> get param {
+    if (_param is EqualUnmodifiableListView) return _param;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_param);
+  }
+
+  @override
+  String toString() {
+    return 'AddressEvent.customerCreateMultipleBlueray(param: $param)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CustomerCreateMultipleBluerayImpl &&
+            const DeepCollectionEquality().equals(other._param, _param));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_param));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CustomerCreateMultipleBluerayImplCopyWith<
+          _$CustomerCreateMultipleBluerayImpl>
+      get copyWith => __$$CustomerCreateMultipleBluerayImplCopyWithImpl<
+          _$CustomerCreateMultipleBluerayImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() customerListBlueray,
+    required TResult Function(CustomerCreateBluerayParam param)
+        customerCreateBlueray,
+    required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
+    required TResult Function(PostcodeValidationParam param) postcodeValidation,
+    required TResult Function(List<CustomerCreateMultipleParam> param)
+        customerCreateMultipleBlueray,
+    required TResult Function(CustomerDeleteBluerayParam param)
+        customerDeleteBlueray,
+    required TResult Function(CustomerUpdateBluerayParam param)
+        customerUpdateBlueray,
+    required TResult Function() getPrimaryAddress,
+    required TResult Function(PostPrimaryAddressParam param) postPrimaryAddress,
+    required TResult Function(String fileImage) uploadFileImage,
+    required TResult Function(int param) indexSearchAddress,
+    required TResult Function(GeoPoint point, MapController mapController)
+        mapAddress,
+    required TResult Function(Map<String, dynamic> data) mapData,
+    required TResult Function(CustomerCreateBluerayParam data)
+        addAddressMultiple,
+    required TResult Function(
+            bool customerDeleteBlueray,
+            bool postcodeValidation,
+            bool subDistrictSearch,
+            bool customerCreateBlueray,
+            bool customerUpdateBlueray,
+            bool getPrimaryAddress,
+            bool postPrimaryAddress,
+            bool uploadFileImage,
+            bool mapAddress,
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)
+        clearData,
+  }) {
+    return customerCreateMultipleBlueray(param);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? customerListBlueray,
+    TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
+    TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
+    TResult? Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult? Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
+    TResult? Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
+    TResult? Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
+    TResult? Function()? getPrimaryAddress,
+    TResult? Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult? Function(String fileImage)? uploadFileImage,
+    TResult? Function(int param)? indexSearchAddress,
+    TResult? Function(GeoPoint point, MapController mapController)? mapAddress,
+    TResult? Function(Map<String, dynamic> data)? mapData,
+    TResult? Function(CustomerCreateBluerayParam data)? addAddressMultiple,
+    TResult? Function(
+            bool customerDeleteBlueray,
+            bool postcodeValidation,
+            bool subDistrictSearch,
+            bool customerCreateBlueray,
+            bool customerUpdateBlueray,
+            bool getPrimaryAddress,
+            bool postPrimaryAddress,
+            bool uploadFileImage,
+            bool mapAddress,
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
+        clearData,
+  }) {
+    return customerCreateMultipleBlueray?.call(param);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? customerListBlueray,
+    TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
+    TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
+    TResult Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
+    TResult Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
+    TResult Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
+    TResult Function()? getPrimaryAddress,
+    TResult Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult Function(String fileImage)? uploadFileImage,
+    TResult Function(int param)? indexSearchAddress,
+    TResult Function(GeoPoint point, MapController mapController)? mapAddress,
+    TResult Function(Map<String, dynamic> data)? mapData,
+    TResult Function(CustomerCreateBluerayParam data)? addAddressMultiple,
+    TResult Function(
+            bool customerDeleteBlueray,
+            bool postcodeValidation,
+            bool subDistrictSearch,
+            bool customerCreateBlueray,
+            bool customerUpdateBlueray,
+            bool getPrimaryAddress,
+            bool postPrimaryAddress,
+            bool uploadFileImage,
+            bool mapAddress,
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
+        clearData,
+    required TResult orElse(),
+  }) {
+    if (customerCreateMultipleBlueray != null) {
+      return customerCreateMultipleBlueray(param);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_CustomerListBlueray value) customerListBlueray,
+    required TResult Function(_CustomerCreateBlueray value)
+        customerCreateBlueray,
+    required TResult Function(_SubDistrictSearch value) subDistrictSearch,
+    required TResult Function(_PostcodeValidation value) postcodeValidation,
+    required TResult Function(_CustomerCreateMultipleBlueray value)
+        customerCreateMultipleBlueray,
+    required TResult Function(_CustomerDeleteBlueray value)
+        customerDeleteBlueray,
+    required TResult Function(_CustomerUpdateBlueray value)
+        customerUpdateBlueray,
+    required TResult Function(_GetPrimaryAddress value) getPrimaryAddress,
+    required TResult Function(_PostPrimaryAddress value) postPrimaryAddress,
+    required TResult Function(_UploadFileImage value) uploadFileImage,
+    required TResult Function(_IndexSearchAddress value) indexSearchAddress,
+    required TResult Function(_MapAddress value) mapAddress,
+    required TResult Function(_MapData value) mapData,
+    required TResult Function(_AddAddressMultiple value) addAddressMultiple,
+    required TResult Function(_ClearData value) clearData,
+  }) {
+    return customerCreateMultipleBlueray(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
+    TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
+    TResult? Function(_PostcodeValidation value)? postcodeValidation,
+    TResult? Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
+    TResult? Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
+    TResult? Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
+    TResult? Function(_GetPrimaryAddress value)? getPrimaryAddress,
+    TResult? Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult? Function(_UploadFileImage value)? uploadFileImage,
+    TResult? Function(_IndexSearchAddress value)? indexSearchAddress,
+    TResult? Function(_MapAddress value)? mapAddress,
+    TResult? Function(_MapData value)? mapData,
+    TResult? Function(_AddAddressMultiple value)? addAddressMultiple,
+    TResult? Function(_ClearData value)? clearData,
+  }) {
+    return customerCreateMultipleBlueray?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
+    TResult Function(_SubDistrictSearch value)? subDistrictSearch,
+    TResult Function(_PostcodeValidation value)? postcodeValidation,
+    TResult Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
+    TResult Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
+    TResult Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
+    TResult Function(_GetPrimaryAddress value)? getPrimaryAddress,
+    TResult Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult Function(_UploadFileImage value)? uploadFileImage,
+    TResult Function(_IndexSearchAddress value)? indexSearchAddress,
+    TResult Function(_MapAddress value)? mapAddress,
+    TResult Function(_MapData value)? mapData,
+    TResult Function(_AddAddressMultiple value)? addAddressMultiple,
+    TResult Function(_ClearData value)? clearData,
+    required TResult orElse(),
+  }) {
+    if (customerCreateMultipleBlueray != null) {
+      return customerCreateMultipleBlueray(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CustomerCreateMultipleBlueray implements AddressEvent {
+  const factory _CustomerCreateMultipleBlueray(
+          {required final List<CustomerCreateMultipleParam> param}) =
+      _$CustomerCreateMultipleBluerayImpl;
+
+  List<CustomerCreateMultipleParam> get param;
+  @JsonKey(ignore: true)
+  _$$CustomerCreateMultipleBluerayImplCopyWith<
+          _$CustomerCreateMultipleBluerayImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1141,16 +1592,21 @@ class _$CustomerDeleteBluerayImpl implements _CustomerDeleteBlueray {
         customerCreateBlueray,
     required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
     required TResult Function(PostcodeValidationParam param) postcodeValidation,
+    required TResult Function(List<CustomerCreateMultipleParam> param)
+        customerCreateMultipleBlueray,
     required TResult Function(CustomerDeleteBluerayParam param)
         customerDeleteBlueray,
     required TResult Function(CustomerUpdateBluerayParam param)
         customerUpdateBlueray,
     required TResult Function() getPrimaryAddress,
     required TResult Function(PostPrimaryAddressParam param) postPrimaryAddress,
+    required TResult Function(String fileImage) uploadFileImage,
     required TResult Function(int param) indexSearchAddress,
     required TResult Function(GeoPoint point, MapController mapController)
         mapAddress,
     required TResult Function(Map<String, dynamic> data) mapData,
+    required TResult Function(CustomerCreateBluerayParam data)
+        addAddressMultiple,
     required TResult Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -1159,8 +1615,11 @@ class _$CustomerDeleteBluerayImpl implements _CustomerDeleteBlueray {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)
         clearData,
   }) {
     return customerDeleteBlueray(param);
@@ -1173,13 +1632,17 @@ class _$CustomerDeleteBluerayImpl implements _CustomerDeleteBlueray {
     TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult? Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult? Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
     TResult? Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
     TResult? Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
     TResult? Function()? getPrimaryAddress,
     TResult? Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult? Function(String fileImage)? uploadFileImage,
     TResult? Function(int param)? indexSearchAddress,
     TResult? Function(GeoPoint point, MapController mapController)? mapAddress,
     TResult? Function(Map<String, dynamic> data)? mapData,
+    TResult? Function(CustomerCreateBluerayParam data)? addAddressMultiple,
     TResult? Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -1188,8 +1651,11 @@ class _$CustomerDeleteBluerayImpl implements _CustomerDeleteBlueray {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)?
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
         clearData,
   }) {
     return customerDeleteBlueray?.call(param);
@@ -1202,13 +1668,17 @@ class _$CustomerDeleteBluerayImpl implements _CustomerDeleteBlueray {
     TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
     TResult Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
     TResult Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
     TResult Function()? getPrimaryAddress,
     TResult Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult Function(String fileImage)? uploadFileImage,
     TResult Function(int param)? indexSearchAddress,
     TResult Function(GeoPoint point, MapController mapController)? mapAddress,
     TResult Function(Map<String, dynamic> data)? mapData,
+    TResult Function(CustomerCreateBluerayParam data)? addAddressMultiple,
     TResult Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -1217,8 +1687,11 @@ class _$CustomerDeleteBluerayImpl implements _CustomerDeleteBlueray {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)?
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
         clearData,
     required TResult orElse(),
   }) {
@@ -1236,15 +1709,19 @@ class _$CustomerDeleteBluerayImpl implements _CustomerDeleteBlueray {
         customerCreateBlueray,
     required TResult Function(_SubDistrictSearch value) subDistrictSearch,
     required TResult Function(_PostcodeValidation value) postcodeValidation,
+    required TResult Function(_CustomerCreateMultipleBlueray value)
+        customerCreateMultipleBlueray,
     required TResult Function(_CustomerDeleteBlueray value)
         customerDeleteBlueray,
     required TResult Function(_CustomerUpdateBlueray value)
         customerUpdateBlueray,
     required TResult Function(_GetPrimaryAddress value) getPrimaryAddress,
     required TResult Function(_PostPrimaryAddress value) postPrimaryAddress,
+    required TResult Function(_UploadFileImage value) uploadFileImage,
     required TResult Function(_IndexSearchAddress value) indexSearchAddress,
     required TResult Function(_MapAddress value) mapAddress,
     required TResult Function(_MapData value) mapData,
+    required TResult Function(_AddAddressMultiple value) addAddressMultiple,
     required TResult Function(_ClearData value) clearData,
   }) {
     return customerDeleteBlueray(this);
@@ -1257,13 +1734,17 @@ class _$CustomerDeleteBluerayImpl implements _CustomerDeleteBlueray {
     TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult? Function(_PostcodeValidation value)? postcodeValidation,
+    TResult? Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
     TResult? Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
     TResult? Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
     TResult? Function(_GetPrimaryAddress value)? getPrimaryAddress,
     TResult? Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult? Function(_UploadFileImage value)? uploadFileImage,
     TResult? Function(_IndexSearchAddress value)? indexSearchAddress,
     TResult? Function(_MapAddress value)? mapAddress,
     TResult? Function(_MapData value)? mapData,
+    TResult? Function(_AddAddressMultiple value)? addAddressMultiple,
     TResult? Function(_ClearData value)? clearData,
   }) {
     return customerDeleteBlueray?.call(this);
@@ -1276,13 +1757,17 @@ class _$CustomerDeleteBluerayImpl implements _CustomerDeleteBlueray {
     TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult Function(_PostcodeValidation value)? postcodeValidation,
+    TResult Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
     TResult Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
     TResult Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
     TResult Function(_GetPrimaryAddress value)? getPrimaryAddress,
     TResult Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult Function(_UploadFileImage value)? uploadFileImage,
     TResult Function(_IndexSearchAddress value)? indexSearchAddress,
     TResult Function(_MapAddress value)? mapAddress,
     TResult Function(_MapData value)? mapData,
+    TResult Function(_AddAddressMultiple value)? addAddressMultiple,
     TResult Function(_ClearData value)? clearData,
     required TResult orElse(),
   }) {
@@ -1375,16 +1860,21 @@ class _$CustomerUpdateBluerayImpl implements _CustomerUpdateBlueray {
         customerCreateBlueray,
     required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
     required TResult Function(PostcodeValidationParam param) postcodeValidation,
+    required TResult Function(List<CustomerCreateMultipleParam> param)
+        customerCreateMultipleBlueray,
     required TResult Function(CustomerDeleteBluerayParam param)
         customerDeleteBlueray,
     required TResult Function(CustomerUpdateBluerayParam param)
         customerUpdateBlueray,
     required TResult Function() getPrimaryAddress,
     required TResult Function(PostPrimaryAddressParam param) postPrimaryAddress,
+    required TResult Function(String fileImage) uploadFileImage,
     required TResult Function(int param) indexSearchAddress,
     required TResult Function(GeoPoint point, MapController mapController)
         mapAddress,
     required TResult Function(Map<String, dynamic> data) mapData,
+    required TResult Function(CustomerCreateBluerayParam data)
+        addAddressMultiple,
     required TResult Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -1393,8 +1883,11 @@ class _$CustomerUpdateBluerayImpl implements _CustomerUpdateBlueray {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)
         clearData,
   }) {
     return customerUpdateBlueray(param);
@@ -1407,13 +1900,17 @@ class _$CustomerUpdateBluerayImpl implements _CustomerUpdateBlueray {
     TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult? Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult? Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
     TResult? Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
     TResult? Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
     TResult? Function()? getPrimaryAddress,
     TResult? Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult? Function(String fileImage)? uploadFileImage,
     TResult? Function(int param)? indexSearchAddress,
     TResult? Function(GeoPoint point, MapController mapController)? mapAddress,
     TResult? Function(Map<String, dynamic> data)? mapData,
+    TResult? Function(CustomerCreateBluerayParam data)? addAddressMultiple,
     TResult? Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -1422,8 +1919,11 @@ class _$CustomerUpdateBluerayImpl implements _CustomerUpdateBlueray {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)?
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
         clearData,
   }) {
     return customerUpdateBlueray?.call(param);
@@ -1436,13 +1936,17 @@ class _$CustomerUpdateBluerayImpl implements _CustomerUpdateBlueray {
     TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
     TResult Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
     TResult Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
     TResult Function()? getPrimaryAddress,
     TResult Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult Function(String fileImage)? uploadFileImage,
     TResult Function(int param)? indexSearchAddress,
     TResult Function(GeoPoint point, MapController mapController)? mapAddress,
     TResult Function(Map<String, dynamic> data)? mapData,
+    TResult Function(CustomerCreateBluerayParam data)? addAddressMultiple,
     TResult Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -1451,8 +1955,11 @@ class _$CustomerUpdateBluerayImpl implements _CustomerUpdateBlueray {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)?
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
         clearData,
     required TResult orElse(),
   }) {
@@ -1470,15 +1977,19 @@ class _$CustomerUpdateBluerayImpl implements _CustomerUpdateBlueray {
         customerCreateBlueray,
     required TResult Function(_SubDistrictSearch value) subDistrictSearch,
     required TResult Function(_PostcodeValidation value) postcodeValidation,
+    required TResult Function(_CustomerCreateMultipleBlueray value)
+        customerCreateMultipleBlueray,
     required TResult Function(_CustomerDeleteBlueray value)
         customerDeleteBlueray,
     required TResult Function(_CustomerUpdateBlueray value)
         customerUpdateBlueray,
     required TResult Function(_GetPrimaryAddress value) getPrimaryAddress,
     required TResult Function(_PostPrimaryAddress value) postPrimaryAddress,
+    required TResult Function(_UploadFileImage value) uploadFileImage,
     required TResult Function(_IndexSearchAddress value) indexSearchAddress,
     required TResult Function(_MapAddress value) mapAddress,
     required TResult Function(_MapData value) mapData,
+    required TResult Function(_AddAddressMultiple value) addAddressMultiple,
     required TResult Function(_ClearData value) clearData,
   }) {
     return customerUpdateBlueray(this);
@@ -1491,13 +2002,17 @@ class _$CustomerUpdateBluerayImpl implements _CustomerUpdateBlueray {
     TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult? Function(_PostcodeValidation value)? postcodeValidation,
+    TResult? Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
     TResult? Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
     TResult? Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
     TResult? Function(_GetPrimaryAddress value)? getPrimaryAddress,
     TResult? Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult? Function(_UploadFileImage value)? uploadFileImage,
     TResult? Function(_IndexSearchAddress value)? indexSearchAddress,
     TResult? Function(_MapAddress value)? mapAddress,
     TResult? Function(_MapData value)? mapData,
+    TResult? Function(_AddAddressMultiple value)? addAddressMultiple,
     TResult? Function(_ClearData value)? clearData,
   }) {
     return customerUpdateBlueray?.call(this);
@@ -1510,13 +2025,17 @@ class _$CustomerUpdateBluerayImpl implements _CustomerUpdateBlueray {
     TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult Function(_PostcodeValidation value)? postcodeValidation,
+    TResult Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
     TResult Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
     TResult Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
     TResult Function(_GetPrimaryAddress value)? getPrimaryAddress,
     TResult Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult Function(_UploadFileImage value)? uploadFileImage,
     TResult Function(_IndexSearchAddress value)? indexSearchAddress,
     TResult Function(_MapAddress value)? mapAddress,
     TResult Function(_MapData value)? mapData,
+    TResult Function(_AddAddressMultiple value)? addAddressMultiple,
     TResult Function(_ClearData value)? clearData,
     required TResult orElse(),
   }) {
@@ -1581,16 +2100,21 @@ class _$GetPrimaryAddressImpl implements _GetPrimaryAddress {
         customerCreateBlueray,
     required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
     required TResult Function(PostcodeValidationParam param) postcodeValidation,
+    required TResult Function(List<CustomerCreateMultipleParam> param)
+        customerCreateMultipleBlueray,
     required TResult Function(CustomerDeleteBluerayParam param)
         customerDeleteBlueray,
     required TResult Function(CustomerUpdateBluerayParam param)
         customerUpdateBlueray,
     required TResult Function() getPrimaryAddress,
     required TResult Function(PostPrimaryAddressParam param) postPrimaryAddress,
+    required TResult Function(String fileImage) uploadFileImage,
     required TResult Function(int param) indexSearchAddress,
     required TResult Function(GeoPoint point, MapController mapController)
         mapAddress,
     required TResult Function(Map<String, dynamic> data) mapData,
+    required TResult Function(CustomerCreateBluerayParam data)
+        addAddressMultiple,
     required TResult Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -1599,8 +2123,11 @@ class _$GetPrimaryAddressImpl implements _GetPrimaryAddress {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)
         clearData,
   }) {
     return getPrimaryAddress();
@@ -1613,13 +2140,17 @@ class _$GetPrimaryAddressImpl implements _GetPrimaryAddress {
     TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult? Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult? Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
     TResult? Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
     TResult? Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
     TResult? Function()? getPrimaryAddress,
     TResult? Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult? Function(String fileImage)? uploadFileImage,
     TResult? Function(int param)? indexSearchAddress,
     TResult? Function(GeoPoint point, MapController mapController)? mapAddress,
     TResult? Function(Map<String, dynamic> data)? mapData,
+    TResult? Function(CustomerCreateBluerayParam data)? addAddressMultiple,
     TResult? Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -1628,8 +2159,11 @@ class _$GetPrimaryAddressImpl implements _GetPrimaryAddress {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)?
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
         clearData,
   }) {
     return getPrimaryAddress?.call();
@@ -1642,13 +2176,17 @@ class _$GetPrimaryAddressImpl implements _GetPrimaryAddress {
     TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
     TResult Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
     TResult Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
     TResult Function()? getPrimaryAddress,
     TResult Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult Function(String fileImage)? uploadFileImage,
     TResult Function(int param)? indexSearchAddress,
     TResult Function(GeoPoint point, MapController mapController)? mapAddress,
     TResult Function(Map<String, dynamic> data)? mapData,
+    TResult Function(CustomerCreateBluerayParam data)? addAddressMultiple,
     TResult Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -1657,8 +2195,11 @@ class _$GetPrimaryAddressImpl implements _GetPrimaryAddress {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)?
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
         clearData,
     required TResult orElse(),
   }) {
@@ -1676,15 +2217,19 @@ class _$GetPrimaryAddressImpl implements _GetPrimaryAddress {
         customerCreateBlueray,
     required TResult Function(_SubDistrictSearch value) subDistrictSearch,
     required TResult Function(_PostcodeValidation value) postcodeValidation,
+    required TResult Function(_CustomerCreateMultipleBlueray value)
+        customerCreateMultipleBlueray,
     required TResult Function(_CustomerDeleteBlueray value)
         customerDeleteBlueray,
     required TResult Function(_CustomerUpdateBlueray value)
         customerUpdateBlueray,
     required TResult Function(_GetPrimaryAddress value) getPrimaryAddress,
     required TResult Function(_PostPrimaryAddress value) postPrimaryAddress,
+    required TResult Function(_UploadFileImage value) uploadFileImage,
     required TResult Function(_IndexSearchAddress value) indexSearchAddress,
     required TResult Function(_MapAddress value) mapAddress,
     required TResult Function(_MapData value) mapData,
+    required TResult Function(_AddAddressMultiple value) addAddressMultiple,
     required TResult Function(_ClearData value) clearData,
   }) {
     return getPrimaryAddress(this);
@@ -1697,13 +2242,17 @@ class _$GetPrimaryAddressImpl implements _GetPrimaryAddress {
     TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult? Function(_PostcodeValidation value)? postcodeValidation,
+    TResult? Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
     TResult? Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
     TResult? Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
     TResult? Function(_GetPrimaryAddress value)? getPrimaryAddress,
     TResult? Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult? Function(_UploadFileImage value)? uploadFileImage,
     TResult? Function(_IndexSearchAddress value)? indexSearchAddress,
     TResult? Function(_MapAddress value)? mapAddress,
     TResult? Function(_MapData value)? mapData,
+    TResult? Function(_AddAddressMultiple value)? addAddressMultiple,
     TResult? Function(_ClearData value)? clearData,
   }) {
     return getPrimaryAddress?.call(this);
@@ -1716,13 +2265,17 @@ class _$GetPrimaryAddressImpl implements _GetPrimaryAddress {
     TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult Function(_PostcodeValidation value)? postcodeValidation,
+    TResult Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
     TResult Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
     TResult Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
     TResult Function(_GetPrimaryAddress value)? getPrimaryAddress,
     TResult Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult Function(_UploadFileImage value)? uploadFileImage,
     TResult Function(_IndexSearchAddress value)? indexSearchAddress,
     TResult Function(_MapAddress value)? mapAddress,
     TResult Function(_MapData value)? mapData,
+    TResult Function(_AddAddressMultiple value)? addAddressMultiple,
     TResult Function(_ClearData value)? clearData,
     required TResult orElse(),
   }) {
@@ -1807,16 +2360,21 @@ class _$PostPrimaryAddressImpl implements _PostPrimaryAddress {
         customerCreateBlueray,
     required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
     required TResult Function(PostcodeValidationParam param) postcodeValidation,
+    required TResult Function(List<CustomerCreateMultipleParam> param)
+        customerCreateMultipleBlueray,
     required TResult Function(CustomerDeleteBluerayParam param)
         customerDeleteBlueray,
     required TResult Function(CustomerUpdateBluerayParam param)
         customerUpdateBlueray,
     required TResult Function() getPrimaryAddress,
     required TResult Function(PostPrimaryAddressParam param) postPrimaryAddress,
+    required TResult Function(String fileImage) uploadFileImage,
     required TResult Function(int param) indexSearchAddress,
     required TResult Function(GeoPoint point, MapController mapController)
         mapAddress,
     required TResult Function(Map<String, dynamic> data) mapData,
+    required TResult Function(CustomerCreateBluerayParam data)
+        addAddressMultiple,
     required TResult Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -1825,8 +2383,11 @@ class _$PostPrimaryAddressImpl implements _PostPrimaryAddress {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)
         clearData,
   }) {
     return postPrimaryAddress(param);
@@ -1839,13 +2400,17 @@ class _$PostPrimaryAddressImpl implements _PostPrimaryAddress {
     TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult? Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult? Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
     TResult? Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
     TResult? Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
     TResult? Function()? getPrimaryAddress,
     TResult? Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult? Function(String fileImage)? uploadFileImage,
     TResult? Function(int param)? indexSearchAddress,
     TResult? Function(GeoPoint point, MapController mapController)? mapAddress,
     TResult? Function(Map<String, dynamic> data)? mapData,
+    TResult? Function(CustomerCreateBluerayParam data)? addAddressMultiple,
     TResult? Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -1854,8 +2419,11 @@ class _$PostPrimaryAddressImpl implements _PostPrimaryAddress {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)?
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
         clearData,
   }) {
     return postPrimaryAddress?.call(param);
@@ -1868,13 +2436,17 @@ class _$PostPrimaryAddressImpl implements _PostPrimaryAddress {
     TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
     TResult Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
     TResult Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
     TResult Function()? getPrimaryAddress,
     TResult Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult Function(String fileImage)? uploadFileImage,
     TResult Function(int param)? indexSearchAddress,
     TResult Function(GeoPoint point, MapController mapController)? mapAddress,
     TResult Function(Map<String, dynamic> data)? mapData,
+    TResult Function(CustomerCreateBluerayParam data)? addAddressMultiple,
     TResult Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -1883,8 +2455,11 @@ class _$PostPrimaryAddressImpl implements _PostPrimaryAddress {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)?
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
         clearData,
     required TResult orElse(),
   }) {
@@ -1902,15 +2477,19 @@ class _$PostPrimaryAddressImpl implements _PostPrimaryAddress {
         customerCreateBlueray,
     required TResult Function(_SubDistrictSearch value) subDistrictSearch,
     required TResult Function(_PostcodeValidation value) postcodeValidation,
+    required TResult Function(_CustomerCreateMultipleBlueray value)
+        customerCreateMultipleBlueray,
     required TResult Function(_CustomerDeleteBlueray value)
         customerDeleteBlueray,
     required TResult Function(_CustomerUpdateBlueray value)
         customerUpdateBlueray,
     required TResult Function(_GetPrimaryAddress value) getPrimaryAddress,
     required TResult Function(_PostPrimaryAddress value) postPrimaryAddress,
+    required TResult Function(_UploadFileImage value) uploadFileImage,
     required TResult Function(_IndexSearchAddress value) indexSearchAddress,
     required TResult Function(_MapAddress value) mapAddress,
     required TResult Function(_MapData value) mapData,
+    required TResult Function(_AddAddressMultiple value) addAddressMultiple,
     required TResult Function(_ClearData value) clearData,
   }) {
     return postPrimaryAddress(this);
@@ -1923,13 +2502,17 @@ class _$PostPrimaryAddressImpl implements _PostPrimaryAddress {
     TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult? Function(_PostcodeValidation value)? postcodeValidation,
+    TResult? Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
     TResult? Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
     TResult? Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
     TResult? Function(_GetPrimaryAddress value)? getPrimaryAddress,
     TResult? Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult? Function(_UploadFileImage value)? uploadFileImage,
     TResult? Function(_IndexSearchAddress value)? indexSearchAddress,
     TResult? Function(_MapAddress value)? mapAddress,
     TResult? Function(_MapData value)? mapData,
+    TResult? Function(_AddAddressMultiple value)? addAddressMultiple,
     TResult? Function(_ClearData value)? clearData,
   }) {
     return postPrimaryAddress?.call(this);
@@ -1942,13 +2525,17 @@ class _$PostPrimaryAddressImpl implements _PostPrimaryAddress {
     TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult Function(_PostcodeValidation value)? postcodeValidation,
+    TResult Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
     TResult Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
     TResult Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
     TResult Function(_GetPrimaryAddress value)? getPrimaryAddress,
     TResult Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult Function(_UploadFileImage value)? uploadFileImage,
     TResult Function(_IndexSearchAddress value)? indexSearchAddress,
     TResult Function(_MapAddress value)? mapAddress,
     TResult Function(_MapData value)? mapData,
+    TResult Function(_AddAddressMultiple value)? addAddressMultiple,
     TResult Function(_ClearData value)? clearData,
     required TResult orElse(),
   }) {
@@ -1967,6 +2554,273 @@ abstract class _PostPrimaryAddress implements AddressEvent {
   PostPrimaryAddressParam get param;
   @JsonKey(ignore: true)
   _$$PostPrimaryAddressImplCopyWith<_$PostPrimaryAddressImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UploadFileImageImplCopyWith<$Res> {
+  factory _$$UploadFileImageImplCopyWith(_$UploadFileImageImpl value,
+          $Res Function(_$UploadFileImageImpl) then) =
+      __$$UploadFileImageImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String fileImage});
+}
+
+/// @nodoc
+class __$$UploadFileImageImplCopyWithImpl<$Res>
+    extends _$AddressEventCopyWithImpl<$Res, _$UploadFileImageImpl>
+    implements _$$UploadFileImageImplCopyWith<$Res> {
+  __$$UploadFileImageImplCopyWithImpl(
+      _$UploadFileImageImpl _value, $Res Function(_$UploadFileImageImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? fileImage = null,
+  }) {
+    return _then(_$UploadFileImageImpl(
+      fileImage: null == fileImage
+          ? _value.fileImage
+          : fileImage // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UploadFileImageImpl implements _UploadFileImage {
+  const _$UploadFileImageImpl({required this.fileImage});
+
+  @override
+  final String fileImage;
+
+  @override
+  String toString() {
+    return 'AddressEvent.uploadFileImage(fileImage: $fileImage)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UploadFileImageImpl &&
+            (identical(other.fileImage, fileImage) ||
+                other.fileImage == fileImage));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, fileImage);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UploadFileImageImplCopyWith<_$UploadFileImageImpl> get copyWith =>
+      __$$UploadFileImageImplCopyWithImpl<_$UploadFileImageImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() customerListBlueray,
+    required TResult Function(CustomerCreateBluerayParam param)
+        customerCreateBlueray,
+    required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
+    required TResult Function(PostcodeValidationParam param) postcodeValidation,
+    required TResult Function(List<CustomerCreateMultipleParam> param)
+        customerCreateMultipleBlueray,
+    required TResult Function(CustomerDeleteBluerayParam param)
+        customerDeleteBlueray,
+    required TResult Function(CustomerUpdateBluerayParam param)
+        customerUpdateBlueray,
+    required TResult Function() getPrimaryAddress,
+    required TResult Function(PostPrimaryAddressParam param) postPrimaryAddress,
+    required TResult Function(String fileImage) uploadFileImage,
+    required TResult Function(int param) indexSearchAddress,
+    required TResult Function(GeoPoint point, MapController mapController)
+        mapAddress,
+    required TResult Function(Map<String, dynamic> data) mapData,
+    required TResult Function(CustomerCreateBluerayParam data)
+        addAddressMultiple,
+    required TResult Function(
+            bool customerDeleteBlueray,
+            bool postcodeValidation,
+            bool subDistrictSearch,
+            bool customerCreateBlueray,
+            bool customerUpdateBlueray,
+            bool getPrimaryAddress,
+            bool postPrimaryAddress,
+            bool uploadFileImage,
+            bool mapAddress,
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)
+        clearData,
+  }) {
+    return uploadFileImage(fileImage);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? customerListBlueray,
+    TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
+    TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
+    TResult? Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult? Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
+    TResult? Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
+    TResult? Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
+    TResult? Function()? getPrimaryAddress,
+    TResult? Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult? Function(String fileImage)? uploadFileImage,
+    TResult? Function(int param)? indexSearchAddress,
+    TResult? Function(GeoPoint point, MapController mapController)? mapAddress,
+    TResult? Function(Map<String, dynamic> data)? mapData,
+    TResult? Function(CustomerCreateBluerayParam data)? addAddressMultiple,
+    TResult? Function(
+            bool customerDeleteBlueray,
+            bool postcodeValidation,
+            bool subDistrictSearch,
+            bool customerCreateBlueray,
+            bool customerUpdateBlueray,
+            bool getPrimaryAddress,
+            bool postPrimaryAddress,
+            bool uploadFileImage,
+            bool mapAddress,
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
+        clearData,
+  }) {
+    return uploadFileImage?.call(fileImage);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? customerListBlueray,
+    TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
+    TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
+    TResult Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
+    TResult Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
+    TResult Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
+    TResult Function()? getPrimaryAddress,
+    TResult Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult Function(String fileImage)? uploadFileImage,
+    TResult Function(int param)? indexSearchAddress,
+    TResult Function(GeoPoint point, MapController mapController)? mapAddress,
+    TResult Function(Map<String, dynamic> data)? mapData,
+    TResult Function(CustomerCreateBluerayParam data)? addAddressMultiple,
+    TResult Function(
+            bool customerDeleteBlueray,
+            bool postcodeValidation,
+            bool subDistrictSearch,
+            bool customerCreateBlueray,
+            bool customerUpdateBlueray,
+            bool getPrimaryAddress,
+            bool postPrimaryAddress,
+            bool uploadFileImage,
+            bool mapAddress,
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
+        clearData,
+    required TResult orElse(),
+  }) {
+    if (uploadFileImage != null) {
+      return uploadFileImage(fileImage);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_CustomerListBlueray value) customerListBlueray,
+    required TResult Function(_CustomerCreateBlueray value)
+        customerCreateBlueray,
+    required TResult Function(_SubDistrictSearch value) subDistrictSearch,
+    required TResult Function(_PostcodeValidation value) postcodeValidation,
+    required TResult Function(_CustomerCreateMultipleBlueray value)
+        customerCreateMultipleBlueray,
+    required TResult Function(_CustomerDeleteBlueray value)
+        customerDeleteBlueray,
+    required TResult Function(_CustomerUpdateBlueray value)
+        customerUpdateBlueray,
+    required TResult Function(_GetPrimaryAddress value) getPrimaryAddress,
+    required TResult Function(_PostPrimaryAddress value) postPrimaryAddress,
+    required TResult Function(_UploadFileImage value) uploadFileImage,
+    required TResult Function(_IndexSearchAddress value) indexSearchAddress,
+    required TResult Function(_MapAddress value) mapAddress,
+    required TResult Function(_MapData value) mapData,
+    required TResult Function(_AddAddressMultiple value) addAddressMultiple,
+    required TResult Function(_ClearData value) clearData,
+  }) {
+    return uploadFileImage(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
+    TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
+    TResult? Function(_PostcodeValidation value)? postcodeValidation,
+    TResult? Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
+    TResult? Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
+    TResult? Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
+    TResult? Function(_GetPrimaryAddress value)? getPrimaryAddress,
+    TResult? Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult? Function(_UploadFileImage value)? uploadFileImage,
+    TResult? Function(_IndexSearchAddress value)? indexSearchAddress,
+    TResult? Function(_MapAddress value)? mapAddress,
+    TResult? Function(_MapData value)? mapData,
+    TResult? Function(_AddAddressMultiple value)? addAddressMultiple,
+    TResult? Function(_ClearData value)? clearData,
+  }) {
+    return uploadFileImage?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
+    TResult Function(_SubDistrictSearch value)? subDistrictSearch,
+    TResult Function(_PostcodeValidation value)? postcodeValidation,
+    TResult Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
+    TResult Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
+    TResult Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
+    TResult Function(_GetPrimaryAddress value)? getPrimaryAddress,
+    TResult Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult Function(_UploadFileImage value)? uploadFileImage,
+    TResult Function(_IndexSearchAddress value)? indexSearchAddress,
+    TResult Function(_MapAddress value)? mapAddress,
+    TResult Function(_MapData value)? mapData,
+    TResult Function(_AddAddressMultiple value)? addAddressMultiple,
+    TResult Function(_ClearData value)? clearData,
+    required TResult orElse(),
+  }) {
+    if (uploadFileImage != null) {
+      return uploadFileImage(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UploadFileImage implements AddressEvent {
+  const factory _UploadFileImage({required final String fileImage}) =
+      _$UploadFileImageImpl;
+
+  String get fileImage;
+  @JsonKey(ignore: true)
+  _$$UploadFileImageImplCopyWith<_$UploadFileImageImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2040,16 +2894,21 @@ class _$IndexSearchAddressImpl implements _IndexSearchAddress {
         customerCreateBlueray,
     required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
     required TResult Function(PostcodeValidationParam param) postcodeValidation,
+    required TResult Function(List<CustomerCreateMultipleParam> param)
+        customerCreateMultipleBlueray,
     required TResult Function(CustomerDeleteBluerayParam param)
         customerDeleteBlueray,
     required TResult Function(CustomerUpdateBluerayParam param)
         customerUpdateBlueray,
     required TResult Function() getPrimaryAddress,
     required TResult Function(PostPrimaryAddressParam param) postPrimaryAddress,
+    required TResult Function(String fileImage) uploadFileImage,
     required TResult Function(int param) indexSearchAddress,
     required TResult Function(GeoPoint point, MapController mapController)
         mapAddress,
     required TResult Function(Map<String, dynamic> data) mapData,
+    required TResult Function(CustomerCreateBluerayParam data)
+        addAddressMultiple,
     required TResult Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -2058,8 +2917,11 @@ class _$IndexSearchAddressImpl implements _IndexSearchAddress {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)
         clearData,
   }) {
     return indexSearchAddress(param);
@@ -2072,13 +2934,17 @@ class _$IndexSearchAddressImpl implements _IndexSearchAddress {
     TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult? Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult? Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
     TResult? Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
     TResult? Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
     TResult? Function()? getPrimaryAddress,
     TResult? Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult? Function(String fileImage)? uploadFileImage,
     TResult? Function(int param)? indexSearchAddress,
     TResult? Function(GeoPoint point, MapController mapController)? mapAddress,
     TResult? Function(Map<String, dynamic> data)? mapData,
+    TResult? Function(CustomerCreateBluerayParam data)? addAddressMultiple,
     TResult? Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -2087,8 +2953,11 @@ class _$IndexSearchAddressImpl implements _IndexSearchAddress {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)?
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
         clearData,
   }) {
     return indexSearchAddress?.call(param);
@@ -2101,13 +2970,17 @@ class _$IndexSearchAddressImpl implements _IndexSearchAddress {
     TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
     TResult Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
     TResult Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
     TResult Function()? getPrimaryAddress,
     TResult Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult Function(String fileImage)? uploadFileImage,
     TResult Function(int param)? indexSearchAddress,
     TResult Function(GeoPoint point, MapController mapController)? mapAddress,
     TResult Function(Map<String, dynamic> data)? mapData,
+    TResult Function(CustomerCreateBluerayParam data)? addAddressMultiple,
     TResult Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -2116,8 +2989,11 @@ class _$IndexSearchAddressImpl implements _IndexSearchAddress {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)?
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
         clearData,
     required TResult orElse(),
   }) {
@@ -2135,15 +3011,19 @@ class _$IndexSearchAddressImpl implements _IndexSearchAddress {
         customerCreateBlueray,
     required TResult Function(_SubDistrictSearch value) subDistrictSearch,
     required TResult Function(_PostcodeValidation value) postcodeValidation,
+    required TResult Function(_CustomerCreateMultipleBlueray value)
+        customerCreateMultipleBlueray,
     required TResult Function(_CustomerDeleteBlueray value)
         customerDeleteBlueray,
     required TResult Function(_CustomerUpdateBlueray value)
         customerUpdateBlueray,
     required TResult Function(_GetPrimaryAddress value) getPrimaryAddress,
     required TResult Function(_PostPrimaryAddress value) postPrimaryAddress,
+    required TResult Function(_UploadFileImage value) uploadFileImage,
     required TResult Function(_IndexSearchAddress value) indexSearchAddress,
     required TResult Function(_MapAddress value) mapAddress,
     required TResult Function(_MapData value) mapData,
+    required TResult Function(_AddAddressMultiple value) addAddressMultiple,
     required TResult Function(_ClearData value) clearData,
   }) {
     return indexSearchAddress(this);
@@ -2156,13 +3036,17 @@ class _$IndexSearchAddressImpl implements _IndexSearchAddress {
     TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult? Function(_PostcodeValidation value)? postcodeValidation,
+    TResult? Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
     TResult? Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
     TResult? Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
     TResult? Function(_GetPrimaryAddress value)? getPrimaryAddress,
     TResult? Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult? Function(_UploadFileImage value)? uploadFileImage,
     TResult? Function(_IndexSearchAddress value)? indexSearchAddress,
     TResult? Function(_MapAddress value)? mapAddress,
     TResult? Function(_MapData value)? mapData,
+    TResult? Function(_AddAddressMultiple value)? addAddressMultiple,
     TResult? Function(_ClearData value)? clearData,
   }) {
     return indexSearchAddress?.call(this);
@@ -2175,13 +3059,17 @@ class _$IndexSearchAddressImpl implements _IndexSearchAddress {
     TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult Function(_PostcodeValidation value)? postcodeValidation,
+    TResult Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
     TResult Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
     TResult Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
     TResult Function(_GetPrimaryAddress value)? getPrimaryAddress,
     TResult Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult Function(_UploadFileImage value)? uploadFileImage,
     TResult Function(_IndexSearchAddress value)? indexSearchAddress,
     TResult Function(_MapAddress value)? mapAddress,
     TResult Function(_MapData value)? mapData,
+    TResult Function(_AddAddressMultiple value)? addAddressMultiple,
     TResult Function(_ClearData value)? clearData,
     required TResult orElse(),
   }) {
@@ -2280,16 +3168,21 @@ class _$MapAddressImpl implements _MapAddress {
         customerCreateBlueray,
     required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
     required TResult Function(PostcodeValidationParam param) postcodeValidation,
+    required TResult Function(List<CustomerCreateMultipleParam> param)
+        customerCreateMultipleBlueray,
     required TResult Function(CustomerDeleteBluerayParam param)
         customerDeleteBlueray,
     required TResult Function(CustomerUpdateBluerayParam param)
         customerUpdateBlueray,
     required TResult Function() getPrimaryAddress,
     required TResult Function(PostPrimaryAddressParam param) postPrimaryAddress,
+    required TResult Function(String fileImage) uploadFileImage,
     required TResult Function(int param) indexSearchAddress,
     required TResult Function(GeoPoint point, MapController mapController)
         mapAddress,
     required TResult Function(Map<String, dynamic> data) mapData,
+    required TResult Function(CustomerCreateBluerayParam data)
+        addAddressMultiple,
     required TResult Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -2298,8 +3191,11 @@ class _$MapAddressImpl implements _MapAddress {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)
         clearData,
   }) {
     return mapAddress(point, mapController);
@@ -2312,13 +3208,17 @@ class _$MapAddressImpl implements _MapAddress {
     TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult? Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult? Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
     TResult? Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
     TResult? Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
     TResult? Function()? getPrimaryAddress,
     TResult? Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult? Function(String fileImage)? uploadFileImage,
     TResult? Function(int param)? indexSearchAddress,
     TResult? Function(GeoPoint point, MapController mapController)? mapAddress,
     TResult? Function(Map<String, dynamic> data)? mapData,
+    TResult? Function(CustomerCreateBluerayParam data)? addAddressMultiple,
     TResult? Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -2327,8 +3227,11 @@ class _$MapAddressImpl implements _MapAddress {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)?
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
         clearData,
   }) {
     return mapAddress?.call(point, mapController);
@@ -2341,13 +3244,17 @@ class _$MapAddressImpl implements _MapAddress {
     TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
     TResult Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
     TResult Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
     TResult Function()? getPrimaryAddress,
     TResult Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult Function(String fileImage)? uploadFileImage,
     TResult Function(int param)? indexSearchAddress,
     TResult Function(GeoPoint point, MapController mapController)? mapAddress,
     TResult Function(Map<String, dynamic> data)? mapData,
+    TResult Function(CustomerCreateBluerayParam data)? addAddressMultiple,
     TResult Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -2356,8 +3263,11 @@ class _$MapAddressImpl implements _MapAddress {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)?
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
         clearData,
     required TResult orElse(),
   }) {
@@ -2375,15 +3285,19 @@ class _$MapAddressImpl implements _MapAddress {
         customerCreateBlueray,
     required TResult Function(_SubDistrictSearch value) subDistrictSearch,
     required TResult Function(_PostcodeValidation value) postcodeValidation,
+    required TResult Function(_CustomerCreateMultipleBlueray value)
+        customerCreateMultipleBlueray,
     required TResult Function(_CustomerDeleteBlueray value)
         customerDeleteBlueray,
     required TResult Function(_CustomerUpdateBlueray value)
         customerUpdateBlueray,
     required TResult Function(_GetPrimaryAddress value) getPrimaryAddress,
     required TResult Function(_PostPrimaryAddress value) postPrimaryAddress,
+    required TResult Function(_UploadFileImage value) uploadFileImage,
     required TResult Function(_IndexSearchAddress value) indexSearchAddress,
     required TResult Function(_MapAddress value) mapAddress,
     required TResult Function(_MapData value) mapData,
+    required TResult Function(_AddAddressMultiple value) addAddressMultiple,
     required TResult Function(_ClearData value) clearData,
   }) {
     return mapAddress(this);
@@ -2396,13 +3310,17 @@ class _$MapAddressImpl implements _MapAddress {
     TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult? Function(_PostcodeValidation value)? postcodeValidation,
+    TResult? Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
     TResult? Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
     TResult? Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
     TResult? Function(_GetPrimaryAddress value)? getPrimaryAddress,
     TResult? Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult? Function(_UploadFileImage value)? uploadFileImage,
     TResult? Function(_IndexSearchAddress value)? indexSearchAddress,
     TResult? Function(_MapAddress value)? mapAddress,
     TResult? Function(_MapData value)? mapData,
+    TResult? Function(_AddAddressMultiple value)? addAddressMultiple,
     TResult? Function(_ClearData value)? clearData,
   }) {
     return mapAddress?.call(this);
@@ -2415,13 +3333,17 @@ class _$MapAddressImpl implements _MapAddress {
     TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult Function(_PostcodeValidation value)? postcodeValidation,
+    TResult Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
     TResult Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
     TResult Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
     TResult Function(_GetPrimaryAddress value)? getPrimaryAddress,
     TResult Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult Function(_UploadFileImage value)? uploadFileImage,
     TResult Function(_IndexSearchAddress value)? indexSearchAddress,
     TResult Function(_MapAddress value)? mapAddress,
     TResult Function(_MapData value)? mapData,
+    TResult Function(_AddAddressMultiple value)? addAddressMultiple,
     TResult Function(_ClearData value)? clearData,
     required TResult orElse(),
   }) {
@@ -2520,16 +3442,21 @@ class _$MapDataImpl implements _MapData {
         customerCreateBlueray,
     required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
     required TResult Function(PostcodeValidationParam param) postcodeValidation,
+    required TResult Function(List<CustomerCreateMultipleParam> param)
+        customerCreateMultipleBlueray,
     required TResult Function(CustomerDeleteBluerayParam param)
         customerDeleteBlueray,
     required TResult Function(CustomerUpdateBluerayParam param)
         customerUpdateBlueray,
     required TResult Function() getPrimaryAddress,
     required TResult Function(PostPrimaryAddressParam param) postPrimaryAddress,
+    required TResult Function(String fileImage) uploadFileImage,
     required TResult Function(int param) indexSearchAddress,
     required TResult Function(GeoPoint point, MapController mapController)
         mapAddress,
     required TResult Function(Map<String, dynamic> data) mapData,
+    required TResult Function(CustomerCreateBluerayParam data)
+        addAddressMultiple,
     required TResult Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -2538,8 +3465,11 @@ class _$MapDataImpl implements _MapData {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)
         clearData,
   }) {
     return mapData(data);
@@ -2552,13 +3482,17 @@ class _$MapDataImpl implements _MapData {
     TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult? Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult? Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
     TResult? Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
     TResult? Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
     TResult? Function()? getPrimaryAddress,
     TResult? Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult? Function(String fileImage)? uploadFileImage,
     TResult? Function(int param)? indexSearchAddress,
     TResult? Function(GeoPoint point, MapController mapController)? mapAddress,
     TResult? Function(Map<String, dynamic> data)? mapData,
+    TResult? Function(CustomerCreateBluerayParam data)? addAddressMultiple,
     TResult? Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -2567,8 +3501,11 @@ class _$MapDataImpl implements _MapData {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)?
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
         clearData,
   }) {
     return mapData?.call(data);
@@ -2581,13 +3518,17 @@ class _$MapDataImpl implements _MapData {
     TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
     TResult Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
     TResult Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
     TResult Function()? getPrimaryAddress,
     TResult Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult Function(String fileImage)? uploadFileImage,
     TResult Function(int param)? indexSearchAddress,
     TResult Function(GeoPoint point, MapController mapController)? mapAddress,
     TResult Function(Map<String, dynamic> data)? mapData,
+    TResult Function(CustomerCreateBluerayParam data)? addAddressMultiple,
     TResult Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -2596,8 +3537,11 @@ class _$MapDataImpl implements _MapData {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)?
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
         clearData,
     required TResult orElse(),
   }) {
@@ -2615,15 +3559,19 @@ class _$MapDataImpl implements _MapData {
         customerCreateBlueray,
     required TResult Function(_SubDistrictSearch value) subDistrictSearch,
     required TResult Function(_PostcodeValidation value) postcodeValidation,
+    required TResult Function(_CustomerCreateMultipleBlueray value)
+        customerCreateMultipleBlueray,
     required TResult Function(_CustomerDeleteBlueray value)
         customerDeleteBlueray,
     required TResult Function(_CustomerUpdateBlueray value)
         customerUpdateBlueray,
     required TResult Function(_GetPrimaryAddress value) getPrimaryAddress,
     required TResult Function(_PostPrimaryAddress value) postPrimaryAddress,
+    required TResult Function(_UploadFileImage value) uploadFileImage,
     required TResult Function(_IndexSearchAddress value) indexSearchAddress,
     required TResult Function(_MapAddress value) mapAddress,
     required TResult Function(_MapData value) mapData,
+    required TResult Function(_AddAddressMultiple value) addAddressMultiple,
     required TResult Function(_ClearData value) clearData,
   }) {
     return mapData(this);
@@ -2636,13 +3584,17 @@ class _$MapDataImpl implements _MapData {
     TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult? Function(_PostcodeValidation value)? postcodeValidation,
+    TResult? Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
     TResult? Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
     TResult? Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
     TResult? Function(_GetPrimaryAddress value)? getPrimaryAddress,
     TResult? Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult? Function(_UploadFileImage value)? uploadFileImage,
     TResult? Function(_IndexSearchAddress value)? indexSearchAddress,
     TResult? Function(_MapAddress value)? mapAddress,
     TResult? Function(_MapData value)? mapData,
+    TResult? Function(_AddAddressMultiple value)? addAddressMultiple,
     TResult? Function(_ClearData value)? clearData,
   }) {
     return mapData?.call(this);
@@ -2655,13 +3607,17 @@ class _$MapDataImpl implements _MapData {
     TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult Function(_PostcodeValidation value)? postcodeValidation,
+    TResult Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
     TResult Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
     TResult Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
     TResult Function(_GetPrimaryAddress value)? getPrimaryAddress,
     TResult Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult Function(_UploadFileImage value)? uploadFileImage,
     TResult Function(_IndexSearchAddress value)? indexSearchAddress,
     TResult Function(_MapAddress value)? mapAddress,
     TResult Function(_MapData value)? mapData,
+    TResult Function(_AddAddressMultiple value)? addAddressMultiple,
     TResult Function(_ClearData value)? clearData,
     required TResult orElse(),
   }) {
@@ -2683,6 +3639,273 @@ abstract class _MapData implements AddressEvent {
 }
 
 /// @nodoc
+abstract class _$$AddAddressMultipleImplCopyWith<$Res> {
+  factory _$$AddAddressMultipleImplCopyWith(_$AddAddressMultipleImpl value,
+          $Res Function(_$AddAddressMultipleImpl) then) =
+      __$$AddAddressMultipleImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({CustomerCreateBluerayParam data});
+}
+
+/// @nodoc
+class __$$AddAddressMultipleImplCopyWithImpl<$Res>
+    extends _$AddressEventCopyWithImpl<$Res, _$AddAddressMultipleImpl>
+    implements _$$AddAddressMultipleImplCopyWith<$Res> {
+  __$$AddAddressMultipleImplCopyWithImpl(_$AddAddressMultipleImpl _value,
+      $Res Function(_$AddAddressMultipleImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = null,
+  }) {
+    return _then(_$AddAddressMultipleImpl(
+      data: null == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as CustomerCreateBluerayParam,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AddAddressMultipleImpl implements _AddAddressMultiple {
+  const _$AddAddressMultipleImpl({required this.data});
+
+  @override
+  final CustomerCreateBluerayParam data;
+
+  @override
+  String toString() {
+    return 'AddressEvent.addAddressMultiple(data: $data)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddAddressMultipleImpl &&
+            (identical(other.data, data) || other.data == data));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, data);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddAddressMultipleImplCopyWith<_$AddAddressMultipleImpl> get copyWith =>
+      __$$AddAddressMultipleImplCopyWithImpl<_$AddAddressMultipleImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() customerListBlueray,
+    required TResult Function(CustomerCreateBluerayParam param)
+        customerCreateBlueray,
+    required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
+    required TResult Function(PostcodeValidationParam param) postcodeValidation,
+    required TResult Function(List<CustomerCreateMultipleParam> param)
+        customerCreateMultipleBlueray,
+    required TResult Function(CustomerDeleteBluerayParam param)
+        customerDeleteBlueray,
+    required TResult Function(CustomerUpdateBluerayParam param)
+        customerUpdateBlueray,
+    required TResult Function() getPrimaryAddress,
+    required TResult Function(PostPrimaryAddressParam param) postPrimaryAddress,
+    required TResult Function(String fileImage) uploadFileImage,
+    required TResult Function(int param) indexSearchAddress,
+    required TResult Function(GeoPoint point, MapController mapController)
+        mapAddress,
+    required TResult Function(Map<String, dynamic> data) mapData,
+    required TResult Function(CustomerCreateBluerayParam data)
+        addAddressMultiple,
+    required TResult Function(
+            bool customerDeleteBlueray,
+            bool postcodeValidation,
+            bool subDistrictSearch,
+            bool customerCreateBlueray,
+            bool customerUpdateBlueray,
+            bool getPrimaryAddress,
+            bool postPrimaryAddress,
+            bool uploadFileImage,
+            bool mapAddress,
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)
+        clearData,
+  }) {
+    return addAddressMultiple(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? customerListBlueray,
+    TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
+    TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
+    TResult? Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult? Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
+    TResult? Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
+    TResult? Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
+    TResult? Function()? getPrimaryAddress,
+    TResult? Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult? Function(String fileImage)? uploadFileImage,
+    TResult? Function(int param)? indexSearchAddress,
+    TResult? Function(GeoPoint point, MapController mapController)? mapAddress,
+    TResult? Function(Map<String, dynamic> data)? mapData,
+    TResult? Function(CustomerCreateBluerayParam data)? addAddressMultiple,
+    TResult? Function(
+            bool customerDeleteBlueray,
+            bool postcodeValidation,
+            bool subDistrictSearch,
+            bool customerCreateBlueray,
+            bool customerUpdateBlueray,
+            bool getPrimaryAddress,
+            bool postPrimaryAddress,
+            bool uploadFileImage,
+            bool mapAddress,
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
+        clearData,
+  }) {
+    return addAddressMultiple?.call(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? customerListBlueray,
+    TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
+    TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
+    TResult Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
+    TResult Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
+    TResult Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
+    TResult Function()? getPrimaryAddress,
+    TResult Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult Function(String fileImage)? uploadFileImage,
+    TResult Function(int param)? indexSearchAddress,
+    TResult Function(GeoPoint point, MapController mapController)? mapAddress,
+    TResult Function(Map<String, dynamic> data)? mapData,
+    TResult Function(CustomerCreateBluerayParam data)? addAddressMultiple,
+    TResult Function(
+            bool customerDeleteBlueray,
+            bool postcodeValidation,
+            bool subDistrictSearch,
+            bool customerCreateBlueray,
+            bool customerUpdateBlueray,
+            bool getPrimaryAddress,
+            bool postPrimaryAddress,
+            bool uploadFileImage,
+            bool mapAddress,
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
+        clearData,
+    required TResult orElse(),
+  }) {
+    if (addAddressMultiple != null) {
+      return addAddressMultiple(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_CustomerListBlueray value) customerListBlueray,
+    required TResult Function(_CustomerCreateBlueray value)
+        customerCreateBlueray,
+    required TResult Function(_SubDistrictSearch value) subDistrictSearch,
+    required TResult Function(_PostcodeValidation value) postcodeValidation,
+    required TResult Function(_CustomerCreateMultipleBlueray value)
+        customerCreateMultipleBlueray,
+    required TResult Function(_CustomerDeleteBlueray value)
+        customerDeleteBlueray,
+    required TResult Function(_CustomerUpdateBlueray value)
+        customerUpdateBlueray,
+    required TResult Function(_GetPrimaryAddress value) getPrimaryAddress,
+    required TResult Function(_PostPrimaryAddress value) postPrimaryAddress,
+    required TResult Function(_UploadFileImage value) uploadFileImage,
+    required TResult Function(_IndexSearchAddress value) indexSearchAddress,
+    required TResult Function(_MapAddress value) mapAddress,
+    required TResult Function(_MapData value) mapData,
+    required TResult Function(_AddAddressMultiple value) addAddressMultiple,
+    required TResult Function(_ClearData value) clearData,
+  }) {
+    return addAddressMultiple(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
+    TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
+    TResult? Function(_PostcodeValidation value)? postcodeValidation,
+    TResult? Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
+    TResult? Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
+    TResult? Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
+    TResult? Function(_GetPrimaryAddress value)? getPrimaryAddress,
+    TResult? Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult? Function(_UploadFileImage value)? uploadFileImage,
+    TResult? Function(_IndexSearchAddress value)? indexSearchAddress,
+    TResult? Function(_MapAddress value)? mapAddress,
+    TResult? Function(_MapData value)? mapData,
+    TResult? Function(_AddAddressMultiple value)? addAddressMultiple,
+    TResult? Function(_ClearData value)? clearData,
+  }) {
+    return addAddressMultiple?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_CustomerListBlueray value)? customerListBlueray,
+    TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
+    TResult Function(_SubDistrictSearch value)? subDistrictSearch,
+    TResult Function(_PostcodeValidation value)? postcodeValidation,
+    TResult Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
+    TResult Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
+    TResult Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
+    TResult Function(_GetPrimaryAddress value)? getPrimaryAddress,
+    TResult Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult Function(_UploadFileImage value)? uploadFileImage,
+    TResult Function(_IndexSearchAddress value)? indexSearchAddress,
+    TResult Function(_MapAddress value)? mapAddress,
+    TResult Function(_MapData value)? mapData,
+    TResult Function(_AddAddressMultiple value)? addAddressMultiple,
+    TResult Function(_ClearData value)? clearData,
+    required TResult orElse(),
+  }) {
+    if (addAddressMultiple != null) {
+      return addAddressMultiple(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AddAddressMultiple implements AddressEvent {
+  const factory _AddAddressMultiple(
+          {required final CustomerCreateBluerayParam data}) =
+      _$AddAddressMultipleImpl;
+
+  CustomerCreateBluerayParam get data;
+  @JsonKey(ignore: true)
+  _$$AddAddressMultipleImplCopyWith<_$AddAddressMultipleImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 abstract class _$$ClearDataImplCopyWith<$Res> {
   factory _$$ClearDataImplCopyWith(
           _$ClearDataImpl value, $Res Function(_$ClearDataImpl) then) =
@@ -2696,8 +3919,11 @@ abstract class _$$ClearDataImplCopyWith<$Res> {
       bool customerUpdateBlueray,
       bool getPrimaryAddress,
       bool postPrimaryAddress,
+      bool uploadFileImage,
       bool mapAddress,
-      bool mapData});
+      bool mapData,
+      bool addAddressMultiple,
+      bool customerCreateMultipleBlueray});
 }
 
 /// @nodoc
@@ -2718,8 +3944,11 @@ class __$$ClearDataImplCopyWithImpl<$Res>
     Object? customerUpdateBlueray = null,
     Object? getPrimaryAddress = null,
     Object? postPrimaryAddress = null,
+    Object? uploadFileImage = null,
     Object? mapAddress = null,
     Object? mapData = null,
+    Object? addAddressMultiple = null,
+    Object? customerCreateMultipleBlueray = null,
   }) {
     return _then(_$ClearDataImpl(
       customerDeleteBlueray: null == customerDeleteBlueray
@@ -2750,6 +3979,10 @@ class __$$ClearDataImplCopyWithImpl<$Res>
           ? _value.postPrimaryAddress
           : postPrimaryAddress // ignore: cast_nullable_to_non_nullable
               as bool,
+      uploadFileImage: null == uploadFileImage
+          ? _value.uploadFileImage
+          : uploadFileImage // ignore: cast_nullable_to_non_nullable
+              as bool,
       mapAddress: null == mapAddress
           ? _value.mapAddress
           : mapAddress // ignore: cast_nullable_to_non_nullable
@@ -2757,6 +3990,14 @@ class __$$ClearDataImplCopyWithImpl<$Res>
       mapData: null == mapData
           ? _value.mapData
           : mapData // ignore: cast_nullable_to_non_nullable
+              as bool,
+      addAddressMultiple: null == addAddressMultiple
+          ? _value.addAddressMultiple
+          : addAddressMultiple // ignore: cast_nullable_to_non_nullable
+              as bool,
+      customerCreateMultipleBlueray: null == customerCreateMultipleBlueray
+          ? _value.customerCreateMultipleBlueray
+          : customerCreateMultipleBlueray // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
   }
@@ -2773,8 +4014,11 @@ class _$ClearDataImpl implements _ClearData {
       this.customerUpdateBlueray = false,
       this.getPrimaryAddress = false,
       this.postPrimaryAddress = false,
+      this.uploadFileImage = false,
       this.mapAddress = false,
-      this.mapData = false});
+      this.mapData = false,
+      this.addAddressMultiple = false,
+      this.customerCreateMultipleBlueray = false});
 
   @override
   @JsonKey()
@@ -2799,14 +4043,23 @@ class _$ClearDataImpl implements _ClearData {
   final bool postPrimaryAddress;
   @override
   @JsonKey()
+  final bool uploadFileImage;
+  @override
+  @JsonKey()
   final bool mapAddress;
   @override
   @JsonKey()
   final bool mapData;
+  @override
+  @JsonKey()
+  final bool addAddressMultiple;
+  @override
+  @JsonKey()
+  final bool customerCreateMultipleBlueray;
 
   @override
   String toString() {
-    return 'AddressEvent.clearData(customerDeleteBlueray: $customerDeleteBlueray, postcodeValidation: $postcodeValidation, subDistrictSearch: $subDistrictSearch, customerCreateBlueray: $customerCreateBlueray, customerUpdateBlueray: $customerUpdateBlueray, getPrimaryAddress: $getPrimaryAddress, postPrimaryAddress: $postPrimaryAddress, mapAddress: $mapAddress, mapData: $mapData)';
+    return 'AddressEvent.clearData(customerDeleteBlueray: $customerDeleteBlueray, postcodeValidation: $postcodeValidation, subDistrictSearch: $subDistrictSearch, customerCreateBlueray: $customerCreateBlueray, customerUpdateBlueray: $customerUpdateBlueray, getPrimaryAddress: $getPrimaryAddress, postPrimaryAddress: $postPrimaryAddress, uploadFileImage: $uploadFileImage, mapAddress: $mapAddress, mapData: $mapData, addAddressMultiple: $addAddressMultiple, customerCreateMultipleBlueray: $customerCreateMultipleBlueray)';
   }
 
   @override
@@ -2828,9 +4081,17 @@ class _$ClearDataImpl implements _ClearData {
                 other.getPrimaryAddress == getPrimaryAddress) &&
             (identical(other.postPrimaryAddress, postPrimaryAddress) ||
                 other.postPrimaryAddress == postPrimaryAddress) &&
+            (identical(other.uploadFileImage, uploadFileImage) ||
+                other.uploadFileImage == uploadFileImage) &&
             (identical(other.mapAddress, mapAddress) ||
                 other.mapAddress == mapAddress) &&
-            (identical(other.mapData, mapData) || other.mapData == mapData));
+            (identical(other.mapData, mapData) || other.mapData == mapData) &&
+            (identical(other.addAddressMultiple, addAddressMultiple) ||
+                other.addAddressMultiple == addAddressMultiple) &&
+            (identical(other.customerCreateMultipleBlueray,
+                    customerCreateMultipleBlueray) ||
+                other.customerCreateMultipleBlueray ==
+                    customerCreateMultipleBlueray));
   }
 
   @override
@@ -2843,8 +4104,11 @@ class _$ClearDataImpl implements _ClearData {
       customerUpdateBlueray,
       getPrimaryAddress,
       postPrimaryAddress,
+      uploadFileImage,
       mapAddress,
-      mapData);
+      mapData,
+      addAddressMultiple,
+      customerCreateMultipleBlueray);
 
   @JsonKey(ignore: true)
   @override
@@ -2860,16 +4124,21 @@ class _$ClearDataImpl implements _ClearData {
         customerCreateBlueray,
     required TResult Function(SubdistrictSearchParam query) subDistrictSearch,
     required TResult Function(PostcodeValidationParam param) postcodeValidation,
+    required TResult Function(List<CustomerCreateMultipleParam> param)
+        customerCreateMultipleBlueray,
     required TResult Function(CustomerDeleteBluerayParam param)
         customerDeleteBlueray,
     required TResult Function(CustomerUpdateBluerayParam param)
         customerUpdateBlueray,
     required TResult Function() getPrimaryAddress,
     required TResult Function(PostPrimaryAddressParam param) postPrimaryAddress,
+    required TResult Function(String fileImage) uploadFileImage,
     required TResult Function(int param) indexSearchAddress,
     required TResult Function(GeoPoint point, MapController mapController)
         mapAddress,
     required TResult Function(Map<String, dynamic> data) mapData,
+    required TResult Function(CustomerCreateBluerayParam data)
+        addAddressMultiple,
     required TResult Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -2878,8 +4147,11 @@ class _$ClearDataImpl implements _ClearData {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)
         clearData,
   }) {
     return clearData(
@@ -2890,8 +4162,11 @@ class _$ClearDataImpl implements _ClearData {
         this.customerUpdateBlueray,
         this.getPrimaryAddress,
         this.postPrimaryAddress,
+        this.uploadFileImage,
         this.mapAddress,
-        this.mapData);
+        this.mapData,
+        this.addAddressMultiple,
+        this.customerCreateMultipleBlueray);
   }
 
   @override
@@ -2901,13 +4176,17 @@ class _$ClearDataImpl implements _ClearData {
     TResult? Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult? Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult? Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult? Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
     TResult? Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
     TResult? Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
     TResult? Function()? getPrimaryAddress,
     TResult? Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult? Function(String fileImage)? uploadFileImage,
     TResult? Function(int param)? indexSearchAddress,
     TResult? Function(GeoPoint point, MapController mapController)? mapAddress,
     TResult? Function(Map<String, dynamic> data)? mapData,
+    TResult? Function(CustomerCreateBluerayParam data)? addAddressMultiple,
     TResult? Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -2916,8 +4195,11 @@ class _$ClearDataImpl implements _ClearData {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)?
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
         clearData,
   }) {
     return clearData?.call(
@@ -2928,8 +4210,11 @@ class _$ClearDataImpl implements _ClearData {
         this.customerUpdateBlueray,
         this.getPrimaryAddress,
         this.postPrimaryAddress,
+        this.uploadFileImage,
         this.mapAddress,
-        this.mapData);
+        this.mapData,
+        this.addAddressMultiple,
+        this.customerCreateMultipleBlueray);
   }
 
   @override
@@ -2939,13 +4224,17 @@ class _$ClearDataImpl implements _ClearData {
     TResult Function(CustomerCreateBluerayParam param)? customerCreateBlueray,
     TResult Function(SubdistrictSearchParam query)? subDistrictSearch,
     TResult Function(PostcodeValidationParam param)? postcodeValidation,
+    TResult Function(List<CustomerCreateMultipleParam> param)?
+        customerCreateMultipleBlueray,
     TResult Function(CustomerDeleteBluerayParam param)? customerDeleteBlueray,
     TResult Function(CustomerUpdateBluerayParam param)? customerUpdateBlueray,
     TResult Function()? getPrimaryAddress,
     TResult Function(PostPrimaryAddressParam param)? postPrimaryAddress,
+    TResult Function(String fileImage)? uploadFileImage,
     TResult Function(int param)? indexSearchAddress,
     TResult Function(GeoPoint point, MapController mapController)? mapAddress,
     TResult Function(Map<String, dynamic> data)? mapData,
+    TResult Function(CustomerCreateBluerayParam data)? addAddressMultiple,
     TResult Function(
             bool customerDeleteBlueray,
             bool postcodeValidation,
@@ -2954,8 +4243,11 @@ class _$ClearDataImpl implements _ClearData {
             bool customerUpdateBlueray,
             bool getPrimaryAddress,
             bool postPrimaryAddress,
+            bool uploadFileImage,
             bool mapAddress,
-            bool mapData)?
+            bool mapData,
+            bool addAddressMultiple,
+            bool customerCreateMultipleBlueray)?
         clearData,
     required TResult orElse(),
   }) {
@@ -2968,8 +4260,11 @@ class _$ClearDataImpl implements _ClearData {
           this.customerUpdateBlueray,
           this.getPrimaryAddress,
           this.postPrimaryAddress,
+          this.uploadFileImage,
           this.mapAddress,
-          this.mapData);
+          this.mapData,
+          this.addAddressMultiple,
+          this.customerCreateMultipleBlueray);
     }
     return orElse();
   }
@@ -2982,15 +4277,19 @@ class _$ClearDataImpl implements _ClearData {
         customerCreateBlueray,
     required TResult Function(_SubDistrictSearch value) subDistrictSearch,
     required TResult Function(_PostcodeValidation value) postcodeValidation,
+    required TResult Function(_CustomerCreateMultipleBlueray value)
+        customerCreateMultipleBlueray,
     required TResult Function(_CustomerDeleteBlueray value)
         customerDeleteBlueray,
     required TResult Function(_CustomerUpdateBlueray value)
         customerUpdateBlueray,
     required TResult Function(_GetPrimaryAddress value) getPrimaryAddress,
     required TResult Function(_PostPrimaryAddress value) postPrimaryAddress,
+    required TResult Function(_UploadFileImage value) uploadFileImage,
     required TResult Function(_IndexSearchAddress value) indexSearchAddress,
     required TResult Function(_MapAddress value) mapAddress,
     required TResult Function(_MapData value) mapData,
+    required TResult Function(_AddAddressMultiple value) addAddressMultiple,
     required TResult Function(_ClearData value) clearData,
   }) {
     return clearData(this);
@@ -3003,13 +4302,17 @@ class _$ClearDataImpl implements _ClearData {
     TResult? Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult? Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult? Function(_PostcodeValidation value)? postcodeValidation,
+    TResult? Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
     TResult? Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
     TResult? Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
     TResult? Function(_GetPrimaryAddress value)? getPrimaryAddress,
     TResult? Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult? Function(_UploadFileImage value)? uploadFileImage,
     TResult? Function(_IndexSearchAddress value)? indexSearchAddress,
     TResult? Function(_MapAddress value)? mapAddress,
     TResult? Function(_MapData value)? mapData,
+    TResult? Function(_AddAddressMultiple value)? addAddressMultiple,
     TResult? Function(_ClearData value)? clearData,
   }) {
     return clearData?.call(this);
@@ -3022,13 +4325,17 @@ class _$ClearDataImpl implements _ClearData {
     TResult Function(_CustomerCreateBlueray value)? customerCreateBlueray,
     TResult Function(_SubDistrictSearch value)? subDistrictSearch,
     TResult Function(_PostcodeValidation value)? postcodeValidation,
+    TResult Function(_CustomerCreateMultipleBlueray value)?
+        customerCreateMultipleBlueray,
     TResult Function(_CustomerDeleteBlueray value)? customerDeleteBlueray,
     TResult Function(_CustomerUpdateBlueray value)? customerUpdateBlueray,
     TResult Function(_GetPrimaryAddress value)? getPrimaryAddress,
     TResult Function(_PostPrimaryAddress value)? postPrimaryAddress,
+    TResult Function(_UploadFileImage value)? uploadFileImage,
     TResult Function(_IndexSearchAddress value)? indexSearchAddress,
     TResult Function(_MapAddress value)? mapAddress,
     TResult Function(_MapData value)? mapData,
+    TResult Function(_AddAddressMultiple value)? addAddressMultiple,
     TResult Function(_ClearData value)? clearData,
     required TResult orElse(),
   }) {
@@ -3048,8 +4355,11 @@ abstract class _ClearData implements AddressEvent {
       final bool customerUpdateBlueray,
       final bool getPrimaryAddress,
       final bool postPrimaryAddress,
+      final bool uploadFileImage,
       final bool mapAddress,
-      final bool mapData}) = _$ClearDataImpl;
+      final bool mapData,
+      final bool addAddressMultiple,
+      final bool customerCreateMultipleBlueray}) = _$ClearDataImpl;
 
   bool get customerDeleteBlueray;
   bool get postcodeValidation;
@@ -3058,8 +4368,11 @@ abstract class _ClearData implements AddressEvent {
   bool get customerUpdateBlueray;
   bool get getPrimaryAddress;
   bool get postPrimaryAddress;
+  bool get uploadFileImage;
   bool get mapAddress;
   bool get mapData;
+  bool get addAddressMultiple;
+  bool get customerCreateMultipleBlueray;
   @JsonKey(ignore: true)
   _$$ClearDataImplCopyWith<_$ClearDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -3075,6 +4388,10 @@ mixin _$AddressState {
   bool get isPostAddressLoading => throw _privateConstructorUsedError;
   String? get postAddressError => throw _privateConstructorUsedError;
   bool get postAddressSuccess =>
+      throw _privateConstructorUsedError; // Post Customer Address Multiple
+  bool get isPostAddressMultipleLoading => throw _privateConstructorUsedError;
+  String? get postAddressMultipleError => throw _privateConstructorUsedError;
+  bool get postAddressMultipleSuccess =>
       throw _privateConstructorUsedError; // SubDistrict Search
   bool get isSubDistrictSearchLoading => throw _privateConstructorUsedError;
   String? get subDistrictSearchError => throw _privateConstructorUsedError;
@@ -3099,12 +4416,19 @@ mixin _$AddressState {
   bool get isPostPrimaryAddressLoading => throw _privateConstructorUsedError;
   String? get postPrimaryAddressError => throw _privateConstructorUsedError;
   bool get postPrimaryAddressSuccess =>
+      throw _privateConstructorUsedError; // Upload
+  bool get isUploadFileImageLoading => throw _privateConstructorUsedError;
+  String? get uploadFileImageError => throw _privateConstructorUsedError;
+  String? get uploadFileImageSuccess =>
       throw _privateConstructorUsedError; // Indexing
   int? get indexSearchAddress => throw _privateConstructorUsedError; // Map
   String? get mapAddress => throw _privateConstructorUsedError;
   String? get mapAddressError => throw _privateConstructorUsedError;
   GeoPoint? get mapPoint => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get mapData => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get mapData =>
+      throw _privateConstructorUsedError; // Address
+  List<CustomerCreateBluerayParam> get address =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $AddressStateCopyWith<AddressState> get copyWith =>
@@ -3124,6 +4448,9 @@ abstract class $AddressStateCopyWith<$Res> {
       bool isPostAddressLoading,
       String? postAddressError,
       bool postAddressSuccess,
+      bool isPostAddressMultipleLoading,
+      String? postAddressMultipleError,
+      bool postAddressMultipleSuccess,
       bool isSubDistrictSearchLoading,
       String? subDistrictSearchError,
       List<SubDistrictsSearchEntity> subDistrictSearchList,
@@ -3142,11 +4469,15 @@ abstract class $AddressStateCopyWith<$Res> {
       bool isPostPrimaryAddressLoading,
       String? postPrimaryAddressError,
       bool postPrimaryAddressSuccess,
+      bool isUploadFileImageLoading,
+      String? uploadFileImageError,
+      String? uploadFileImageSuccess,
       int? indexSearchAddress,
       String? mapAddress,
       String? mapAddressError,
       GeoPoint? mapPoint,
-      Map<String, dynamic>? mapData});
+      Map<String, dynamic>? mapData,
+      List<CustomerCreateBluerayParam> address});
 }
 
 /// @nodoc
@@ -3168,6 +4499,9 @@ class _$AddressStateCopyWithImpl<$Res, $Val extends AddressState>
     Object? isPostAddressLoading = null,
     Object? postAddressError = freezed,
     Object? postAddressSuccess = null,
+    Object? isPostAddressMultipleLoading = null,
+    Object? postAddressMultipleError = freezed,
+    Object? postAddressMultipleSuccess = null,
     Object? isSubDistrictSearchLoading = null,
     Object? subDistrictSearchError = freezed,
     Object? subDistrictSearchList = null,
@@ -3186,11 +4520,15 @@ class _$AddressStateCopyWithImpl<$Res, $Val extends AddressState>
     Object? isPostPrimaryAddressLoading = null,
     Object? postPrimaryAddressError = freezed,
     Object? postPrimaryAddressSuccess = null,
+    Object? isUploadFileImageLoading = null,
+    Object? uploadFileImageError = freezed,
+    Object? uploadFileImageSuccess = freezed,
     Object? indexSearchAddress = freezed,
     Object? mapAddress = freezed,
     Object? mapAddressError = freezed,
     Object? mapPoint = freezed,
     Object? mapData = freezed,
+    Object? address = null,
   }) {
     return _then(_value.copyWith(
       isGetAddressListLoading: null == isGetAddressListLoading
@@ -3216,6 +4554,18 @@ class _$AddressStateCopyWithImpl<$Res, $Val extends AddressState>
       postAddressSuccess: null == postAddressSuccess
           ? _value.postAddressSuccess
           : postAddressSuccess // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isPostAddressMultipleLoading: null == isPostAddressMultipleLoading
+          ? _value.isPostAddressMultipleLoading
+          : isPostAddressMultipleLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      postAddressMultipleError: freezed == postAddressMultipleError
+          ? _value.postAddressMultipleError
+          : postAddressMultipleError // ignore: cast_nullable_to_non_nullable
+              as String?,
+      postAddressMultipleSuccess: null == postAddressMultipleSuccess
+          ? _value.postAddressMultipleSuccess
+          : postAddressMultipleSuccess // ignore: cast_nullable_to_non_nullable
               as bool,
       isSubDistrictSearchLoading: null == isSubDistrictSearchLoading
           ? _value.isSubDistrictSearchLoading
@@ -3289,6 +4639,18 @@ class _$AddressStateCopyWithImpl<$Res, $Val extends AddressState>
           ? _value.postPrimaryAddressSuccess
           : postPrimaryAddressSuccess // ignore: cast_nullable_to_non_nullable
               as bool,
+      isUploadFileImageLoading: null == isUploadFileImageLoading
+          ? _value.isUploadFileImageLoading
+          : isUploadFileImageLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      uploadFileImageError: freezed == uploadFileImageError
+          ? _value.uploadFileImageError
+          : uploadFileImageError // ignore: cast_nullable_to_non_nullable
+              as String?,
+      uploadFileImageSuccess: freezed == uploadFileImageSuccess
+          ? _value.uploadFileImageSuccess
+          : uploadFileImageSuccess // ignore: cast_nullable_to_non_nullable
+              as String?,
       indexSearchAddress: freezed == indexSearchAddress
           ? _value.indexSearchAddress
           : indexSearchAddress // ignore: cast_nullable_to_non_nullable
@@ -3309,6 +4671,10 @@ class _$AddressStateCopyWithImpl<$Res, $Val extends AddressState>
           ? _value.mapData
           : mapData // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
+      address: null == address
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as List<CustomerCreateBluerayParam>,
     ) as $Val);
   }
 }
@@ -3328,6 +4694,9 @@ abstract class _$$AddressStateImplCopyWith<$Res>
       bool isPostAddressLoading,
       String? postAddressError,
       bool postAddressSuccess,
+      bool isPostAddressMultipleLoading,
+      String? postAddressMultipleError,
+      bool postAddressMultipleSuccess,
       bool isSubDistrictSearchLoading,
       String? subDistrictSearchError,
       List<SubDistrictsSearchEntity> subDistrictSearchList,
@@ -3346,11 +4715,15 @@ abstract class _$$AddressStateImplCopyWith<$Res>
       bool isPostPrimaryAddressLoading,
       String? postPrimaryAddressError,
       bool postPrimaryAddressSuccess,
+      bool isUploadFileImageLoading,
+      String? uploadFileImageError,
+      String? uploadFileImageSuccess,
       int? indexSearchAddress,
       String? mapAddress,
       String? mapAddressError,
       GeoPoint? mapPoint,
-      Map<String, dynamic>? mapData});
+      Map<String, dynamic>? mapData,
+      List<CustomerCreateBluerayParam> address});
 }
 
 /// @nodoc
@@ -3370,6 +4743,9 @@ class __$$AddressStateImplCopyWithImpl<$Res>
     Object? isPostAddressLoading = null,
     Object? postAddressError = freezed,
     Object? postAddressSuccess = null,
+    Object? isPostAddressMultipleLoading = null,
+    Object? postAddressMultipleError = freezed,
+    Object? postAddressMultipleSuccess = null,
     Object? isSubDistrictSearchLoading = null,
     Object? subDistrictSearchError = freezed,
     Object? subDistrictSearchList = null,
@@ -3388,11 +4764,15 @@ class __$$AddressStateImplCopyWithImpl<$Res>
     Object? isPostPrimaryAddressLoading = null,
     Object? postPrimaryAddressError = freezed,
     Object? postPrimaryAddressSuccess = null,
+    Object? isUploadFileImageLoading = null,
+    Object? uploadFileImageError = freezed,
+    Object? uploadFileImageSuccess = freezed,
     Object? indexSearchAddress = freezed,
     Object? mapAddress = freezed,
     Object? mapAddressError = freezed,
     Object? mapPoint = freezed,
     Object? mapData = freezed,
+    Object? address = null,
   }) {
     return _then(_$AddressStateImpl(
       isGetAddressListLoading: null == isGetAddressListLoading
@@ -3418,6 +4798,18 @@ class __$$AddressStateImplCopyWithImpl<$Res>
       postAddressSuccess: null == postAddressSuccess
           ? _value.postAddressSuccess
           : postAddressSuccess // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isPostAddressMultipleLoading: null == isPostAddressMultipleLoading
+          ? _value.isPostAddressMultipleLoading
+          : isPostAddressMultipleLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      postAddressMultipleError: freezed == postAddressMultipleError
+          ? _value.postAddressMultipleError
+          : postAddressMultipleError // ignore: cast_nullable_to_non_nullable
+              as String?,
+      postAddressMultipleSuccess: null == postAddressMultipleSuccess
+          ? _value.postAddressMultipleSuccess
+          : postAddressMultipleSuccess // ignore: cast_nullable_to_non_nullable
               as bool,
       isSubDistrictSearchLoading: null == isSubDistrictSearchLoading
           ? _value.isSubDistrictSearchLoading
@@ -3491,6 +4883,18 @@ class __$$AddressStateImplCopyWithImpl<$Res>
           ? _value.postPrimaryAddressSuccess
           : postPrimaryAddressSuccess // ignore: cast_nullable_to_non_nullable
               as bool,
+      isUploadFileImageLoading: null == isUploadFileImageLoading
+          ? _value.isUploadFileImageLoading
+          : isUploadFileImageLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      uploadFileImageError: freezed == uploadFileImageError
+          ? _value.uploadFileImageError
+          : uploadFileImageError // ignore: cast_nullable_to_non_nullable
+              as String?,
+      uploadFileImageSuccess: freezed == uploadFileImageSuccess
+          ? _value.uploadFileImageSuccess
+          : uploadFileImageSuccess // ignore: cast_nullable_to_non_nullable
+              as String?,
       indexSearchAddress: freezed == indexSearchAddress
           ? _value.indexSearchAddress
           : indexSearchAddress // ignore: cast_nullable_to_non_nullable
@@ -3511,6 +4915,10 @@ class __$$AddressStateImplCopyWithImpl<$Res>
           ? _value._mapData
           : mapData // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
+      address: null == address
+          ? _value._address
+          : address // ignore: cast_nullable_to_non_nullable
+              as List<CustomerCreateBluerayParam>,
     ));
   }
 }
@@ -3525,6 +4933,9 @@ class _$AddressStateImpl implements _AddressState {
       this.isPostAddressLoading = false,
       this.postAddressError,
       this.postAddressSuccess = false,
+      this.isPostAddressMultipleLoading = false,
+      this.postAddressMultipleError,
+      this.postAddressMultipleSuccess = false,
       this.isSubDistrictSearchLoading = false,
       this.subDistrictSearchError,
       final List<SubDistrictsSearchEntity> subDistrictSearchList = const [],
@@ -3543,14 +4954,19 @@ class _$AddressStateImpl implements _AddressState {
       this.isPostPrimaryAddressLoading = false,
       this.postPrimaryAddressError,
       this.postPrimaryAddressSuccess = false,
+      this.isUploadFileImageLoading = false,
+      this.uploadFileImageError,
+      this.uploadFileImageSuccess,
       this.indexSearchAddress,
       this.mapAddress,
       this.mapAddressError,
       this.mapPoint,
-      final Map<String, dynamic>? mapData})
+      final Map<String, dynamic>? mapData,
+      final List<CustomerCreateBluerayParam> address = const []})
       : _getAddressList = getAddressList,
         _subDistrictSearchList = subDistrictSearchList,
-        _mapData = mapData;
+        _mapData = mapData,
+        _address = address;
 
 // Get Customer Address List Blueray
   @override
@@ -3576,6 +4992,15 @@ class _$AddressStateImpl implements _AddressState {
   @override
   @JsonKey()
   final bool postAddressSuccess;
+// Post Customer Address Multiple
+  @override
+  @JsonKey()
+  final bool isPostAddressMultipleLoading;
+  @override
+  final String? postAddressMultipleError;
+  @override
+  @JsonKey()
+  final bool postAddressMultipleSuccess;
 // SubDistrict Search
   @override
   @JsonKey()
@@ -3636,6 +5061,14 @@ class _$AddressStateImpl implements _AddressState {
   @override
   @JsonKey()
   final bool postPrimaryAddressSuccess;
+// Upload
+  @override
+  @JsonKey()
+  final bool isUploadFileImageLoading;
+  @override
+  final String? uploadFileImageError;
+  @override
+  final String? uploadFileImageSuccess;
 // Indexing
   @override
   final int? indexSearchAddress;
@@ -3656,9 +5089,20 @@ class _$AddressStateImpl implements _AddressState {
     return EqualUnmodifiableMapView(value);
   }
 
+// Address
+  final List<CustomerCreateBluerayParam> _address;
+// Address
+  @override
+  @JsonKey()
+  List<CustomerCreateBluerayParam> get address {
+    if (_address is EqualUnmodifiableListView) return _address;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_address);
+  }
+
   @override
   String toString() {
-    return 'AddressState(isGetAddressListLoading: $isGetAddressListLoading, getAddressListError: $getAddressListError, getAddressList: $getAddressList, isPostAddressLoading: $isPostAddressLoading, postAddressError: $postAddressError, postAddressSuccess: $postAddressSuccess, isSubDistrictSearchLoading: $isSubDistrictSearchLoading, subDistrictSearchError: $subDistrictSearchError, subDistrictSearchList: $subDistrictSearchList, isPostcodeValidationLoading: $isPostcodeValidationLoading, postcodeValidationError: $postcodeValidationError, isPostcodeValidationSuccess: $isPostcodeValidationSuccess, isDeleteAddressLoading: $isDeleteAddressLoading, deleteAddressError: $deleteAddressError, deleteAddressSuccess: $deleteAddressSuccess, isUpdateAddressLoading: $isUpdateAddressLoading, updateAddressError: $updateAddressError, updateAddressSuccess: $updateAddressSuccess, isGetPrimaryAddressLoading: $isGetPrimaryAddressLoading, getPrimaryAddressError: $getPrimaryAddressError, getPrimaryAddressSuccess: $getPrimaryAddressSuccess, isPostPrimaryAddressLoading: $isPostPrimaryAddressLoading, postPrimaryAddressError: $postPrimaryAddressError, postPrimaryAddressSuccess: $postPrimaryAddressSuccess, indexSearchAddress: $indexSearchAddress, mapAddress: $mapAddress, mapAddressError: $mapAddressError, mapPoint: $mapPoint, mapData: $mapData)';
+    return 'AddressState(isGetAddressListLoading: $isGetAddressListLoading, getAddressListError: $getAddressListError, getAddressList: $getAddressList, isPostAddressLoading: $isPostAddressLoading, postAddressError: $postAddressError, postAddressSuccess: $postAddressSuccess, isPostAddressMultipleLoading: $isPostAddressMultipleLoading, postAddressMultipleError: $postAddressMultipleError, postAddressMultipleSuccess: $postAddressMultipleSuccess, isSubDistrictSearchLoading: $isSubDistrictSearchLoading, subDistrictSearchError: $subDistrictSearchError, subDistrictSearchList: $subDistrictSearchList, isPostcodeValidationLoading: $isPostcodeValidationLoading, postcodeValidationError: $postcodeValidationError, isPostcodeValidationSuccess: $isPostcodeValidationSuccess, isDeleteAddressLoading: $isDeleteAddressLoading, deleteAddressError: $deleteAddressError, deleteAddressSuccess: $deleteAddressSuccess, isUpdateAddressLoading: $isUpdateAddressLoading, updateAddressError: $updateAddressError, updateAddressSuccess: $updateAddressSuccess, isGetPrimaryAddressLoading: $isGetPrimaryAddressLoading, getPrimaryAddressError: $getPrimaryAddressError, getPrimaryAddressSuccess: $getPrimaryAddressSuccess, isPostPrimaryAddressLoading: $isPostPrimaryAddressLoading, postPrimaryAddressError: $postPrimaryAddressError, postPrimaryAddressSuccess: $postPrimaryAddressSuccess, isUploadFileImageLoading: $isUploadFileImageLoading, uploadFileImageError: $uploadFileImageError, uploadFileImageSuccess: $uploadFileImageSuccess, indexSearchAddress: $indexSearchAddress, mapAddress: $mapAddress, mapAddressError: $mapAddressError, mapPoint: $mapPoint, mapData: $mapData, address: $address)';
   }
 
   @override
@@ -3678,6 +5122,14 @@ class _$AddressStateImpl implements _AddressState {
                 other.postAddressError == postAddressError) &&
             (identical(other.postAddressSuccess, postAddressSuccess) ||
                 other.postAddressSuccess == postAddressSuccess) &&
+            (identical(other.isPostAddressMultipleLoading, isPostAddressMultipleLoading) ||
+                other.isPostAddressMultipleLoading ==
+                    isPostAddressMultipleLoading) &&
+            (identical(other.postAddressMultipleError, postAddressMultipleError) ||
+                other.postAddressMultipleError == postAddressMultipleError) &&
+            (identical(other.postAddressMultipleSuccess, postAddressMultipleSuccess) ||
+                other.postAddressMultipleSuccess ==
+                    postAddressMultipleSuccess) &&
             (identical(other.isSubDistrictSearchLoading, isSubDistrictSearchLoading) ||
                 other.isSubDistrictSearchLoading ==
                     isSubDistrictSearchLoading) &&
@@ -3699,27 +5151,24 @@ class _$AddressStateImpl implements _AddressState {
                 other.deleteAddressError == deleteAddressError) &&
             (identical(other.deleteAddressSuccess, deleteAddressSuccess) ||
                 other.deleteAddressSuccess == deleteAddressSuccess) &&
-            (identical(other.isUpdateAddressLoading, isUpdateAddressLoading) ||
-                other.isUpdateAddressLoading == isUpdateAddressLoading) &&
-            (identical(other.updateAddressError, updateAddressError) ||
-                other.updateAddressError == updateAddressError) &&
-            (identical(other.updateAddressSuccess, updateAddressSuccess) ||
-                other.updateAddressSuccess == updateAddressSuccess) &&
-            (identical(other.isGetPrimaryAddressLoading, isGetPrimaryAddressLoading) ||
-                other.isGetPrimaryAddressLoading ==
-                    isGetPrimaryAddressLoading) &&
-            (identical(other.getPrimaryAddressError, getPrimaryAddressError) ||
-                other.getPrimaryAddressError == getPrimaryAddressError) &&
-            (identical(other.getPrimaryAddressSuccess, getPrimaryAddressSuccess) ||
-                other.getPrimaryAddressSuccess == getPrimaryAddressSuccess) &&
+            (identical(other.isUpdateAddressLoading, isUpdateAddressLoading) || other.isUpdateAddressLoading == isUpdateAddressLoading) &&
+            (identical(other.updateAddressError, updateAddressError) || other.updateAddressError == updateAddressError) &&
+            (identical(other.updateAddressSuccess, updateAddressSuccess) || other.updateAddressSuccess == updateAddressSuccess) &&
+            (identical(other.isGetPrimaryAddressLoading, isGetPrimaryAddressLoading) || other.isGetPrimaryAddressLoading == isGetPrimaryAddressLoading) &&
+            (identical(other.getPrimaryAddressError, getPrimaryAddressError) || other.getPrimaryAddressError == getPrimaryAddressError) &&
+            (identical(other.getPrimaryAddressSuccess, getPrimaryAddressSuccess) || other.getPrimaryAddressSuccess == getPrimaryAddressSuccess) &&
             (identical(other.isPostPrimaryAddressLoading, isPostPrimaryAddressLoading) || other.isPostPrimaryAddressLoading == isPostPrimaryAddressLoading) &&
             (identical(other.postPrimaryAddressError, postPrimaryAddressError) || other.postPrimaryAddressError == postPrimaryAddressError) &&
             (identical(other.postPrimaryAddressSuccess, postPrimaryAddressSuccess) || other.postPrimaryAddressSuccess == postPrimaryAddressSuccess) &&
+            (identical(other.isUploadFileImageLoading, isUploadFileImageLoading) || other.isUploadFileImageLoading == isUploadFileImageLoading) &&
+            (identical(other.uploadFileImageError, uploadFileImageError) || other.uploadFileImageError == uploadFileImageError) &&
+            (identical(other.uploadFileImageSuccess, uploadFileImageSuccess) || other.uploadFileImageSuccess == uploadFileImageSuccess) &&
             (identical(other.indexSearchAddress, indexSearchAddress) || other.indexSearchAddress == indexSearchAddress) &&
             (identical(other.mapAddress, mapAddress) || other.mapAddress == mapAddress) &&
             (identical(other.mapAddressError, mapAddressError) || other.mapAddressError == mapAddressError) &&
             (identical(other.mapPoint, mapPoint) || other.mapPoint == mapPoint) &&
-            const DeepCollectionEquality().equals(other._mapData, _mapData));
+            const DeepCollectionEquality().equals(other._mapData, _mapData) &&
+            const DeepCollectionEquality().equals(other._address, _address));
   }
 
   @override
@@ -3731,6 +5180,9 @@ class _$AddressStateImpl implements _AddressState {
         isPostAddressLoading,
         postAddressError,
         postAddressSuccess,
+        isPostAddressMultipleLoading,
+        postAddressMultipleError,
+        postAddressMultipleSuccess,
         isSubDistrictSearchLoading,
         subDistrictSearchError,
         const DeepCollectionEquality().hash(_subDistrictSearchList),
@@ -3749,11 +5201,15 @@ class _$AddressStateImpl implements _AddressState {
         isPostPrimaryAddressLoading,
         postPrimaryAddressError,
         postPrimaryAddressSuccess,
+        isUploadFileImageLoading,
+        uploadFileImageError,
+        uploadFileImageSuccess,
         indexSearchAddress,
         mapAddress,
         mapAddressError,
         mapPoint,
-        const DeepCollectionEquality().hash(_mapData)
+        const DeepCollectionEquality().hash(_mapData),
+        const DeepCollectionEquality().hash(_address)
       ]);
 
   @JsonKey(ignore: true)
@@ -3771,6 +5227,9 @@ abstract class _AddressState implements AddressState {
       final bool isPostAddressLoading,
       final String? postAddressError,
       final bool postAddressSuccess,
+      final bool isPostAddressMultipleLoading,
+      final String? postAddressMultipleError,
+      final bool postAddressMultipleSuccess,
       final bool isSubDistrictSearchLoading,
       final String? subDistrictSearchError,
       final List<SubDistrictsSearchEntity> subDistrictSearchList,
@@ -3789,11 +5248,15 @@ abstract class _AddressState implements AddressState {
       final bool isPostPrimaryAddressLoading,
       final String? postPrimaryAddressError,
       final bool postPrimaryAddressSuccess,
+      final bool isUploadFileImageLoading,
+      final String? uploadFileImageError,
+      final String? uploadFileImageSuccess,
       final int? indexSearchAddress,
       final String? mapAddress,
       final String? mapAddressError,
       final GeoPoint? mapPoint,
-      final Map<String, dynamic>? mapData}) = _$AddressStateImpl;
+      final Map<String, dynamic>? mapData,
+      final List<CustomerCreateBluerayParam> address}) = _$AddressStateImpl;
 
   @override // Get Customer Address List Blueray
   bool get isGetAddressListLoading;
@@ -3807,6 +5270,12 @@ abstract class _AddressState implements AddressState {
   String? get postAddressError;
   @override
   bool get postAddressSuccess;
+  @override // Post Customer Address Multiple
+  bool get isPostAddressMultipleLoading;
+  @override
+  String? get postAddressMultipleError;
+  @override
+  bool get postAddressMultipleSuccess;
   @override // SubDistrict Search
   bool get isSubDistrictSearchLoading;
   @override
@@ -3843,6 +5312,12 @@ abstract class _AddressState implements AddressState {
   String? get postPrimaryAddressError;
   @override
   bool get postPrimaryAddressSuccess;
+  @override // Upload
+  bool get isUploadFileImageLoading;
+  @override
+  String? get uploadFileImageError;
+  @override
+  String? get uploadFileImageSuccess;
   @override // Indexing
   int? get indexSearchAddress;
   @override // Map
@@ -3853,6 +5328,8 @@ abstract class _AddressState implements AddressState {
   GeoPoint? get mapPoint;
   @override
   Map<String, dynamic>? get mapData;
+  @override // Address
+  List<CustomerCreateBluerayParam> get address;
   @override
   @JsonKey(ignore: true)
   _$$AddressStateImplCopyWith<_$AddressStateImpl> get copyWith =>

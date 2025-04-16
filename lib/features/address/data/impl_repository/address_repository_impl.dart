@@ -91,7 +91,7 @@ class AddressRepositoryImpl implements AddressRepository {
 
       if (response.statusCode == 200) {
         return Right((response.data as List)
-            .map((e) => ConsumerAddressModel.fromJson(e).toEntity())
+            .map((data) => ConsumerAddressModel.fromJson(data).toEntity())
             .toList());
       } else {
         return Left(
@@ -254,7 +254,7 @@ class AddressRepositoryImpl implements AddressRepository {
         postalCode: postalCode,
       );
 
-      if (response.data['status'] == true) {
+      if (response.data['action'] == true) {
         return const Right(null);
       } else {
         return Left(
@@ -284,6 +284,71 @@ class AddressRepositoryImpl implements AddressRepository {
       } else {
         return Left(
           response.data['message'] ?? 'Sub District Search Failed',
+        );
+      }
+    } on DioException catch (e) {
+      return Left(e.response?.data['message']);
+    } catch (e) {
+      return Left("Unexpected error: ${e.toString()}");
+    }
+  }
+
+  @override
+  Future<Either<String, String>> uploadFile({required String fileName}) async {
+    try {
+      final response = await _addressServices.uploadFile(
+        fileName: fileName,
+      );
+
+      if (response.statusCode == 201) {
+        return Right(response.data['file_url']);
+      } else {
+        return Left(
+          response.data['message'] ?? 'Upload File Failed',
+        );
+      }
+    } on DioException catch (e) {
+      return Left(e.response?.data['message']);
+    } catch (e) {
+      return Left("Unexpected error: ${e.toString()}");
+    }
+  }
+
+  @override
+  Future<Either<String, String>> uploadImage(
+      {required String imageName}) async {
+    try {
+      final response = await _addressServices.uploadImage(
+        imageName: imageName,
+      );
+
+      if (response.statusCode == 201) {
+        return Right(response.data['image_url']);
+      } else {
+        return Left(
+          response.data['message'] ?? 'Upload Image Failed',
+        );
+      }
+    } on DioException catch (e) {
+      return Left(e.response?.data['message']);
+    } catch (e) {
+      return Left("Unexpected error: ${e.toString()}");
+    }
+  }
+
+  @override
+  Future<Either<String, void>> customerCreateMultipleBlueray({
+    required List<Map<String, dynamic>> addresses,
+  }) async {
+    try {
+      final response = await _addressServices.customerCreateMultipleBlueray(
+          addresses: addresses);
+
+      if (response.statusCode == 201) {
+        return const Right(null);
+      } else {
+        return Left(
+          response.data['message'] ?? 'Customer Create Bluray Failed',
         );
       }
     } on DioException catch (e) {

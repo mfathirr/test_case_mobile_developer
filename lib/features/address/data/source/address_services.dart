@@ -50,6 +50,15 @@ class AddressServices {
     );
   }
 
+  Future<Response> customerCreateMultipleBlueray({
+    required List<Map<String, dynamic>> addresses,
+  }) async {
+    return dioClient.post(
+      '${dotenv.env['BASE_URL']}/customer/address/create-multiple',
+      data: addresses,
+    );
+  }
+
   Future<Response> customerDeleteBlueray({required int addressId}) async {
     return dioClient.delete(
       '${dotenv.env['BASE_URL']}/customer/address/delete',
@@ -129,5 +138,25 @@ class AddressServices {
   Future<Response> getDetailDistrict({required int districtId}) async {
     return dioClient
         .get('${dotenv.env['BASE_URL']}/address/district/$districtId');
+  }
+
+  Future<Response> uploadImage({required String imageName}) async {
+    return dioClient.post(
+      '${dotenv.env['BASE_URL']}/image/upload',
+      isMultipart: true,
+      data: FormData.fromMap({
+        'image_file': await MultipartFile.fromFile(imageName),
+      }),
+    );
+  }
+
+  Future<Response> uploadFile({required String fileName}) async {
+    return dioClient.post(
+      '${dotenv.env['BASE_URL']}/file/upload',
+      isMultipart: true,
+      data: FormData.fromMap({
+        'file_data': await MultipartFile.fromFile(fileName),
+      }),
+    );
   }
 }

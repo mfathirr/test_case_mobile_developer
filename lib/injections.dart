@@ -7,6 +7,7 @@ import 'package:test_case_mobile_developer/features/address/data/impl_repository
 import 'package:test_case_mobile_developer/features/address/data/source/address_services.dart';
 import 'package:test_case_mobile_developer/features/address/domain/repository/address_repository.dart';
 import 'package:test_case_mobile_developer/features/address/domain/usecase/customer_create_blueray/customer_create_blueray.dart';
+import 'package:test_case_mobile_developer/features/address/domain/usecase/customer_create_multiple%20copy/customer_create_multiple.dart';
 import 'package:test_case_mobile_developer/features/address/domain/usecase/customer_delete_blueray/customer_delete_blueray.dart';
 import 'package:test_case_mobile_developer/features/address/domain/usecase/customer_list_blueray/customer_list_blueray.dart';
 import 'package:test_case_mobile_developer/features/address/domain/usecase/customer_update_blueray/customer_update_blueray.dart';
@@ -16,6 +17,8 @@ import 'package:test_case_mobile_developer/features/address/domain/usecase/get_p
 import 'package:test_case_mobile_developer/features/address/domain/usecase/post_primary_address/post_primary_address.dart';
 import 'package:test_case_mobile_developer/features/address/domain/usecase/postcode_validation/postcode_validation.dart';
 import 'package:test_case_mobile_developer/features/address/domain/usecase/subdistrict_search/subdistrict_search.dart';
+import 'package:test_case_mobile_developer/features/address/domain/usecase/upload_file/upload_file.dart';
+import 'package:test_case_mobile_developer/features/address/domain/usecase/upload_image/upload_image.dart';
 import 'package:test_case_mobile_developer/features/address/presentation/bloc/bloc/address_bloc.dart';
 import 'package:test_case_mobile_developer/features/auth/data/impl_repository/auth_repository_impl.dart';
 import 'package:test_case_mobile_developer/features/auth/data/source/auth_local.dart';
@@ -29,8 +32,8 @@ final getIt = GetIt.instance;
 Future<void> initInjections() async {
   getIt.registerFactory(() =>
       AuthBloc(getIt(), getIt(), getIt(), getIt(), getIt(), getIt(), getIt()));
-  getIt.registerFactory(() => AddressBloc(
-      getIt(), getIt(), getIt(), getIt(), getIt(), getIt(), getIt(), getIt()));
+  getIt.registerFactory(() => AddressBloc(getIt(), getIt(), getIt(), getIt(),
+      getIt(), getIt(), getIt(), getIt(), getIt(), getIt(), getIt()));
 
   // Usecase
   getIt.registerLazySingleton(() => CustomerRegisterMiniUseCase(getIt()));
@@ -51,6 +54,9 @@ Future<void> initInjections() async {
   getIt.registerLazySingleton(() => PostPrimaryAddressUseCase(getIt()));
   getIt.registerLazySingleton(() => PostcodeValidationUseCase(getIt()));
   getIt.registerLazySingleton(() => SubdistrictSearchUseCase(getIt()));
+  getIt.registerLazySingleton(() => UploadImageUseCase(getIt()));
+  getIt.registerLazySingleton(() => UploadFileUseCase(getIt()));
+  getIt.registerLazySingleton(() => CustomerCreateMultipleUseCase(getIt()));
 
   // Repository
   getIt.registerLazySingleton<AuthRepository>(

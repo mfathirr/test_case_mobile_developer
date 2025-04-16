@@ -73,7 +73,7 @@ class AddressItem extends StatelessWidget {
                   const SizedBox(width: 4),
                   Expanded(
                     child: Text(
-                      "${data.name} - ${data.addressLabel}",
+                      "${data.name}${data.addressLabel.isEmpty ? '' : ' - ${data.addressLabel}'}",
                       style: AppTheme.jakartaSansTextTheme.titleSmall,
                       overflow: TextOverflow.ellipsis,
                     ),
@@ -112,7 +112,7 @@ class AddressItem extends StatelessWidget {
                                 ),
                                 const SizedBox(height: 12),
                                 Text(
-                                  'Apakah kamu yakin untuk menghapus ${data.name} - ${data.addressLabel}?',
+                                  'Apakah kamu yakin untuk menghapus ${data.name}${data.addressLabel.isEmpty ? '' : ' - ${data.addressLabel}'}?',
                                   style:
                                       AppTheme.jakartaSansTextTheme.titleMedium,
                                   textAlign: TextAlign.center,

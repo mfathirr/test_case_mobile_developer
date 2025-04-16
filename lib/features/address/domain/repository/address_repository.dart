@@ -23,6 +23,9 @@ abstract interface class AddressRepository {
   Future<Either<String, void>> customerDeleteBlueray({
     required int addressId,
   });
+  Future<Either<String, void>> customerCreateMultipleBlueray({
+    required List<Map<String, dynamic>> addresses,
+  });
   Future<Either<String, void>> customerUpdateBlueray({
     required String addressId,
     required String address,
@@ -56,4 +59,6 @@ abstract interface class AddressRepository {
   Future<Either<String, void>> getDetailDistrict({
     required int districtId,
   });
+  Future<Either<String, String>> uploadImage({required String imageName});
+  Future<Either<String, String>> uploadFile({required String fileName});
 }

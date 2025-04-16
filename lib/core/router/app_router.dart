@@ -1,9 +1,11 @@
 import 'package:flutter_osm_plugin/flutter_osm_plugin.dart';
 import 'package:go_router/go_router.dart';
 import 'package:test_case_mobile_developer/features/address/domain/entities/customer_list_address_blueray_entity.dart';
+import 'package:test_case_mobile_developer/features/address/domain/usecase/customer_create_blueray/customer_create_blueray_param.dart';
 import 'package:test_case_mobile_developer/features/address/presentation/pages/addres_create_page.dart';
 import 'package:test_case_mobile_developer/features/address/presentation/pages/addres_update_page.dart';
 import 'package:test_case_mobile_developer/features/address/presentation/pages/address_map_page.dart';
+import 'package:test_case_mobile_developer/features/address/presentation/pages/address_multiple_create_page.dart';
 import 'package:test_case_mobile_developer/features/address/presentation/pages/address_page.dart';
 import 'package:test_case_mobile_developer/features/address/presentation/pages/address_search_data_page.dart';
 import 'package:test_case_mobile_developer/features/auth/presentation/pages/login_page.dart';
@@ -12,8 +14,13 @@ import 'package:test_case_mobile_developer/features/auth/presentation/pages/regi
 import 'package:test_case_mobile_developer/features/auth/presentation/pages/register_verify_page.dart';
 
 class AppRouter {
-  static GoRouter goRouter = GoRouter(
-    initialLocation: '/${AddressPage.routeName}',
+  final bool isLoggedIn;
+
+  AppRouter({required this.isLoggedIn});
+
+  late final GoRouter goRouter = GoRouter(
+    initialLocation:
+        isLoggedIn ? '/${AddressPage.routeName}' : '/${LoginPage.routeName}',
     routes: [
       GoRoute(
         path: '/${LoginPage.routeName}',
@@ -52,7 +59,9 @@ class AppRouter {
       GoRoute(
         path: '/${AddressMapPage.routeName}',
         name: AddressMapPage.routeName,
-        builder: (context, state) => AddressMapPage(point: state.extra as GeoPoint?,),
+        builder: (context, state) => AddressMapPage(
+          point: state.extra as GeoPoint?,
+        ),
       ),
       GoRoute(
         path: '/${AddressSearchDataPage.routeName}',
@@ -64,6 +73,13 @@ class AppRouter {
         name: AddresUpdatePage.routeName,
         builder: (context, state) => AddresUpdatePage(
           data: state.extra as CustomerAddressEntity,
+        ),
+      ),
+      GoRoute(
+        path: '/${AddressMultipleCreatePage.routeName}',
+        name: AddressMultipleCreatePage.routeName,
+        builder: (context, state) => AddressMultipleCreatePage(
+          data: state.extra as CustomerCreateBluerayParam?,
         ),
       ),
     ],
