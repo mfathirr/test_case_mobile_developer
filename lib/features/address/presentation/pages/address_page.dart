@@ -89,6 +89,7 @@ class _AddressPageState extends State<AddressPage> {
       ],
       child: Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           title: Padding(
             padding: const EdgeInsets.only(left: 8.0),
             child: Text(

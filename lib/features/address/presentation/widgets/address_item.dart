@@ -61,7 +61,6 @@ class AddressItem extends StatelessWidget {
                                 param: PostPrimaryAddressParam(
                                     addressId: data.addressId)),
                           );
-                      context.pop();
                     },
                     child: Icon(
                       Icons.star_rounded,
